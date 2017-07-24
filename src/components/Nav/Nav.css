@@ -1,0 +1,12 @@
+#nav{
+	border-radius: 0;
+	margin-bottom: 0;
+	background-color: #0A0C26; 
+}
+
+.nav.navbar-nav.navbar-right a {
+    color: #C9954C;
+}
+
+ul.nav a:hover { color: #C9954C !important; }
+ul.nav a:focus { color: #C9954C !important; }
