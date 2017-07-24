@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
 
-import "./contact.css";
+import "./Collections.css";
 
-class Contact extends Component {
+class Collections extends Component {
     render() {
         return (
             <div>
@@ -14,4 +14,4 @@ class Contact extends Component {
     }
 }
 
-export default Contact;
+export default Collections;

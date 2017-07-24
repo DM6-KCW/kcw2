@@ -1,17 +1,18 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import Designer from '../Designer/Designer';
 
+import "./Brand.css";
 
-import "./media.css";
-
-class Media extends Component {
+class Brand extends Component {
     render() {
         return (
             <div>
-                media page
+                brand page
+                <Designer />
             </div>
         )
     }
 }
 
-export default Media;
+export default Brand;
