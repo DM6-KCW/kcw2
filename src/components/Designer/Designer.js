@@ -2,16 +2,16 @@ import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 
 
-import "./contact.css";
+import "./Designer.css";
 
-class Contact extends Component {
+class Designer extends Component {
     render() {
         return (
             <div>
-                home page
+                design page
             </div>
         )
     }
 }
 
-export default Contact;
+export default Designer;

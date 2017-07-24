@@ -2,12 +2,12 @@ import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 
 import Home from './components/Home/Home';
-import Brand from './components/brand/brand';
-import Designer from './components/designer/designer';
-import Collections from './components/collections/collections';
-import Blog from './components/blog/blog';
-import Contact from './components/contact/contact';
-import Media from './components/media/Media';
+import Brand from './components/Brand/Brand';
+import Designer from './components/Designer/Designer';
+import Collections from './components/Collections/Collections';
+import Blog from './components/Blog/Blog';
+import Contact from './components/Contact/Contact';
+import Media from './components/Media/Media';
 
 
 
