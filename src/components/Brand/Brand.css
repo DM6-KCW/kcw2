@@ -1,0 +1,39 @@
+
+
+.brand-container{
+    margin-top: 14%;
+    background-color: #fff;
+    margin-top: 10%; 
+    height:100%;
+}
+
+body, *{
+    max-height: 400px;
+    margin: 0px;
+    color: #626262;
+    padding: 0px;
+    font-family: 'Helvetica', 'Arial', 'sans-serif';
+}
+
+p{
+    font-size: 22px;
+    line-height: 30px;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+h3{
+    font-size: 19px;
+    line-height: 30px;
+    margin-top: 3%;
+}
+
+h1{
+    font-size: 30px;
+}
+
+
+
+.m-d{
+    margin-top: 10px;
+}
