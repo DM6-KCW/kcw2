@@ -1,7 +1,13 @@
 #nav{
 	border-radius: 0;
 	margin-bottom: 0;
-	background-color: #0A0C26; 
+	background-color: #0A0C26;
+	border: none;
+	 transition: background-color 0.3s ease-in-out;
+}
+
+.navbar-brand{
+	padding: 0; 
 }
 
 .nav.navbar-nav.navbar-right a {

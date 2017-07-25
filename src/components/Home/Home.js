@@ -7,7 +7,7 @@ import "./Home.css";
 class Home extends Component {
     render() {
         return (
-            <div>
+            <div className="Home">
                 home page
             </div>
         )

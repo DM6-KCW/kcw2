@@ -2,24 +2,36 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 import "./Nav.css";
+import logo from "./logo.JPG"
+
 
 class Nav extends Component {
-	addScroll(nav) {
-		console.log(nav)
-		document.addEventListener('scroll', e => {
-			console.log(document.body.scrollTop)
-			if(document.body.scrollTop > 50){
-				nav.style.backgroundColor = "white"
-			}
-			else{
-				nav.style.backgroundColor = '#0A0C26'
-			}
-		})
+	constructor() {
+		super()
+		this.addScroll = this.addScroll.bind(this)
+		this.scrollListener = this.scrollListener.bind(this)
+	}
+	addScroll() {
+		document.onscroll = this.scrollListener
+	}
+	scrollListener(e) {
+		if(document.body.scrollTop > 50){
+			this.nav.style.backgroundColor = "white"
+		}
+		else{
+			this.nav.style.backgroundColor = '#0A0C26'
+		}
+
+	}
+	componentWillUnmount() {
+		console.log("UNmounting")
+		document.onscroll = null
+		console.log(document)
 	}
 	render() {
 		return (
 			<div>
-				<nav id="nav" ref={nav => {this.addScroll(nav)}} className="navbar navbar-inverse navbar-fixed-top">
+				<nav id="nav" ref={nav => {this.nav = nav; this.addScroll()}} className="navbar navbar-inverse navbar-fixed-top">
 					<div className="container-fluid">
 						<div className="navbar-header">
 							<button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
@@ -28,7 +40,8 @@ class Nav extends Component {
 								<span className="icon-bar"></span>
 								<span className="icon-bar"></span>
 							</button>
-							<Link to="/" className="navbar-brand">Mithi Kalra</Link>
+
+								<img className="navbar-brand" src={logo} alt="logo" />
 						</div>
 
 						<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
