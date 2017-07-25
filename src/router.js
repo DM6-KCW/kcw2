@@ -18,7 +18,6 @@ export default (
         <Route component={Blog} path = "/blog"/>
         <Route component={Contact} path = "/contact"/>
         <Route component={Media} path = "/media"/>
-        <Route component={Designer} path = "/Designer"/>
     </Switch>
 
 )
