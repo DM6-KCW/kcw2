@@ -1,6 +1,77 @@
 #moonlight-text {
     color: gold;
+    text-align: center;
 }
 #moonlight-date {
     color: blue;
+    text-align: center;
+}
+.collectionstack{
+    height: 710px;
+    width: 100%;
+    padding-right: 15px;
+}
+.toplefttext{
+    width: 40%;
+    text-align: center;
+    z-index: 2;
+    background-color: red;
+    position: absolute;
+    height: 200px;
+    padding: 15px;
+    display:block;
+}
+.imgtopright{
+    position: absolute;
+    right: 0px;
+    z-index: 0;
+    width:70%;
+    background-color: orange;
+    height: 175px;
+
+}
+.imgundertext{
+    position: absolute;
+    top: 230px;
+    width: 30%;
+    z-index: 1;
+    height: 300px;
+    background-color: blue;
+}
+
+.rightimg{
+    position: absolute;
+    right: 0px;
+    z-index: 0;
+    width: 70%;
+    background-color: purple;
+    height: 250px;
+    top: 215px;
+}
+
+.middletxt{
+    position: absolute;
+    left: 33%;
+    top: 465px;
+    background-color: yellow;
+    z-index: 3;
+    height: 65px;
+    width: 33%;
+}
+.rightrightimg{
+    position: absolute;
+    right: 0px;
+    top: 375px;
+    width: 30%;
+    background-color: cyan;
+    height: 200px;
+    z-index: 1;
+}
+.bottomimg{
+    z-index: 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 220px;
+    background-color: violet;
 }

@@ -10,8 +10,9 @@ class Collections extends Component {
     render() {
         return (
             <div>
-                Collections
-
+                <div className="collections">
+                    Collections
+                </div>
 
                 <div className="row">
                     <div className="col-sm-1">

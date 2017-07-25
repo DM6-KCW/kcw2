@@ -7,7 +7,9 @@ class Collection2 extends Component {
     render() {
         return (
             <div>
+                <div id="othertext">
                 Other Collection!
+                </div>
             </div>
         )
     }

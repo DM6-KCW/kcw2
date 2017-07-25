@@ -4,9 +4,16 @@
 }
 
 #figOne {
-    background-color: green;
+align: center;
 }
 
 #figTwo {
-    background-color: blue;
+
+}
+
+#media {
+    margin-top: 50px;
+}
+#image {
+   margin: 0 auto;
 }

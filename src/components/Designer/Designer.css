@@ -1,0 +1,14 @@
+body, *{
+    margin: 0px;
+    padding: 0px;
+    color: #fff;
+}
+
+.designer-container{
+    background-color: #242424;
+    height: 200vh;
+    
+}
+.margin-down{
+    margin-top: 10px;
+}
