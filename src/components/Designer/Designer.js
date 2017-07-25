@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 
 
 
-import "./designer.css";
+import "./Designer.css";
 
 class Designer extends Component {
     render() {
