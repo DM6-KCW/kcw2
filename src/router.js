@@ -3,7 +3,6 @@ import {Switch, Route} from 'react-router-dom';
 
 import Home from './components/Home/Home';
 import Brand from './components/Brand/Brand';
-import Designer from './components/Designer/Designer';
 import Collections from './components/Collections/Collections';
 import Blog from './components/Blog/Blog';
 import Contact from './components/Contact/Contact';
@@ -19,6 +18,7 @@ export default (
         <Route component={Blog} path = "/blog"/>
         <Route component={Contact} path = "/contact"/>
         <Route component={Media} path = "/media"/>
+        <Route component={Designer} path = "/Designer"/>
     </Switch>
 
 )
