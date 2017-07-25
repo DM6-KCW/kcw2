@@ -5,9 +5,10 @@ import "./Nav.css";
 
 class Nav extends Component {
 	addScroll(nav) {
-		console.log(nav)
+		console.log(nav);
 		document.addEventListener('scroll', e => {
-			console.log(document.body.scrollTop)
+			console.log(document.body.scrollTop);
+			
 			if(document.body.scrollTop > 50){
 				nav.style.backgroundColor = "white"
 			}
