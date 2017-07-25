@@ -18,7 +18,7 @@ class Nav extends Component {
 	}
 	render() {
 		return (
-			<div>
+			<div className="nav-container">
 				<nav id="nav" ref={nav => {this.addScroll(nav)}} className="navbar navbar-inverse navbar-fixed-top">
 					<div className="container-fluid">
 						<div className="navbar-header">
