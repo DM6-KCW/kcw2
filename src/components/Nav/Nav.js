@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 
 import "./Nav.css";
-import logo from "./logo.JPG"
+import logo from "./logo.png"
 
 
 class Nav extends Component {
@@ -40,8 +40,7 @@ class Nav extends Component {
 								<span className="icon-bar"></span>
 								<span className="icon-bar"></span>
 							</button>
-
-								<img className="navbar-brand" src={logo} alt="logo" />
+							<img className="navbar-brand" src={logo} alt="logo" />
 						</div>
 
 						<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
