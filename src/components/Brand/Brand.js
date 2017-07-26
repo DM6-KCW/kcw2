@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import Designer from '../Designer/Designer.js';
-import Nav from '../Nav/Nav.js'
+import Designer from '../Designer/Designer';
 
 import "./Brand.css";
 
@@ -11,7 +10,6 @@ class Brand extends Component {
             
             <div className="brand-container">
                 
-
                     <div className="text-center">
                     <div className="m-d">
                         <h1>BRAND</h1>
@@ -57,6 +55,7 @@ class Brand extends Component {
                     
                     </div>
 
+                    <Designer />
                     
             </div>
 

@@ -3,23 +3,21 @@
 .brand-container{
     margin-top: 14%;
     background-color: #fff;
+    /*color: #c6c6c6;*/
+    font-family: 'Bellefair', serif;
     margin-top: 10%; 
-    height:100%;
+    max-height:510vh;
+    color: #626262;
+
 }
 
-body, *{
-    max-height: 400px;
-    margin: 0px;
-    color: #626262;
-    padding: 0px;
-    font-family: 'Helvetica', 'Arial', 'sans-serif';
-}
+
 
 p{
-    font-size: 22px;
+    font-size: 16px;
     line-height: 30px;
-    margin-left: 20%;
-    margin-right: 20%;
+    margin-left: 25%;
+    margin-right: 25%;
 }
 
 h3{
