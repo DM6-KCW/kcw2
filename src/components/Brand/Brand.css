@@ -3,11 +3,11 @@
 .brand-container{
     margin-top: 14%;
     background-color: #fff;
-    margin-top: 10%; 
+    margin-top: 10%;
     height:100%;
 }
 
-body, *{
+body{
     max-height: 400px;
     margin: 0px;
     color: #626262;

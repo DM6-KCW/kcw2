@@ -1,18 +1,27 @@
 #moonlight-text {
     color: gold;
     text-align: center;
+
 }
 #moonlight-date {
     color: blue;
     text-align: center;
 }
+.collectionbox{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background-color: red;
+}
 .collectionstack{
-    height: 710px;
-    width: 100%;
-    padding-right: 15px;
+    border: solid 3px #F0F0F0;
+    padding: 0px;
+    background-color: magenta;
+    height: 642px;
+    width: 377px;
 }
 .toplefttext{
-    width: 40%;
+    width: 160px;
     text-align: center;
     z-index: 2;
     background-color: red;
@@ -22,56 +31,57 @@
     display:block;
 }
 .imgtopright{
-    position: absolute;
-    right: 0px;
+    position: relative;
+    left: 71px;
     z-index: 0;
-    width:70%;
+    width:300px;
     background-color: orange;
     height: 175px;
 
 }
 .imgundertext{
     position: absolute;
-    top: 230px;
-    width: 30%;
+    top: 300px;
+    width: 120px;
     z-index: 1;
     height: 300px;
     background-color: blue;
 }
 
 .rightimg{
-    position: absolute;
-    right: 0px;
+    position: relative;
+    left: 72px;
     z-index: 0;
-    width: 70%;
+    width: 300px;
     background-color: purple;
     height: 250px;
-    top: 215px;
+    top: 0px;
 }
 
 .middletxt{
-    position: absolute;
-    left: 33%;
-    top: 465px;
+    position: relative;
+    left: 110px;
+    top: -50px;
     background-color: yellow;
     z-index: 3;
     height: 65px;
-    width: 33%;
+    width: 150px;
 }
 .rightrightimg{
-    position: absolute;
-    right: 0px;
-    top: 375px;
-    width: 30%;
+    position: relative;
+    left: 252px;
+    top: -200px;
+    width: 120px;
     background-color: cyan;
     height: 200px;
     z-index: 1;
 }
 .bottomimg{
     z-index: 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    position: relative;
+    left: 0px;
+    top: -274px;
+    width: 371px;
     height: 220px;
     background-color: violet;
 }
