@@ -1,21 +1,10 @@
 
 
 .brand-container{
-    margin-top: 14%;
-    background-color: #fff;
     font-family: 'Bellefair', serif;
-    margin-top: 10%;
     height:100%;
     color: #626262;
 }
-
-body{
-    max-height: 400px;
-    margin: 0px;
-    color: #626262;
-
-}
-
 
 
 p{
@@ -39,4 +28,15 @@ h1{
 
 .m-d{
     margin-top: 10px;
+}
+
+.img-logo{
+    background-image: url("/images/full-logo.png");
+    background-repeat: no-repeat;
+    height: 120px;
+    width: 120px;
+    margin-left: 45%;
+    border-style: solid;
+    border-width: thin;
+    
 }
