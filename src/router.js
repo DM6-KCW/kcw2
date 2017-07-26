@@ -8,10 +8,13 @@ import Blog from './components/Blog/Blog';
 import Contact from './components/Contact/Contact';
 import Media from './components/Media/Media';
 import Admin from './components/Admin/Admin';
-
+import DisneyCollection from './components/Collections/Actualviews/Disney/disney'
+import MoonlightCollection from './components/Collections/Actualviews/Moonlight/moonlight'
+import Collection3 from './components/Collections/Actualviews/Collection3/collection3'
 
 
 export default (
+    <div>
     <Switch>
         <Route component={Home} exact path="/"/>
         <Route component={Brand} path = "/brand"/>
@@ -20,6 +23,11 @@ export default (
         <Route component={Contact} path = "/contact"/>
         <Route component={Media} path = "/media"/>
         <Route component={Admin} path= "/admin"/>
+        <Route component={DisneyCollection} path= "/disney"/>
+        <Route component={MoonlightCollection} path= "/moonlight"/>
+        <Route component={Collection3} path= "/collection3"/>
     </Switch>
+
+    </div>
 
 )

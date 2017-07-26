@@ -1,0 +1,82 @@
+#third-text{
+    text-align: center;
+}
+#third-date{
+    text-align: center;
+}
+
+.threetop{
+    background-color: orange;
+    width: 371px;
+    height: 150px;
+    display: flex;
+}
+.threetopleft{
+    background-color: red;
+    width: 130px;
+    height: 150px;
+}
+.threetopright{
+    background-color: purple;
+    width: 241px;
+    height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.threetoprightupper{
+    background-color: blue;
+    width: 241px;
+    height: 75px;
+    display: flex;
+    flex-direction: row;
+}
+.threetoprightupperleft{
+    background-color: cyan;
+    height: 75px;
+    width: 90px;
+}
+.threetoprightupperright{
+    background-color: beige;
+    width: 151px;
+    height: 75px;
+}
+.threetoprightlower{
+    background-color: green;
+    width: 241px;
+    height: 75px;
+}
+
+.threebigmid{
+    background-color: blue;
+    height: 175px;
+    width: 371px;
+}
+.threemidleft{
+    background-color: pink;
+    height: 110px;
+    width: 180px;
+}
+.threemidright{
+    background-color: orange;
+    height: 180px;
+    width: 191px;
+    position: relative;
+    left: 180px;
+    top: -150px;
+
+}
+.threebottomleft{
+    background-color: violet;
+    height: 201px;
+    width: 220px;
+    position: relative;
+    top: -180px;
+}
+.threebottomright{
+    background-color: purple;
+    height: 171px;
+    width: 186px;
+    position: relative;
+    top: -351px;
+    left: 185px;
+}
