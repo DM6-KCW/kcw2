@@ -1,6 +1,8 @@
 #title {
-    background-color: blueviolet;
     text-align: center;
+    font-family: 'Helvetica', 'Arial', 'sans-serif';
+    color: #C9954C;
+    margin: 15px;
 }
 
 #figOne {
@@ -8,7 +10,7 @@ align: center;
 }
 
 #figTwo {
-
+    align: center;
 }
 
 #media {
@@ -17,3 +19,12 @@ align: center;
 #image {
    margin: 0 auto;
 }
+
+#divspace {
+    width: 100%;
+    padding: 0px 15px;
+}
+
+/*.news {*/
+    /*margin: 10px;*/
+/*}*/
