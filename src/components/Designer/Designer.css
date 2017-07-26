@@ -1,14 +1,33 @@
-body, *{
-    margin: 0px;
-    padding: 0px;
-    color: #fff;
-}
+
 
 .designer-container{
     background-color: #242424;
-    height: 200vh;
+    color: #c6c6c6;
+    font-family: 'Bellefair', serif;
+    max-height: 1910px;
     
 }
 .margin-down{
     margin-top: 10px;
+}
+
+.designer-img{
+    width: 500px;
+    height: 750px;
+    background-color: greenyellow;
+    background-repeat: no-repeat;
+    margin-left: 38%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+h1 {
+    padding: 50px;
+}
+
+p{
+    font-size: 16px;
+    line-height: 30px;
+    margin-left: 30%;
+    margin-right: 30%;
 }
