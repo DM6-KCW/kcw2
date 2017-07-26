@@ -7,6 +7,7 @@ import Collections from './components/Collections/Collections';
 import Blog from './components/Blog/Blog';
 import Contact from './components/Contact/Contact';
 import Media from './components/Media/Media';
+import Admin from './components/Admin/Admin';
 
 
 
@@ -18,6 +19,7 @@ export default (
         <Route component={Blog} path = "/blog"/>
         <Route component={Contact} path = "/contact"/>
         <Route component={Media} path = "/media"/>
+        <Route component={Admin} path= "/admin"/>
     </Switch>
 
 )
