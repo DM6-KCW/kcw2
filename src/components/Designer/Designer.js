@@ -9,6 +9,7 @@ import Footer from '../Footer/Footer.js';
 
 
 import "./Designer.css";
+import fullLogo from '../../images/full-logo.png';
 
 class Designer extends Component{
    
@@ -16,7 +17,14 @@ class Designer extends Component{
 
     render() {
         return (
+
+
+
         <div>
+
+            <div className="img-logo">
+                <img className="full-logo" src={fullLogo} alt=""/>
+            </div>
             <div className="designer-container text-center">
                 
                   <h1>THE DESIGNER</h1>

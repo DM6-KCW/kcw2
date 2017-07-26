@@ -4,6 +4,8 @@ import Designer from '../Designer/Designer';
 
 import "./Brand.css";
 
+import fullLogo from '../../images/full-logo.png';
+
 class Brand extends Component {
     render() {
         return (
@@ -11,8 +13,9 @@ class Brand extends Component {
             <div className="brand-container">
 
 
-                <div className="img-logo"></div>
-                
+                <div className="img-logo">
+                    <img className="full-logo" src={fullLogo} alt=""/>
+                </div>
                     <div className="text-center">
                     <div className="m-d">
                         <h1>THE BRAND</h1>

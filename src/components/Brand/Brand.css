@@ -31,12 +31,16 @@ h1{
 }
 
 .img-logo{
-    background-image: url("/images/full-logo.png");
-    background-repeat: no-repeat;
+    /*background-size: auto;
+    background-image: url("/../images/full-logo.png");
+    background-repeat: no-repeat;*/
     height: 120px;
     width: 120px;
-    margin-left: 45%;
-    border-style: solid;
-    border-width: thin;
+    margin: 0 auto;
     
+}
+
+.full-logo{
+    height: 120px; 
+    width: 120px; 
 }
