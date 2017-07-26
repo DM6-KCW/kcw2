@@ -1,5 +1,5 @@
 .collections{
-    margin-top:100px;
+    margin-top:70px;
     text-align: center;
 }
 .collectionsholder{
@@ -7,7 +7,7 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding-bottom: 20px;
+    padding-bottom: calc(100vh - 792px);
 }
 
 .collection1{
