@@ -1,10 +1,23 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import axios from 'axios';
+import baseurl from '../../Utilities/utils';
 
 
 import "./Contact.css";
 
 class Contact extends Component {
+    constructor(props) {
+        super(props);
+
+        this.onSubmit = this.onSubmit.bind(this);
+    }
+    onSubmit() {
+        console.log('HIT');
+        axios.get(baseurl + '/tacos').then(function(response) {
+            console.log(response);
+        });
+    }
     render() {
         return (
             <div className="contact-form col-md-6">
@@ -27,7 +40,7 @@ class Contact extends Component {
                 <div className="form-group">
                   <textarea id="contact-form-message" type="text" className="form-control" rows="5" placeholder="Message"  />
                 </div>
-                <button type="button" className="btn">Submit</button>
+                <button type="button" className="btn" onClick={this.onSubmit}>Submit</button>
                 <hr/>
 
                 <h4>Other Way</h4>
