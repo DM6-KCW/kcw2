@@ -1,6 +1,9 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import Brand from '../Brand/Brand.js';
+import Footer from '../Footer/Footer.js';
+
+
 
 
 
@@ -16,7 +19,7 @@ class Designer extends Component{
         <div>
             <div className="designer-container text-center">
                 
-                  <h1>DESIGNER DESIGNER</h1>
+                  <h1>THE DESIGNER</h1>
 
                 <div className="designer-img">
                 </div>
@@ -68,6 +71,7 @@ class Designer extends Component{
                 </div> 
 
             </div>
+            <Footer />
         </div>
         )
     }

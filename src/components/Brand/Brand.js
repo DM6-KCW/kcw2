@@ -9,10 +9,13 @@ class Brand extends Component {
         return (
             
             <div className="brand-container">
+
+
+                <div className="img-logo"></div>
                 
                     <div className="text-center">
                     <div className="m-d">
-                        <h1>BRAND</h1>
+                        <h1>THE BRAND</h1>
                     </div>
 
                     <div>
