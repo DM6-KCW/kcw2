@@ -10,17 +10,15 @@ class Collections extends Component {
     render() {
         return (
             <div>
+
                 <div className="collections">
                     Collections
                 </div>
-
-                <div className="row">
-                    <div className="col-sm-1">
-                    </div>
-                    <div className="col-sm-5">
+                <div className="collectionsholder">
+                    <div className="collection1">
                         <Collection1 />
                     </div>
-                    <div className="col-sm-5">
+                    <div className="collection2">
                         <Collection2 />
                     </div>
                 </div>
