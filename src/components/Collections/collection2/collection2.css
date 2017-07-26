@@ -4,3 +4,82 @@
 #disney-date{
     text-align: center;
 }
+
+.disneytop{
+    background-color: blue;
+    height: 175px;
+}
+.disneytopleft{
+    background-color: red;
+    height: 75px;
+    width: 160px;
+}
+
+
+.disneymid{
+    background-color: orange;
+    height: 200px;
+
+}
+.disneymidupleft{
+    height: 100px;
+    width: 125px;
+    background-color: pink;
+}
+.disneymidupright{
+    height: 100px;
+    width: 125px;
+    background-color: purple;
+    position: relative;
+    left: 246px;
+    top: -100px;
+}
+.disneymidmid{
+    height: 150px;
+    width: 121px;
+    background-color: cyan;
+    position: relative;
+    top: -350px;
+    left: 125px;
+}
+.disneymiddown{
+    height: 150px;
+    background-color: green;
+    position: relative;
+    top: -100px;
+}
+.disneybottom4square{
+    background-color: yellow;
+    height: 211px;
+    position: relative;
+    top: 50px;
+}
+.disney4squaretopleft{
+    background-color: violet;
+    height: 105px;
+    width: 185px;
+
+}
+.disney4squaretopright{
+    background-color: red;
+    height: 105px;
+    width: 186px;
+    position: relative;
+    top: -105px;
+    left: 185px;
+}
+.disney4squarebottomleft{
+    background-color: indigo;
+    height: 106px;
+    width: 185px;
+    position: relative;
+    top: -105px;
+}
+.disney4squarebottomright{
+    background-color: black;
+    height: 106px;
+    width: 186px;
+    position: relative;
+    top: -211px;
+    left: 185px;
+}

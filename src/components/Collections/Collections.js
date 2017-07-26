@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+import { Route, Link, Switch } from 'react-router-dom';
 
 import Collection1 from './collection1/collection1';
 import Collection2 from './collection2/collection2';
+import Collection3 from './collection3/collection3';
+
+import DisneyCollection from './Actualviews/Disney/disney'
+import MoonlightCollection from './Actualviews/Moonlight/moonlight'
+import Collectionthird from './Actualviews/Collection3/collection3'
 
 import "./Collections.css";
 
@@ -15,12 +20,22 @@ class Collections extends Component {
                     Collections
                 </div>
                 <div className="collectionsholder">
-                    <div className="collection1">
-                        <Collection1 />
-                    </div>
-                    <div className="collection2">
-                        <Collection2 />
-                    </div>
+                    <Link to="/moonlight">
+                        <div className="collection1">
+                            <Collection1 />
+                        </div>
+                    </Link>
+                    <Link to="/collection3">
+                        <div className="collection3">
+                            <Collection3 />
+                        </div>
+                    </Link>
+                    <Link to="/disney">
+                        <div className="collection2">
+                            <Collection2 />
+                        </div>
+                    </Link>
+
                 </div>
             </div>
         )
