@@ -2,11 +2,10 @@
     text-align: center;
     font-family: 'Helvetica', 'Arial', 'sans-serif';
     color: #C9954C;
-    margin: 15px;
 }
 
 #figOne {
-align: center;
+    align: center;
 }
 
 #figTwo {
@@ -14,17 +13,21 @@ align: center;
 }
 
 #media {
-    margin-top: 50px;
+    margin-top: 80px;
 }
 #image {
    margin: 0 auto;
 }
 
-#divspace {
-    width: 100%;
-    padding: 0px 15px;
+#mediap {
+    margin: 0 1px;
+    padding: 5px;
+    border-style: solid;
 }
-
 /*.news {*/
     /*margin: 10px;*/
 /*}*/
+
+.border {
+    padding: 20px;
+}
