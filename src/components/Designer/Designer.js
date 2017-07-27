@@ -26,12 +26,6 @@ class Designer extends Component{
                     <img className="full-logo" src={fullLogo} alt=""/>
                 </div>
 
-            
-                <div>
-                    <img className="full-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/No_image_3x4.svg/1024px-No_image_3x4.svg.png" alt=""/>
-                </div>
-
-
                 <div>
                     <p>Nam libero tempore, cum soluta nobis est eligendi optio 
                         cumque nihil impedit quo minus id quod maxime placeat 
