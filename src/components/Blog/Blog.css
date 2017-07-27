@@ -1,0 +1,54 @@
+#blogcontainer{
+    padding-top: 100px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+#postcontainer{
+
+}
+#blogtitle{
+    width: 800px;
+    font-family: 'Bellefair', serif;
+    font-size: 52px;
+    color: #626262
+}
+.blogposts{
+    width: 800px;
+    background-color: white;
+}
+#blogsidebar{
+    width: 300px;
+}
+#blogheadshot{
+    background-color: white;
+    height: 275px;
+    width: 300px;
+}
+#blogheadshotimg{
+    height: 250px;
+    width: 250px;
+    margin-left: 25px;
+    margin-top: 25px;
+    background-color: white;
+}
+#blogsideabout{
+    background-color: yellow;
+}
+#blogsidesocial{
+    background-color: cyan;
+    text-align: center;
+}
+#blogsocials{
+    display: flex;
+    justify-content: space-around;
+}
+#blogsocialface{
+    
+}
+#blogsocialtwit{
+
+}
+#blogsocialinsta{
+
+}
