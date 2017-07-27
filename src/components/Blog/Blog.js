@@ -1,11 +1,24 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+
 import Posts from './Posts/posts'
+
 import Footer from '../Footer/Footer.js';
+
 import "./Blog.css";
+
 import fullLogo from '../../images/full-logo.png';
-class Blog extends Component {
-    render() {
+
+
+export function Blog( { blogs } ) {
+    // console.log(blogs);
+    // const postage = blogs.map( (post, index) => {
+    //     <div key={post.id}>
+    //         <Posts image={post.image} id={post.id} />
+    //     </div>
+    // })
+
         return (
             <div>
                 <div id="blogcontainer">
@@ -14,7 +27,7 @@ class Blog extends Component {
                             Mithi says stuff to people
                         </div>
                         <div className="blogposts">
-                            <Posts />
+                         <Posts/>
                         </div>
                     </div>
                     <div id="blogsidebar">
@@ -45,7 +58,12 @@ class Blog extends Component {
                 <Footer />
             </div>
         )
-    }
+
 }
 
-export default Blog;
+function mapStateToProps( {post}){
+    return { posts: post}
+}
+
+
+export default connect( mapStateToProps, { }) (Blog);
