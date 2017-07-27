@@ -1,3 +1,31 @@
 .Home{
-	height: 150vh; 
+	max-height: 1200px;
+}
+
+
+.home-intro{
+	background-color: #C9954C;
+
+	height: 50vh;
+
+}
+
+
+.home-img-intro{
+	margin-top: 4%;
+	margin-left: 45%;
+	
+}
+
+.home-intro-word{
+
+	position: absolute;
+	margin-bottom: 50%;
+	z-index: 3;
+
+}
+
+.home-intro-img{
+    height: 300px; 
+    width: 300px; 
 }

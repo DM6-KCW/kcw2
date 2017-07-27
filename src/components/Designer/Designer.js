@@ -12,25 +12,25 @@ import "./Designer.css";
 import fullLogo from '../../images/full-logo.png';
 
 class Designer extends Component{
-   
-// console.log('this this working')
-
     render() {
         return (
-
-
-
         <div>
-
-            <div className="img-logo">
-                <img className="full-logo" src={fullLogo} alt=""/>
-            </div>
             <div className="designer-container text-center">
-                
-                  <h1>THE DESIGNER</h1>
 
-                <div className="designer-img">
+                <div> 
+                  <h1>THE DESIGNER</h1>
                 </div>
+
+
+                <div className="img-logo">
+                    <img className="full-logo" src={fullLogo} alt=""/>
+                </div>
+
+            
+                <div>
+                    <img className="full-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/No_image_3x4.svg/1024px-No_image_3x4.svg.png" alt=""/>
+                </div>
+
 
                 <div>
                     <p>Nam libero tempore, cum soluta nobis est eligendi optio 
