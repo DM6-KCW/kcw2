@@ -5,9 +5,6 @@ import Collection1 from './collection1/collection1';
 import Collection2 from './collection2/collection2';
 import Collection3 from './collection3/collection3';
 
-import DisneyCollection from './Actualviews/Disney/disney'
-import MoonlightCollection from './Actualviews/Moonlight/moonlight'
-import Collectionthird from './Actualviews/Collection3/collection3'
 
 import "./Collections.css";
 
