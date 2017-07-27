@@ -1,14 +1,34 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import dressProducts from '../dressProduct/dressProducts';
 
-class DisneyCollection extends Component {
-    render(){
+
+
+
+export function DisneyCollection( { dressProduct } ) {
+    const dresses = dressProduct.map( (dress, index) => {
+        <dressProducts
+            key={index * Math.random() * 10}
+            image={dress.image}
+            />
+    });
+
         return (
             <div>
-                Disney
+                {console.log(dresses)}
+
+               <h1>Disney dresses</h1>
+
+                <div>
+                    {dresses}
+                </div>
             </div>
         )
-    }
+
 }
 
-export default DisneyCollection;
+function mapStateToProps( { dresses }) {
+    return { dressProduct: dresses}
+}
+export default connect( mapStateToProps, { }) (DisneyCollection);
