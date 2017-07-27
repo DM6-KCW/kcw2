@@ -1,22 +1,20 @@
 import React, {Component} from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import dressProducts from '../dressProduct/dressProducts';
+import DressProducts from './dressProduct/dressProducts';
 
 
 
 
 export function DisneyCollection( { dressProduct } ) {
-    const dresses = dressProduct.map( (dress, index) => {
-        <dressProducts
-            key={index * Math.random() * 10}
-            image={dress.image}
-            />
-    });
+    const dresses = dressProduct.map( (dress, index) => (
+        <div key={dress.id}>
+            <DressProducts image={dress.image} id={dress.id} />
+        </div>
 
+));
         return (
             <div>
-                {console.log(dresses)}
 
                <h1>Disney dresses</h1>
 

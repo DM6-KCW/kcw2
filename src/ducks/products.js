@@ -1,5 +1,6 @@
 import dresses from '../dresses';
 
+
 const initialState = {
     dresses,
     productsInCart: []
