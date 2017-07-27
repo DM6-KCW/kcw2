@@ -49,7 +49,7 @@ class Nav extends Component {
 									<Link to="/brand">The Brand</Link>
 								</li>
 								<li>
-									<Link to="/designer">The Designer</Link>
+									<Link to="/brand">The Designer</Link>
 								</li>
 								<li>
 									<Link to="/collections">Collections</Link>

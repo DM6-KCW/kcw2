@@ -1,0 +1,20 @@
+#post{
+    margin-bottom: 20px;
+}
+#posttitle{
+    font-size: 32px;
+    color: #4286f4;
+}
+#postdate{
+    color: #626262;
+}
+#postimgbox{
+
+}
+#postimg{
+    height: 500px;
+    width: 800px;
+}
+#posttext{
+    font-size: 20px;
+}
