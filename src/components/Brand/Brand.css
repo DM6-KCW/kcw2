@@ -3,7 +3,8 @@
 .brand-container{
     font-family: 'Bellefair', serif;
     height:100%;
-    color: #626262;
+    /*padding: 5%;*/
+    color: #C9954C;
 }
 
 
@@ -44,3 +45,7 @@ h1{
     height: 120px; 
     width: 120px; 
 }
+
+
+
+

@@ -40,7 +40,7 @@ class Nav extends Component {
 								<span className="icon-bar"></span>
 								<span className="icon-bar"></span>
 							</button>
-							<img className="navbar-brand" src={logo} alt="logo" />
+							<Link to="/"><img className="navbar-brand" src={logo} alt="logo" /></Link>
 						</div>
 
 						<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">

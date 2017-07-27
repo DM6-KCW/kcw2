@@ -1,72 +1,52 @@
+
+
+
 .footer-container{
     background-color: #0A0C26;
     color: #C9954C;
     font-style: normal;
-    font-size: 15px;
-    line-height: 14px;
-    padding: 1%;
+    font-size: 10px;
+    line-height: 10px;
 }
 
 .footer-margin{
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 15%;
+    margin-right: 15%;
 }
 
-
-/*.footer-media{
-    margin-right: 20%;
-}*/
-
+.footer-margin-v2{
+    /*margin-left: 15%;
+    margin-right: 15%;*/
+}
 
 .spacer{
-    border-right-style: solid;
-    border-right-width: thick;
+    border-left-style: solid;
+    border-left-width: thick;
     border-color: #C9954C;
-    line-height: 400%; 
+    line-height: 200%; 
 }
-
 
 .inv-spacer{
-    border-right-style: solid;
-    border-right-width: thick;
-    border-color: #0A0C26;
-    line-height: 400%;  
+    line-height: 200%;  
 }
-
-
 
 .padder-right{
     margin-left: -20px;
 }
 
-.padder-left{
-    margin-left: 20px;
+a{
+    color: #C9954C;
 }
 
-.ig-hex{
-    color: #cd486b;
-}
-
-.twitter-hex{
-    color: #00aced;
-}
-
-.facebook-hex{
-    color: #3B5998;
-}
+@media only screen and (max-width: 800px) {
 
 
-a .fa-facebook{
-    color: #3B5998;;
-    
-}
+    .footer-container{
+    background-color: blue;
+    color: red;
 
-a .fa-instagram{
-    color: #cd486b;;
-    
-}
-
-a .fa-twitter{
-    color: #00aced;;
-    
+    font-size: 30px;
+    line-height: 19px;
+    }
+   
 }

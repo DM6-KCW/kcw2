@@ -2,23 +2,14 @@
 
 .designer-container{
     background-color: #fff;
-    color: #c6c6c6;
+    padding: 5%;
+    color: #C9954C;
     font-family: 'Bellefair', serif;
     max-height: 1910px;
     
 }
 .margin-down{
     margin-top: 10px;
-}
-
-.designer-img{
-    width: 500px;
-    height: 750px;
-    background-color: greenyellow;
-    background-repeat: no-repeat;
-    margin-left: 38%;
-    margin-top: 10%;
-    margin-bottom: 5%;
 }
 
 h1 {
@@ -30,4 +21,31 @@ p{
     line-height: 30px;
     margin-left: 30%;
     margin-right: 30%;
+}
+
+
+.designer-img{
+    width: 500px;
+    height: 750px;
+    background-color: greenyellow;
+    background-repeat: no-repeat;
+    margin-left: 38%;
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+
+.full-logo{
+    height: 700px; 
+    width: 300px; 
+}
+
+
+.img-logo{
+    /*background-size: auto;
+    background-image: url("/../images/full-logo.png");
+    background-repeat: no-repeat;*/
+    height: 120px;
+    width: 120px;
+    margin: 0 auto;
 }
