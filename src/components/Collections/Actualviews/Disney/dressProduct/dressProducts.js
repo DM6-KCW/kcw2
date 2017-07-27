@@ -2,6 +2,7 @@ import React, {PropTypes} from 'react';
 import {Link} from 'react-router-dom';
 
 export default function dressProduct( { id, image } ) {
+    console.log(image)
     return (
         <div>
             <div className="wrapper">
@@ -10,7 +11,6 @@ export default function dressProduct( { id, image } ) {
             </div>
             <div>
                 <button>
-                    onClick={}
                 </button>
             </div>
         </div>
