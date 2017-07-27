@@ -8,7 +8,7 @@ class Footer extends Component {
         return (
             
             <div className="container-fluid footer-container">
-                <div className="footer-margin">
+                <div id="first-media" className="footer-margin">
                     <div className="row">
                         <div className="col-md-3">
                             <div className="text-center inv-spacer padder-right">
@@ -25,7 +25,7 @@ class Footer extends Component {
                             <div className="row">
                                     
                                         <div className="col-md-3">
-                                            <div className="text-center spacer padder-right">FOLLOW</div>
+                                            <div className="text-center spacer padder-right">FOLLOW:</div>
                                         </div>
                                         
 
@@ -59,7 +59,39 @@ class Footer extends Component {
                             </div>
                         </div>
                     </div>
-                </div>    
+                </div>
+
+
+                {/*media*/}
+
+
+                 <div id="sec-media">
+                    <div className="row">
+                        <div className="col-md-2">
+                            <div>
+                                SUBSCRIBE TO OUR NEWSLETTER
+                            </div>
+                        </div>
+
+                        <div className="col-md-4">
+                            <ul className="footer-ul">
+                                <li className="footer-li">FOLLOW:</li>
+                                <li className="footer-li"><a href="https://www.facebook.com/MithikalraFashion/"><i className="fa fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+                                <li className="footer-li"><a href="https://twitter.com/mithikalra?lang=en"><i className="fa fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+                                <li className="footer-li"><a href="https://www.instagram.com/mithikalra/"><i className="fa fa-instagram fa-lg" aria-hidden="true"></i></a></li>
+                            </ul>
+                        </div>
+
+                        <div className="col-md-3">
+                            <div>
+                                WORK WITH US
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+
             </div>
 
         )
