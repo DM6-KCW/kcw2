@@ -9,7 +9,7 @@ const port = 4000;
 const config = require('./server/config');
 const contact = require('./server/contact');
 const nodemailer_config = require('./server/nodemailer_config')
-
+const masterRoutes = require('./server/masterRoutes');
 /*
 config file setup:
 
@@ -48,7 +48,8 @@ app.use(cors({
     credentials: true
 }));
 app.use(json());
-app.use('/', express.static(__dirname + '/public'));
+
+masterRoutes(app);
 
 
 app.post('/api/contact', contact.sendContactEmail);
