@@ -1,0 +1,16 @@
+#dDresses {
+    text-align: center;
+    color: #C9954C;
+}
+
+#dPage {
+    margin: 20px;
+}
+
+#dContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+}

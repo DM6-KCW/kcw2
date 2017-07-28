@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import DressProducts from './dressProduct/dressProducts';
 
-
+import './disney.css';
 
 
 export function DisneyCollection( { dressProduct } ) {
@@ -14,19 +14,23 @@ export function DisneyCollection( { dressProduct } ) {
 
 ));
         return (
-            <div>
+            <div id="dPage">
+                <header id="dDresses">
+                     <h1>Disney dresses</h1>
+                </header>
+                <hr/>
 
-               <h1>Disney dresses</h1>
+                 <div id="dContainer">
+                     { dresses }
+                 </div>
 
-                <div>
-                    {dresses}
-                </div>
+
             </div>
         )
 
 }
 
 function mapStateToProps( { dresses }) {
-    return { dressProduct: dresses}
+    return { dressProduct: dresses.dresses}
 }
 export default connect( mapStateToProps, { }) (DisneyCollection);
