@@ -22,11 +22,11 @@ class Collections extends Component {
                             <Collection1 />
                         </div>
                     </Link>
-                    <Link to="/collection3">
-                        <div className="collection3">
-                            <Collection3 />
-                        </div>
-                    </Link>
+                    {/*<Link to="/collection3">*/}
+                        {/*<div className="collection3">*/}
+                            {/*<Collection3 />*/}
+                        {/*</div>*/}
+                    {/*</Link>*/}
                     <Link to="/disney">
                         <div className="collection2">
                             <Collection2 />

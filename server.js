@@ -8,7 +8,7 @@ const massive = require('massive');
 const port = 4000;
 const config = require('./server/config');
 const contact = require('./server/contact');
-const nodemailer_config = require('./server/nodemailer_config')
+const nodemailer_config = require('./server/nodemailer_config');
 
 /*
 config file setup:
