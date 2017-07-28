@@ -42,6 +42,9 @@ app.use(cors({
 }));
 app.use(json());
 
+app.get('/api/disneyCollection', collections.getDisneyCollection);
+app.get('/api/moonlightCollection', collections.getMoonlightCollection); 
+
 masterRoutes(app);
 
 
