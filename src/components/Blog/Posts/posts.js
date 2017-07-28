@@ -4,22 +4,22 @@ import testimg from "../../../images/FB_IMG_1500476073426[124].jpg";
 
 
 
-export default function posts({id, image}) {
+export default function posts({id, image, title, date, text}) {
 
         return (
             <div>
                 <div id="post">
                     <div id="posttitle">
-                        Summery shimmer where they do stuff together in the sun with cats
+                        {title}
                     </div>
                     <div id="postdate">
-
+                        {date}
                     </div>
                     <div id="postimgbox">
                         <img id="postimg" src={image}/>
                     </div>
                     <div id="posttext">
-                        eyyy this is a good time heres to the future where we do more stuff like this eyyy lmao how do i turn this off?
+                        {text}
                     </div>
                 </div>
 
