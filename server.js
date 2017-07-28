@@ -8,7 +8,8 @@ const massive = require('massive');
 const port = 4000;
 const config = require('./server/config');
 const contact = require('./server/contact');
-const nodemailer_config = require('./server/nodemailer_config')
+const nodemailer_config = require('./server/nodemailer_config');
+const collections = require('./server/collections');
 
 /*
 config file setup:
@@ -52,6 +53,9 @@ app.use('/', express.static(__dirname + '/public'));
 
 
 app.post('/api/contact', contact.sendContactEmail);
+app.get('/api/disneyCollection', collections.getDisneyCollection);
+app.get('/api/moonlightCollection', collections.getMoonlightCollection); 
+
 
 app.get('/api/s3', function(req, res, next) {
     console.log(req.query);
