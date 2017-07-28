@@ -73,7 +73,7 @@ class Designer extends Component{
                 </div> 
 
             </div>
-            <Footer />
+        
         </div>
         )
     }

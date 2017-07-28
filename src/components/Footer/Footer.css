@@ -2,9 +2,8 @@
 
 
 .footer-container{
-    background-color: #0A0C26;
     color: #C9954C;
-    padding: 1%;
+    padding: .5%;
     font-style: normal;
     font-size: 10px;
     
@@ -52,7 +51,7 @@ a{
     display: none
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1100px) {
    
     #sec-media{
         display: none;
@@ -62,13 +61,10 @@ a{
         display: inline;
     }
 
-   a{
-    color: royalblue;
-    }
 }
 
 
-@media only screen and (min-width: 601px) and (max-width: 1500px) {
+@media only screen and (min-width: 1100px) and (max-width: 1500px) {
 
      #first-media{
         display: none;
@@ -81,7 +77,9 @@ a{
    
 
    .spacer{
-        border-style: none;
+        border-left-style: none;
+        border-left-width: thin;
+        border-color: #0A0C26;
         line-height: 200%; 
     }
 }
