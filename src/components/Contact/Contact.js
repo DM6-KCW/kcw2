@@ -12,11 +12,27 @@ class Contact extends Component {
 			email: "",
 			subject: "",
 			message: "",
-			sender_name: ""
+			sender_name: "",
+            imageUrl: ""
 		}
 		this.onSubmit = this.onSubmit.bind(this);
 		this.handleInputChange = this.handleInputChange.bind(this);
 	}
+
+    // componentDidMount(){
+    //     var file = {
+    //         name: "full-logo",
+    //         type: "png"
+    //     };
+    //     var self = this;
+    //     var imgUrl;
+    //     axios.get(`/api/s3?file_name=${file.name}&file_type=${file.type}`).then(function(response){
+    //         console.log(response.data.url);
+    //         imgUrl = response.data.url;
+    //         self.setState({'imageUrl': imgUrl})
+    //         return response.data.url;
+    //     });
+    // }
 	onSubmit() {
         axios.post(baseurl + '/api/contact', this.state).then(function(response) {
             console.log(response);
@@ -111,6 +127,7 @@ class Contact extends Component {
 						</div>
 					</div>
 				</div>
+
 
 			</div>
             </div>
