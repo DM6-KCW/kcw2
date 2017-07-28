@@ -128,6 +128,7 @@ class Contact extends Component {
 					</div>
 				</div>
 
+				<img src="https://s3.us-east-2.amazonaws.com/mithi-kalra/disney-1.JPG" alt=""/>
 
 			</div>
             </div>

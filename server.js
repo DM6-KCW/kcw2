@@ -3,12 +3,31 @@ const cors = require('cors');
 const {json} = require('body-parser');
 const nodemailer = require('nodemailer');
 const aws = require('aws-sdk');
+const massive = require('massive');
 
 const port = 4000;
 const config = require('./server/config');
 const contact = require('./server/contact');
 const nodemailer_config = require('./server/nodemailer_config')
 
+/*
+config file setup:
+
+var config = {};
+
+config.email = '';
+config.pass = '';
+
+config.bucketName = '';
+config.accessKeyId = '';
+config.secretAccessKey = '';
+config.region = '';
+config.signatureVersion = '';
+
+config.postgres = '';
+
+module.exports = config;
+*/
 
 // Configure the library with your API keys and info
 aws.config.update({
@@ -20,13 +39,17 @@ aws.config.update({
 
 const app = express();
 
+massive(config.postgres).then(function(db){
+    app.set('db', db);
+})
+
 app.use(cors({
     origin: 'http://localhost:3000',
     credentials: true
 }));
 app.use(json());
-
 app.use('/', express.static(__dirname + '/public'));
+
 
 app.post('/api/contact', contact.sendContactEmail);
 
