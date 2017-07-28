@@ -15,7 +15,7 @@ export function Blog( {blogs}) {
     console.log(blogs);
     const postage = blogs.map( (post, index) => (
         <div key={post.id}>
-            <Posts image={post.image} id={post.id} />
+            <Posts image={post.image} id={post.id} title={post.title} date={post.date} text={post.text} />
         </div>
     ))
 
@@ -55,7 +55,7 @@ export function Blog( {blogs}) {
                         </div>
                     </div>
                 </div>
-                <Footer />
+                
             </div>
         )
 
