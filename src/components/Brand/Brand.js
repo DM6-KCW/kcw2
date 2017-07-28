@@ -10,6 +10,7 @@ class Brand extends Component {
     render() {
         return (
             
+            <div>
             <div className="brand-container">
                     <div className="text-center">
                         <div className="m-d">
@@ -58,8 +59,12 @@ class Brand extends Component {
                             luxury shoppers around the globe</p>
                     </div>
 
-                    <Designer />
                     
+                    
+            </div>
+
+            <Designer />
+
             </div>
 
         )
