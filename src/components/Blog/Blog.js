@@ -11,13 +11,13 @@ import "./Blog.css";
 import fullLogo from '../../images/full-logo.png';
 
 
-export function Blog( { blogs } ) {
-    // console.log(blogs);
-    // const postage = blogs.map( (post, index) => {
-    //     <div key={post.id}>
-    //         <Posts image={post.image} id={post.id} />
-    //     </div>
-    // })
+export function Blog( {blogs}) {
+    console.log(blogs);
+    const postage = blogs.map( (post, index) => (
+        <div key={post.id}>
+            <Posts image={post.image} id={post.id} />
+        </div>
+    ))
 
         return (
             <div>
@@ -27,7 +27,7 @@ export function Blog( { blogs } ) {
                             Mithi says stuff to people
                         </div>
                         <div className="blogposts">
-                         <Posts/>
+                         {postage}
                         </div>
                     </div>
                     <div id="blogsidebar">
@@ -61,8 +61,8 @@ export function Blog( { blogs } ) {
 
 }
 
-function mapStateToProps( {post}){
-    return { posts: post}
+function mapStateToProps( {blogs}){
+    return { blogs: blogs.blogs}
 }
 
 
