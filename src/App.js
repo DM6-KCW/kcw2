@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Nav from './components/Nav/Nav'
 import router from  "./router";
+import Footer from "./components/Footer/Footer";
 
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
         <div className="App-header">
             { router }
         </div>
+          <Footer/>
       </div>
     );
   }
