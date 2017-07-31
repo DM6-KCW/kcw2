@@ -31,14 +31,17 @@ class Disney extends Component {
             <div>
                 <div className = "dressContainer">
                 {this.state.dresses.map(function(dresses) {
-                     return (
-                         <Link to="/">
-                            <div  className="dress" key={dresses.dress_id} >
-                                <img  className="dress" src={dresses.img_url} alt=""/>
+                         return (
+                            <div className="container">
+                                <img src={dresses.img_url} alt="Avatar" className="image" />
+                                <Link to={"/disney/"+dresses.dress_id}>
+                                        <div className="overlay">
+                                            <div className="text">Price Request</div>
+                                        </div>
+                                </Link>
                             </div>
-                        </Link>
-                      );
-                })}
+                          );
+                    })}
                 </div>
             </div>
         )
@@ -47,6 +50,16 @@ class Disney extends Component {
 
 export default Disney;
 
+// <Link to={'/disney/'+dresses.dress_id }>
+//     <div  className="dress container" key={dresses.dress_id} >
+//         <img  className="dress" src={dresses.img_url} alt=""/>
+//         <div className="overlay">
+//             <div className="text">Hello World</div>
+//         </div>
+//     </div>
+// </Link>
+
+// </div>
 
 //
 // export function DisneyCollection({dressProduct}) {
