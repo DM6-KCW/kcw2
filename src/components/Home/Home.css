@@ -1,4 +1,5 @@
 .home-container{
+	display: block;
 	color: black;
 	background-color: #FFFFFF;
 	width: 90%;
@@ -11,7 +12,7 @@
 
 /*Section 2*/
 .sec-2{
-	
+	display: block;
 }
 
 .sec-2-Collections{
@@ -23,7 +24,7 @@
 }
 
 #sec-2-bm-li{
-	margin-left: 300pxpx;
+	margin-left: 300px;
 }
 
 #sec-2-bm-li div{
@@ -58,7 +59,6 @@
 	color: #EE7B60;
 	margin-top: 20px;
 	clear: both;
-	
 }
 
 
@@ -75,14 +75,66 @@
 	background-color: transparent;
 	border-style: solid;
 	border-color: #EE7B60;
-	padding: 20px;
+	padding: 15px;
 
+}
+
+
+.sec-3-btn-padder{
+	padding: 30px;
 }
 
 /*Section 3*/
 
 
 /*Section 4*/
+
+.sec-4{
+	height: 900px;
+	padding: 5%;
+	clear: both;
+ 	display: block;
+}
+
+.sec-4-an-1{
+	background-color: transparent;
+	
+	height: 300px;
+	width: 300px;
+	
+}
+
+.sec-4-img{
+	background-color: #0A0C26;
+	height: 300px;
+	width: 300px;
+	z-index: 1;
+	position: relative;
+}
+
+.sec-4-color{
+	background-color:gold;
+	height: 300px;
+	width: 300px;
+	z-index: 3;
+	animation-name: sec-4-animate-1;
+    animation-duration: 4s;
+	position: relative;
+	/*right: 1250px;
+	top: 2300px;*/
+	left: 100px;
+	top: 200px;
+
+	
+}
+
+@keyframes sec-4-animate-1 {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+}
+
 /*Section 4*/
 
 
@@ -90,14 +142,15 @@
 /*Section 5*/
 
 /*Section 6*/
-
 	.sec-6{
 		padding: 5%;
+		height: 100vh;
 		color: blanchedalmond;
+		border-style: solid;
+		display: block;
 	}
 
 	.sec-6-header{
-
 		font-size: 20px;
 		font-weight: bold;
 		padding: 4%;
@@ -106,13 +159,24 @@
 	}
 
 	.sec-6-img{
-		width: 500px;
-		height: 500px;
+		width: 30%;
+		height: 35vh;
+		padding: 30px;
 		margin: 10px;
-		padding: 10px;
 		background-color: darkcyan;
-		/*remember to chanche to %*/
+		float: right;
+		
 	}
+
+
+	.sec-6-marg{
+	
+	}
+
+	.sec-6-img-cont{
+	
+	}
+
 /*Section 6*/
 
 /*Section 7*/
@@ -120,3 +184,69 @@
 
 /*Section 8*/
 /*Section 8*/
+
+
+
+/*Media query*/
+
+@media only screen and (min-width: 1000px) and (max-width: 1500px) {
+
+	 
+
+
+	.sec-6{
+		display: block;
+		overflow: scroll;
+		padding: 3%;
+		height: 100vh;
+		color: blanchedalmond;
+		border-style: solid;
+	}
+
+	.sec-6-img{
+		width: 60%;
+		height: 40vh;
+		padding: 30px;
+		margin: 10px;
+		background-color: darkcyan;
+	
+		
+	}
+
+	.sec-6-img-cont{
+		clear: both;
+		margin-right: 250px;
+	}
+     
+
+}
+
+@media only screen and (max-width: 990px) {
+   
+   
+	.sec-6{
+		display: block;
+		overflow: scroll;
+		padding: 3%;
+		height: 100vh;
+		color: blanchedalmond;
+		border-style: solid;
+	}
+	
+
+	.sec-6-img{
+		width: 70%;
+		height: 35vh;
+		padding: 30px;
+		margin: 10px;
+		background-color: darkcyan;
+	
+		
+	}
+
+	.sec-6-img-cont{
+		clear: both;
+		margin-right: 120px;
+	}
+
+}
