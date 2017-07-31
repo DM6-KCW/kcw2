@@ -14,3 +14,15 @@
 
 
 }
+
+.dressContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.dress{
+    margin-bottom: 20px;
+    width: 320px;
+}

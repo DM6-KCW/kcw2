@@ -1,1 +1,1 @@
-SELECT * FROM disney_collection; 
+SELECT * FROM disney_collection;
