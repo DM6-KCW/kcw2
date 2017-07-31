@@ -5,26 +5,27 @@ class Home extends Component {
 render() {
 return (
 <div className="container-fluid home-container">
-   <div className="sec-6">
+   <div className="sec-6 text-center">
       <div className="sec-6-header">
-         <div className="text-center">FOLLOW US ON IN SOCIAL MEDIA </div>
+         <div>FOLLOW US ON IN SOCIAL MEDIA </div>
       </div>
-      <div className="row">
-         <div className="col-md-4">
-            <div className="sec-6-img">
-            </div>
-         </div>
-         {/**/}
-         <div className="col-md-4">
-            <div className="sec-6-img">
-            </div>
-         </div>
-         {/**/}
-         <div className="col-md-4">
-            <div className="sec-6-img">
-            </div>
-         </div>
+
+      <div className="sec-6-marg">
+
+        <div className="sec-6-img-cont"> 
+            <div className="sec-6-img"></div>
+        </div>
+
+        <div className="sec-6-img-cont"> 
+            <div className="sec-6-img"></div>
+        </div>
+
+        <div className="sec-6-img-cont"> 
+            <div className="sec-6-img"></div>
+        </div>
+
       </div>
+
    </div>
    <div className="sec-2">
       <div className="Latest-Collections">
@@ -76,15 +77,29 @@ return (
             <p className="sec-3-p"> 
                sed quia non numquam eius modi tempora 
                incidunt ut labore et dolore magnam aliquam 
-               quaerat voluptatem. Ut enim ad minima veniam, 
-               quis
+               quaerat voluptatem. Ut.
             </p>
          </div>
-         <div className="text-center">
+         <div className="text-center sec-3-btn-padder">
             <button className="sec-3-btn">FIND OUT MORE</button>
          </div>
       </div>
    </div>
+
+
+   <div className="sec-4">
+
+       <div className="sec-4-an-1">
+            <div className="sec-4-color"></div>
+            <div className="sec-4-img"></div>
+       </div>
+
+
+   </div>
+
+
+
+
 </div>
 )
 }
