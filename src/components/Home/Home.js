@@ -1,27 +1,92 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-
-
 import "./Home.css";
-
 class Home extends Component {
-    render() {
-        return (
-            <div className="Home">
-                <div className="container-fluid home-intro">
-                    <div className="home-img-intro">
-                        <img className="home-intro-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6c/No_image_3x4.svg/1024px-No_image_3x4.svg.png"/>
-                        <div className="home-intro-word">
-                            <h1>MITHI KALRA</h1>
-                        </div>
-                    </div>
-
-                    
-
-                </div>
+render() {
+return (
+<div className="container-fluid home-container">
+   <div className="sec-6">
+      <div className="sec-6-header">
+         <div className="text-center">FOLLOW US ON IN SOCIAL MEDIA </div>
+      </div>
+      <div className="row">
+         <div className="col-md-4">
+            <div className="sec-6-img">
             </div>
-        )
-    }
+         </div>
+         {/**/}
+         <div className="col-md-4">
+            <div className="sec-6-img">
+            </div>
+         </div>
+         {/**/}
+         <div className="col-md-4">
+            <div className="sec-6-img">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div className="sec-2">
+      <div className="Latest-Collections">
+         <div className="sec-2-Collections">
+            <h1>Latest Collections</h1>
+         </div>
+         <div>
+            <p>
+               Lorem ipsum dolor sit amet, consetetur 
+               sadipscing elitr, sed diam nonumy eirmod 
+               tempor invidunt ut labore et dolore magna 
+               aliquyam erat, sed diam voluptua. At vero eos 
+               et accusam et justo duo dolores et ea rebum. 
+               Stet clita kasd gubergren, no sea takimata sanctus 
+               est Lorem ipsum dolor sit amet. Lorem ipsum dolor 
+               sit amet, consetetur sadipscing elitr, sed diam 
+               nonumy eirmod tempor invidunt ut labore et dolore 
+               magna aliquyam erat, sed diam voluptua. At vero eos et 
+               accusam et justo duo dolores et ea rebum. Stet clita 
+               kasd gubergren, no sea takimata sanctus est Lorem ipsum 
+               dolor sit amet.
+            </p>
+         </div>
+         <div className="sec-2-bm">
+            <h3>OUR BRANDS & MARKS</h3>
+         </div>
+         <div className="sec-2-bm-img">
+            <div id="sec-2-bm-li" className="row">
+               <div className="col-md-3">
+                  <img src="http://2c2f06a14a9ade4267e6-fb8aac3b3bf42afe824f73b606f0aa4c.r92.cf1.rackcdn.com/tenantlogos/26271.png"/>
+               </div>
+               <div className="col-md-3">
+                  <img src="http://creator.design/_logos/52/logo-52_06.png"/>
+               </div>
+               <div className="col-md-3">
+                  <img src="http://www.conceptfashion.be/Uploads/Images/Brands/andylucy/Logo/andylucy_black.png"/>
+               </div>
+               <div className="col-md-3">
+                  <img src="http://www.conceptfashion.be/Uploads/Images/Brands/andylucy/Logo/andylucy_black.png"/>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <div className="sec-3">
+      <div>
+         <div className="text-center"><h1>Lorem Ipsum</h1></div>
+         <div>
+            <p className="sec-3-p"> 
+               sed quia non numquam eius modi tempora 
+               incidunt ut labore et dolore magnam aliquam 
+               quaerat voluptatem. Ut enim ad minima veniam, 
+               quis
+            </p>
+         </div>
+         <div className="text-center">
+            <button className="sec-3-btn">FIND OUT MORE</button>
+         </div>
+      </div>
+   </div>
+</div>
+)
 }
-
+}
 export default Home;

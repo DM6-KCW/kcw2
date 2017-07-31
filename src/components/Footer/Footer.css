@@ -2,10 +2,12 @@
 
 
 .footer-container{
+    background-color: #0A0C26;
     color: #C9954C;
-    padding: .5%;
     font-style: normal;
     font-size: 10px;
+    padding-bottom: 5px;
+    padding-top: 5px;
     
 }
 
@@ -15,8 +17,7 @@
 }
 
 .footer-margin-v2{
-    /*margin-left: 15%;
-    margin-right: 15%;*/
+    margin-left: 15%;
 }
 
 .spacer{
@@ -72,6 +73,7 @@ a{
 
     #sec-media{
         display: block;
+        border-left-style: none !important;
         margin-left: 30%;
     }
    
@@ -82,4 +84,24 @@ a{
         border-color: #0A0C26;
         line-height: 200%; 
     }
+
+}
+
+@media only screen and (max-width: 990px) {
+   
+    #sec-media{
+        display: none;
+    }
+
+    #first-media{
+        display: inline;
+    }
+
+
+    .spacer{
+        border-style: none;
+        border-color: #0A0C26;
+        
+    }
+
 }
