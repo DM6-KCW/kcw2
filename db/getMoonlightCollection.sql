@@ -1,1 +1,1 @@
-SELECT * FROM moonlight_collection;
+SELECT * FROM dresses where collection_id = 2;
