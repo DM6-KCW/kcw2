@@ -6,6 +6,7 @@ const massive = require('massive');
 
 const port = 4000;
 const config = require('./server/config');
+const collections = require('./server/collections')
 
 const masterRoutes = require('./server/masterRoutes');
 /*
@@ -43,7 +44,7 @@ app.use(cors({
 app.use(json());
 
 app.get('/api/disneyCollection', collections.getDisneyCollection);
-app.get('/api/moonlightCollection', collections.getMoonlightCollection); 
+app.get('/api/moonlightCollection', collections.getMoonlightCollection);
 
 masterRoutes(app);
 

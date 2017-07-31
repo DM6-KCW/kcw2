@@ -1,1 +1,1 @@
-SELECT * FROM moonlight_collection; 
+SELECT * FROM moonlight_collection;
