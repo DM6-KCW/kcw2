@@ -15,7 +15,7 @@ class Collection2 extends Component {
                 </div>
                 <div className="collectionstack">
                     <div className="disneytop">
-                        <div className="disneytopleft"></div>
+                        <div className="disneytopleft">MITHI KALRA</div>
                     </div>
                     <div className="disneymid">
                         <div className="disneymidupleft"></div>
