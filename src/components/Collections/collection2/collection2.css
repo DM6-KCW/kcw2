@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "disney";
+    src: url('./NewWaltDisneyUI.ttf');
+}
+
 #disney-text{
     text-align: center;
 }
@@ -5,14 +10,27 @@
     text-align: center;
 }
 
+
+
 .disneytop{
     background-color: blue;
     height: 175px;
+    background-image: url('http://www.holifestival.org/images/holi-image-4-big.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 .disneytopleft{
-    background-color: red;
+    background-color: blue;
     height: 75px;
     width: 160px;
+    font-family: disney;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
 }
 
 
@@ -41,12 +59,18 @@
     position: relative;
     top: -350px;
     left: 125px;
+    background-position: center;
+    background-size: cover;
+    background-image: url('https://lumiere-a.akamaihd.net/v1/images/character_disneyprincess_mulan_693b57cb.jpeg?region=0,0,300,300');
 }
 .disneymiddown{
     height: 150px;
     background-color: green;
     position: relative;
     top: -100px;
+    background-position: center;
+    background-size: contain;
+    background-image: url('http://personalitygrowth.com/wp-content/uploads/2015/09/disneyprincesses.png?2aa4f6');
 }
 .disneybottom4square{
     background-color: yellow;
@@ -74,6 +98,9 @@
     width: 185px;
     position: relative;
     top: -105px;
+    background-position: center;
+    background-size: cover;
+    background-image: url('https://s-media-cache-ak0.pinimg.com/736x/45/d9/cb/45d9cbaf29ebbc1412d296264b4bf056--disney-princess-sketches-disney-princess-art.jpg');
 }
 .disney4squarebottomright{
     background-color: black;

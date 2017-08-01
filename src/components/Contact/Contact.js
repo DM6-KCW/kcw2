@@ -108,9 +108,9 @@ class Contact extends Component {
 				</button>
 				<hr/>
 
-				<h4>Other Way</h4>
-				<div>Email</div>
-				<div>Phone</div>
+				<h4>Or call us at</h4>
+
+				<div id="phonenumber">1-555-555-5555</div>
 
 				<div className="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 					<div className="modal-dialog modal-sm" role="document">

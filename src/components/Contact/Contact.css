@@ -1,6 +1,6 @@
 .contact-container{
-	padding-top: 20px; 
-	padding-bottom: calc(100vh - 679px)
+	padding-top: 20px;
+	padding-bottom: calc(100vh - 679px);
 }
 
 .contact-form{
@@ -10,11 +10,13 @@
 	background-color: white;
 	margin: 20px auto;
 	padding: 20px;
+    border-radius: 5px;
 }
 
 .social-buttons{
 	display: flex;
 	text-align: center;
+    justify-content:space-around;
 }
 
 #contact-form-message{
@@ -25,4 +27,7 @@
 #we-will-contact{
 	margin: 0;
 	padding: 0;
+}
+#phonenumber{
+    color: #C9954C;
 }
