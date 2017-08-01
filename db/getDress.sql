@@ -1,1 +1,1 @@
-select * from dresses where dress_id = $1;
+SELECT * FROM dresses where dress_id = $1;
