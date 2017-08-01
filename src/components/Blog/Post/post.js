@@ -9,7 +9,7 @@ import "../Blog.css";
 import fullLogo from '../../../images/full-logo.png';
 
 
-class Posts extends Component{
+class Post extends Component{
 
     constructor(){
         super();
@@ -21,7 +21,7 @@ class Posts extends Component{
 
     componentDidMount(){
         var self = this;
-        axios.get('/api/allblogs').then(function(response){
+        axios.get('/api/blogs/' + this.props.match.params.blog_id).then(function(response){
             self.setState({'postage': response.data})
         })
     }
@@ -34,26 +34,37 @@ class Posts extends Component{
                     <div id="postcontainer">
                         <div id="blogtitle">
                             Mithi says stuff to people
-                        </div>
-                        <div className="blogposts">
-                         {this.state.postage.map(function(postage){
-                             return (
-                                 <div>
-                                 <Link to={"/post/"+postage.blog_id}>
-                                     <div id="post">
-                                         <div id="posttitle">
-                                             {postage.title}
-                                         </div>
-                                         <div id="postdate">
-                                             {postage.posttime}
-                                         </div>
-                                     </div>
-                                     </Link>
-                                 </div>
-                             )
-                         })}
-                        </div>
+                            </div>
+                            <div className="blogposts">
+                            {this.state.postage.map(function(postage){
+                                return (
+                                    <div>
+                                        <div id="post">
+                                            <div id="posttitle">
+                                                {postage.title}
+                                            </div>
+                                            <div id="postdate">
+                                                {postage.posttime}
+                                            </div>
+                                            <div id="postimgbox">
+                                                <img id="postimg" src={postage.img_url}/>
+                                            </div>
+                                            <div id="posttext">
+                                                {postage.posttext}
+                                            </div>
+                                    </div>
+                             </div>
+                         )
+                     })}
                     </div>
+                    <div className="blognavigation">
+                        <Link to="older">
+                            <button>
+                                other posts
+                            </button>
+                        </Link>
+                    </div>
+                </div>
 
 
 
@@ -92,4 +103,4 @@ class Posts extends Component{
 
 }
 
-export default Posts;
+export default Post;
