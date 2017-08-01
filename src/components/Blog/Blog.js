@@ -61,7 +61,7 @@ class Blog extends Component{
                         </div>
                         <div className="blognavigation">
                             <Link to="older">
-                                <button>
+                                <button className="btn btn-default">
                                     older posts...
                                 </button>
                             </Link>

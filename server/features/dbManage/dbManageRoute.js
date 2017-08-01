@@ -23,4 +23,18 @@ module.exports = function(app) {
     })
 
 
+
+    //endpoint for adding blogs
+
+    // app.post('/api/addblog', function(req, res){
+    //     const db = app.get('db');
+    //     db.addBlog([id, title, moment().format('MMMM/DD/YY h:mm:ss A'), imgurl, text])
+    //     .then(function(response){
+    //         // db.addBlog([2, "Hello!", moment().format('MMMM/DD/YY h:mm:ss A'), "https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/2014/02/image.png", "Heres some neat birds"])
+    //
+    //         res.status(200).json(response);
+    //     })
+    // })
+
+
 }
