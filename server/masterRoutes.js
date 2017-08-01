@@ -3,10 +3,13 @@
 const nodemailerRoute = require('./features/nodemailer/nodemailerRoute');
 const dbManageRoute = require('./features/dbManage/dbManageRoute');
 const s3Route = require('./features/s3/s3');
+const adminRoute = require('./features/admin/adminRoute');
+
 module.exports = function(app){
 //export the routes here
 //exampleRoute(app);
 nodemailerRoute(app);
 dbManageRoute(app);
 s3Route(app);
-}
+adminRoute(app);
+};

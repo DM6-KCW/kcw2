@@ -1,18 +1,55 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
+import axios from 'axios';
+import {withRouter} from 'react-router-dom';
+
 
 import "./Admin.css";
 
-class Brand extends Component {
+class Admin extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            loggedIn: undefined,
+        };
+
+        this.handleSubmit = this.handleSubmit.bind(this);
+    }
+
+    handleSubmit(e) {
+        e.preventDefault();
+
+        axios.get('/api/login?username=' + this.user.value + '&password=' + this.pass.value )
+
+            .then( response => {
+
+            this.setState({loggedIn: response.data.answer},
+
+                () => {
+                console.log('checked' , this.state.loggedIn);
+
+                    if (this.state.loggedIn) {
+                        this.props.history.push('/media')
+                    }
+                    else {
+                        alert('wrong username or password idk either');
+                        this.props.history.push('/admin');
+                    }
+            });
+        })
+
+
+    }
+
     render() {
         return (
             
             <div className="admin-container">
                     <div className="login-page">
                         <div className="login-form">
-                            <form className="login-login-form">
-                                <input type="text" placeholder="username"/>
-                                <input type="password" placeholder="password"/>
+                            <form className="login-login-form" onSubmit={this.handleSubmit}>
+
+                                <input type="text" ref={(user) => this.user = user}/>
+                                <input type="password" ref={(pass) => this.pass = pass}/>
                                 <button>login</button>
                             </form>
                         </div>
@@ -23,4 +60,4 @@ class Brand extends Component {
     }
 }
 
-export default Brand;
+export default withRouter(Admin);

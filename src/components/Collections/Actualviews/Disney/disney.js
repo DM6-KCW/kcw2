@@ -34,9 +34,9 @@ class Disney extends Component {
                          return (
                             <div className="container">
                                 <img src={dresses.img_url} alt="Avatar" className="image" />
-                                <Link to={"/disney/"+dresses.dress_id}>
+                                <Link to={ "/disney/" + dresses.dress_id }>
                                         <div className="overlay">
-                                            <div className="text">Price Request</div>
+                                            <div className="text"> Price Request </div>
                                         </div>
                                 </Link>
                             </div>
