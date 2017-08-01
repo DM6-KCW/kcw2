@@ -11,6 +11,8 @@ class PriceRequest extends Component {
 		this.state = {
 			dress: ""
 		}
+		this.onSubmit = this.onSubmit.bind(this);
+		this.handleInputChange = this.handleInputChange.bind(this);
 	}
 
 	componentWillMount(){
@@ -25,6 +27,16 @@ class PriceRequest extends Component {
 		 });
 	}
 
+	onSubmit() {
+		console.log(this.state);
+	}
+	handleInputChange(event) {
+		const target = event.target;
+		const value = target.value;
+		const name = target.name;
+		this.setState({[name]: value});
+	}
+
 	render(){
 		return(
 			<div className="contact-form col-md-6">
@@ -32,9 +44,9 @@ class PriceRequest extends Component {
 				<h1 className="chosen-header">Chosen Item: </h1>
 				<img className="chosen-dress" src={this.state.dress} alt=""/>
 
-				<h2>Step 1: What's your size</h2>
-					<h3>Choose from Standard Sizes: </h3>
-					<select className="form-control">
+				<h2 className="order-header">Step 1: What's your size</h2>
+					<h3><b>Choose from Standard Sizes:</b> </h3>
+					<select name="standardSize" value={this.state.standardSize} onChange={this.handleInputChange} className="form-control">
 						<optgroup label="Select Size...">
 						  <option value="us0uk4">US 0 / UK 4</option>
 						  <option value="us2uk6">US 2 / UK 6</option>
@@ -47,30 +59,59 @@ class PriceRequest extends Component {
 						  <option value="us16uk20">US 16 / UK 20</option>
 				  		</optgroup>
 					</select>
-					<h3><i>or</i></h3>
-					<h3>Create a Custom Size: </h3>
-					<br/><br/>
+					<h3><i><b>or</b></i></h3>
+					<h3><b>Create a Custom Size:</b> </h3>
+					<br/>
 					<p id="create-custom-size">Go with a custom size and give us your body measurements in inches:</p>
 					<br/>
-
 					<div id="custom-size-container" className="row">
-							<div className="col-md-2 col-md-offset-1 number-input-box"><label htmlFor="bust">Bust: </label> <input name="bust" type="number" min="20" max="100" /></div>
-							<div className="col-md-2 col-md-offset-1 number-input-box"><label htmlFor="chest">Chest: </label> <input name="chest" type="number" min="20" max="100" /></div>
-							<div className="col-md-2 col-md-offset-1 number-input-box"><label htmlFor="hip">Hip: </label> <input name="hip" type="number" min="20" max="100" /></div>
-							<div className="col-md-2 col-md-offset-1 number-input-box"><label htmlFor="shoulder">Shoulder: </label> <input name="shoulder" type="number" min="20" max="100" /></div>
-							<div className="col-md-2 col-md-offset-1 number-input-box"><label htmlFor="underbust">Under Bust: </label> <input name="underbust" type="number" min="20" max="100" /></div>
-							<div className="col-md-2 col-md-offset-1 number-input-box"><label htmlFor="upperarm">Upper Arm: </label> <input name="upperarm" type="number" min="20" max="100" /></div>
-							<div className="col-md-2 col-md-offset-1 number-input-box"><label htmlFor="waist">Waist: </label> <input name="waist" type="number" min="20" max="100" /></div>
-							<div className="col-md-2 col-md-offset-1 number-input-box"><label htmlFor="shouldertobust">High Point Shoulder to Bust Point: </label> <input name="shouldertobust" type="number" min="20" max="100" /></div>
-							<div className="col-md-2 col-md-offset-1 number-input-box"><label htmlFor="shouldertowaist">High Point Shoulder to Waist: </label> <input name="shouldertowaist" type="number" min="20" max="100" /></div>
-							<div className="col-md-2 col-md-offset-1 number-input-box"><label htmlFor="shouldertoknee">High Point Shoulder to Knee: </label> <input name="shouldertoknee" type="number" min="20" max="100" /></div>
-							<div className="col-md-2 col-md-offset-1 number-input-box"><label htmlFor="shouldertoground">High Point Shoulder to Ground: </label> <input name="shouldertoground" type="number" min="20" max="100" /></div>
-
-
+							<div className="col-xs-12 col-lg-6 number-input-box">
+								<label htmlFor="bust">Bust: </label>
+								<input value={this.state.bust} onChange={this.handleInputChange} name="bust" type="number" min="20" max="100" />
+							</div>
+							<div className="col-xs-12 col-lg-6 number-input-box">
+								<label htmlFor="chest">Chest: </label>
+								<input value={this.state.chest} onChange={this.handleInputChange} name="chest" type="number" min="20" max="100" />
+							</div>
+							<div className="col-xs-12 col-lg-6 number-input-box">
+								<label htmlFor="hip">Hip: </label>
+								<input value={this.state.hip} onChange={this.handleInputChange} name="hip" type="number" min="20" max="100" />
+							</div>
+							<div className="col-xs-12 col-lg-6 number-input-box">
+								<label htmlFor="shoulder">Shoulder: </label>
+								<input value={this.state.shoulder} onChange={this.handleInputChange} name="shoulder" type="number" min="20" max="100" />
+							</div>
+							<div className="col-xs-12 col-lg-6 number-input-box">
+								<label htmlFor="underbust">Under Bust: </label>
+								<input value={this.state.underbust} onChange={this.handleInputChange} name="underbust" type="number" min="20" max="100" />
+							</div>
+							<div className="col-xs-12 col-lg-6 number-input-box">
+								<label htmlFor="upperarm">Upper Arm: </label>
+								<input value={this.state.upperarm} onChange={this.handleInputChange} name="upperarm" type="number" min="20" max="100" />
+							</div>
+							<div className="col-xs-12 col-lg-6 number-input-box">
+								<label htmlFor="waist">Waist: </label>
+								<input value={this.state.waist} onChange={this.handleInputChange} name="waist" type="number" min="20" max="100" />
+							</div>
+							<div className="col-xs-12 col-lg-6 number-input-box">
+								<label htmlFor="shouldertobust">High Point Shoulder to Bust Point: </label>
+								<input value={this.state.shouldertobust} onChange={this.handleInputChange} name="shouldertobust" type="number" min="20" max="100" />
+							</div>
+							<div className="col-xs-12 col-lg-6 number-input-box">
+								<label htmlFor="shouldertowaist">High Point Shoulder to Waist: </label>
+								<input value={this.state.shouldertowaist} onChange={this.handleInputChange} name="shouldertowaist" type="number" min="20" max="100" />
+							</div>
+							<div className="col-xs-12 col-lg-6 number-input-box">
+								<label htmlFor="shouldertoknee">High Point Shoulder to Knee: </label>
+								<input value={this.state.shouldertoknee} onChange={this.handleInputChange} name="shouldertoknee" type="number" min="20" max="100" />
+							</div>
+							<div className="col-xs-12 col-lg-6 number-input-box">
+								<label htmlFor="shouldertoground">High Point Shoulder to Ground: </label>
+								<input value={this.state.shouldertoground} onChange={this.handleInputChange} name="shouldertoground" type="number" min="20" max="100" />
+							</div>
 					</div>
-
-				<h2>Step 2: What's your height</h2>
-					<select className="form-control">
+				<h2 className="order-header">Step 2: What's your height</h2>
+					<select name="height" value={this.state.height} onChange={this.handleInputChange} className="form-control">
 						<optgroup label="Select Height...">
 						  <option value="46">4'6"</option>
 						  <option value="47">4'7"</option>
@@ -104,6 +145,40 @@ class PriceRequest extends Component {
 						  <option value="611">6'11"</option>
 						</optgroup>
 					</select>
+
+				<h2 className="order-header">Step 3: Contact Info</h2>
+				<div id="country-input" className="bfh-selectbox bfh-countries"  data-flags="true" data-country="US" ></div>
+				<div className="form-group">
+					<input
+						type="text"
+						className="form-control"
+						placeholder="Name"/>
+				</div>
+				<div className="form-group">
+					<input
+						type="email"
+						className="form-control"
+						placeholder="Email"/>
+				</div>
+				<div className="form-group">
+					<input
+						type="tel"
+						className="form-control"
+						placeholder="Phone No."/>
+				</div>
+				<div className="form-group">
+					<input
+						type="number"
+						className="form-control"
+						placeholder="Age"/>
+				</div>
+
+				<button
+					type="button"
+					className="btn btn-primary"
+					onClick={this.onSubmit}>
+					Submit Order
+				</button>
 
 			</div>
 		)
