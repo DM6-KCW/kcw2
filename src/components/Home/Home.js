@@ -4,32 +4,37 @@ import "./Home.css";
 class Home extends Component {
 render() {
 return (
-<div className="container-fluid home-container">
-   <div className="sec-6 text-center">
-      <div className="sec-6-header">
-         <div>FOLLOW US ON IN SOCIAL MEDIA </div>
-      </div>
-      <div className="sec-6-marg">
-         <div className="sec-6-img-cont">
-            <div className="sec-6-img"></div>
-         </div>
-         <div className="sec-6-img-cont">
-            <div className="sec-6-img"></div>
-         </div>
-         <div className="sec-6-img-cont">
-            <div className="sec-6-img"></div>
-         </div>
-      </div>
-   </div>
-   <div className="sec-2">
-      <div className="Latest-Collections">
+<div className="home-container">
+   
 
-        <div className="sec-2-sudo-sec4">
+   <div className="sec-5">
+       <div className="sec-5-back-img">
+            <div className="sec-5-word-cont text-center">           
+                <div className="sec-5-word">
+                    FASHION <br />
+                    BEAUTY  <br />
+                    LIFESTYLE
+                </div>
+            </div>
+       </div>
+   </div>
+
+<div className="container-fluid">
+
+      
+   
+
+
+      <div className="sec-2">
+
+      <div className="sec-2-sudo-sec4">
             <div className="sec-4-an-1">
                 <div className="sec-4-color"></div>
                 <div className="sec-4-img"></div>
             </div>
         </div>
+
+      <div className="Latest-Collections">
 
          <div className="sec-2-Collections">
             <h1>Latest Collections</h1>
@@ -72,32 +77,19 @@ return (
          </div>
       </div>
    </div>
-
-
-
-   <div className="sec-5">
-       <div className="sec-5-back-img">
-            <div className="sec-5-word-cont text-center">           
-                <div className="sec-5-word">
-                    FASHION <br />
-                    BEAUTY  <br />
-                    LIFESTYLE
-                </div>
-            </div>
-       </div>
-   </div>
+   
 
    
    <div className="sec-3">
       <div>
          <div className="text-center">
-            <h1>Lorem Ipsum</h1>
+            <h1>MEDIA</h1>
          </div>
          <div>
             <p className="sec-3-p"> 
-               sed quia non numquam eius modi tempora 
+               "sed quia non numquam eius modi tempora 
                incidunt ut labore et dolore magnam aliquam 
-               quaerat voluptatem. Ut.
+               quaerat voluptatem. Ut."
             </p>
          </div>
          <div className="text-center sec-3-btn-padder">
@@ -107,32 +99,64 @@ return (
    </div>
 
 
+   <div className="sec-6 text-center">
+      <div className="sec-6-header">
+         <div>FOLLOW US ON IN SOCIAL MEDIA </div>
+      </div>
+      <div className="sec-6-marg">
+         <div className="sec-6-img-cont">
+            <div className="sec-6-img"></div>
+         </div>
+         <div className="sec-6-img-cont">
+            <div className="sec-6-img"></div>
+         </div>
+         <div className="sec-6-img-cont">
+            <div className="sec-6-img"></div>
+         </div>
+      </div>
+   </div>
+
+
    <div className="sec-4">
       <div className="col-md-3">
-         <div className="sec-4-an-1" id="sec-4-down-top">
-            <div className="sec-4-color"></div>
-            <div className="sec-4-img"></div>
+
+         <div className="sec-4-an-1">
+            <div className="sec-4-color sec-4-mid-an"></div>
+            <div className="sec-4-img" id="sec-4-img-1"></div>
+         </div>
+
+         <div className="sec-4-an-1" id="sec-4-down">
+            <div className="sec-4-color sec-4-slow-an" id="sec-4-img-2"></div>
+            <div className="sec-4-img sec-4-slow-an"></div>
+         </div>
+
+      </div>
+
+      <div className="col-md-3">
+         <div className="sec-4-an-1" id="sec-4-more-down">
+            <div className="sec-4-color sec-4-mid-an" id="sec-4-img-3"></div>
+            <div className="sec-4-img sec-4-mid-an"></div>
+         </div>
+      </div>
+      
+      <div className="col-md-3">
+         
+         <div className="sec-4-an-1">
+            <div className="sec-4-color-v2 sec-4-fast-an"></div>
+            <div className="sec-4-img-v2 sec-4-fast-an"></div>
          </div>
       </div>
       <div className="col-md-3">
-         <div className="sec-4-an-1" id="sec-4-btm">
-            <div className="sec-4-color"></div>
-            <div className="sec-4-img"></div>
-         </div>
-      </div>
-      <div className="col-md-3">
-         <div className="sec-4-an-1" id="sec-4-md">
-            <div className="sec-4-color"></div>
-            <div className="sec-4-img"></div>
-         </div>
-      </div>
-      <div className="col-md-3">
-         <div className="sec-4-text-dent">
-            <div>eos et accusamus et iusto odio dignissimos 
-                ducimus qui blanditiis praesentium voluptatum 
-                deleniti atque corrupti quos dolores et quas 
+         <div className="sec-8-word-fade">
+            <div className="sec-8-word">
+                <p> accusantium doloremque laudantium, 
+                    totam rem aperiam, <br />eaque ipsa quae 
+                    ab illo inventore veritatis et quasi 
+                    explicabo. <br />Nemo enim ipsam voluptatem 
+                    aut fugit
+                </p>
             </div>
-         </div>
+        </div>
       </div>
    </div>
 
@@ -179,7 +203,7 @@ return (
    </div>
 
    
-
+</div>
 
 </div>
 )
