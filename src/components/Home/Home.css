@@ -12,7 +12,13 @@
 
 /*Section 2*/
 .sec-2{
-	display: block;
+	height: 80vh;
+}
+
+.sec-2-sudo-sec4{
+	float: left;
+	margin-right: 30px;
+
 }
 
 .sec-2-Collections{
@@ -56,6 +62,7 @@
 .sec-3{
 	
 	background-color: #910025;
+	height: 50vh;
 	color: #EE7B60;
 	margin-top: 20px;
 	clear: both;
@@ -90,11 +97,21 @@
 /*Section 4*/
 
 .sec-4{
-	height: 900px;
+	height: 3000px;
 	padding: 5%;
+	background-color: #FFFFFF;
 	clear: both;
  	display: block;
 }
+
+.sec-4-btm{
+	margin-top: 10px;
+}
+
+.sec-4-md{}
+
+.sec-4-top{}
+
 
 .sec-4-an-1{
 	background-color: transparent;
@@ -106,6 +123,8 @@
 
 .sec-4-img{
 	background-color: #0A0C26;
+	animation-name: sec-4-animate-1;
+    animation-duration: .5s;
 	height: 300px;
 	width: 300px;
 	z-index: 1;
@@ -118,27 +137,127 @@
 	width: 300px;
 	z-index: 3;
 	animation-name: sec-4-animate-1;
-    animation-duration: 4s;
+    animation-duration: 1s;
 	position: relative;
 	/*right: 1250px;
 	top: 2300px;*/
 	left: 100px;
 	top: 200px;
 
+}
+
+
+.sec-4-color-2{
+	background-color:gold;
+	height: 300px;
+	width: 300px;
+	z-index: 3;
+	animation-name: sec-4-animate-2;
+    animation-duration: 1s;
+	animation-delay: 2s;
+	position: relative;
+	/*right: 1250px;
+	top: 2300px;*/
+	left: 100px;
+	top: 200px;
+
+}
+
+.sec-4-color-1{
+	
+	animation-name: sec-4-animate-1;
+    animation-duration: 1s;
+	animation-delay: 2.5s;
+	
+
+}
+
+.sec-4-color-2{
+	
+	animation-name: sec-4-animate-1;
+    animation-duration: 1s;
+	animation-delay: 2s;
+	
+
+}
+
+.sec-4-color-3{
+	
+	animation-name: sec-4-animate-1;
+    animation-duration: 1s;
+	animation-delay: 1s;
+	
+
+}
+
+
+.sec-4-text-dent{
+	font-size: 30px;
+	font-style: normal;
+	line-height: 36px;
+	z-index: 4;
+	background-attachment: fixed;
 	
 }
 
+ .sec-4-down{} 
+
 @keyframes sec-4-animate-1 {
-    0%   {background-color: red;}
-    25%  {background-color: yellow;}
-    50%  {background-color: blue;}
-    100% {background-color: green;}
+    
+	from {width: 0px;}
+    to {width: 300px}
+
 }
 
 /*Section 4*/
 
 
 /*Section 5*/
+
+.sec-5{
+		font-size: 450%;
+		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+		height: 70vh;
+		color: #C9954C;
+		display: block;
+		clear: both;
+	}
+
+.sec-5-back-img{
+	background-image: url('https://mygeneral.org/wp-content/uploads/2017/06/fashion13-1.jpg');
+	/*background-color: #CA3517;*/
+	background-repeat: no-repeat;
+	background-position: right 20% top 20%;
+	background-attachment: fixed;
+	z-index: 1;
+	height: 100%;
+
+
+	
+}
+
+
+.sec-5-word-cont{
+	position: relative;
+	top: 10%;
+	z-index: 2;
+	background-attachment: fixed;
+	
+}
+
+
+.sec-5-word{
+	top: 22px;
+	z-index: 3;
+	position: relative;
+	margin-top: 40px;
+	background-attachment: fixed;
+}
+
+
+
+
+
 /*Section 5*/
 
 /*Section 6*/
@@ -180,9 +299,111 @@
 /*Section 6*/
 
 /*Section 7*/
+.sec-7{
+	height: 70vh;
+	display: block;
+	
+	
+}
+.sec-7-img{
+	background-image: url('http://www.thebluegrassspecial.com/archive/2010/november10/imagesnov10/leo-tolstoy1.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed; 
+	background-position: right 500px bottom 80%;
+	max-width: 800px;
+	height: 25vh;
+	position: relative;  
+	padding-right: 100px;
+	padding-bottom: 50px;  
+	animation-name: sec-7-animate-1;
+    animation-duration: 1s;
+}
+
+
+.sec-7-word{
+	position: relative;
+	margin: 5%;
+}
+
+.sec-7-bg-word{
+
+	background-color: black;
+	font-size: 30px;
+	font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+	page-break-after: 10%;
+	animation-name: sec-7-word-animate-1;
+    animation-duration: 2s;
+	width: 250px;
+	height: 25vh;
+
+}
+
+@keyframes sec-7-word-animate-1 {
+    
+	from {width: 0px;}
+    to {width: 250px}
+
+}
+
+
 /*Section 7*/
 
 /*Section 8*/
+
+
+.sec-8{
+		font-family: Helvetica, sans-serif;
+		display: block;
+		clear: both;
+		height: 80vh;
+		color: black;
+		background-color: transparent;
+	}
+
+
+.sec-8-word-fade{
+	/*animation-delay: 1s;*/
+	animation-duration: 3s;
+	animation-name: word-fade;
+	transition: all ease-in-out 5s;
+	-webkit-animation-fill-mode: forwards;
+
+
+}
+
+
+.sec-8-word{
+	/*position: relative;*/
+	left: 100px;
+	font-family: Helvetica, sans-serif;
+	font-size: 35px;
+	
+}
+
+
+.sec-8-back-word{
+	font-size: 450%;
+}
+
+
+@keyframes word-fade{
+   
+	from {
+		color: transparent;
+		transform: translateX(0);		
+
+	}
+    to {
+		color: black;
+		transform: translateX(100px);
+		
+		font-size: 35px;
+
+
+	}
+}
+
 /*Section 8*/
 
 
@@ -192,8 +413,6 @@
 @media only screen and (min-width: 1000px) and (max-width: 1500px) {
 
 	 
-
-
 	.sec-6{
 		display: block;
 		overflow: scroll;

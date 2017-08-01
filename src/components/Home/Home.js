@@ -9,26 +9,28 @@ return (
       <div className="sec-6-header">
          <div>FOLLOW US ON IN SOCIAL MEDIA </div>
       </div>
-
       <div className="sec-6-marg">
-
-        <div className="sec-6-img-cont"> 
+         <div className="sec-6-img-cont">
             <div className="sec-6-img"></div>
-        </div>
-
-        <div className="sec-6-img-cont"> 
+         </div>
+         <div className="sec-6-img-cont">
             <div className="sec-6-img"></div>
-        </div>
-
-        <div className="sec-6-img-cont"> 
+         </div>
+         <div className="sec-6-img-cont">
             <div className="sec-6-img"></div>
-        </div>
-
+         </div>
       </div>
-
    </div>
    <div className="sec-2">
       <div className="Latest-Collections">
+
+        <div className="sec-2-sudo-sec4">
+            <div className="sec-4-an-1">
+                <div className="sec-4-color"></div>
+                <div className="sec-4-img"></div>
+            </div>
+        </div>
+
          <div className="sec-2-Collections">
             <h1>Latest Collections</h1>
          </div>
@@ -70,9 +72,27 @@ return (
          </div>
       </div>
    </div>
+
+
+
+   <div className="sec-5">
+       <div className="sec-5-back-img">
+            <div className="sec-5-word-cont text-center">           
+                <div className="sec-5-word">
+                    FASHION <br />
+                    BEAUTY  <br />
+                    LIFESTYLE
+                </div>
+            </div>
+       </div>
+   </div>
+
+   
    <div className="sec-3">
       <div>
-         <div className="text-center"><h1>Lorem Ipsum</h1></div>
+         <div className="text-center">
+            <h1>Lorem Ipsum</h1>
+         </div>
          <div>
             <p className="sec-3-p"> 
                sed quia non numquam eius modi tempora 
@@ -88,16 +108,77 @@ return (
 
 
    <div className="sec-4">
-
-       <div className="sec-4-an-1">
+      <div className="col-md-3">
+         <div className="sec-4-an-1" id="sec-4-down-top">
             <div className="sec-4-color"></div>
             <div className="sec-4-img"></div>
-       </div>
+         </div>
+      </div>
+      <div className="col-md-3">
+         <div className="sec-4-an-1" id="sec-4-btm">
+            <div className="sec-4-color"></div>
+            <div className="sec-4-img"></div>
+         </div>
+      </div>
+      <div className="col-md-3">
+         <div className="sec-4-an-1" id="sec-4-md">
+            <div className="sec-4-color"></div>
+            <div className="sec-4-img"></div>
+         </div>
+      </div>
+      <div className="col-md-3">
+         <div className="sec-4-text-dent">
+            <div>eos et accusamus et iusto odio dignissimos 
+                ducimus qui blanditiis praesentium voluptatum 
+                deleniti atque corrupti quos dolores et quas 
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+   <div className="sec-8">
+        <div className="sec-8-word-fade">
+            <div className="sec-8-word">
+                <p> accusantium doloremque laudantium, 
+                    totam rem aperiam, <br />eaque ipsa quae 
+                    ab illo inventore veritatis et quasi 
+                    explicabo. <br />Nemo enim ipsam voluptatem 
+                    aut fugit
+                </p>
+            </div>
+        </div>
+
+
+        <div className="sec-8-back-word">
+            this is in the background moving
+        </div>
+
+   </div>
+
+   <div className="sec-7">
+
+        <div className="text-center margin-down">
+            <h1>Dolore Magnam</h1>
+        </div>
+
+        <div>
+            <div className="sec-7-img"></div>
+        </div>
+
+        <div>
+            <div className="sec-7-bg-word">
+                <div className="sec-7-word">
+                    <h1 className="sec-7-word">THESE ARE THE WORD</h1>
+                </div>
+            </div>
+        </div>
+
 
 
    </div>
 
-
+   
 
 
 </div>
