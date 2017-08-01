@@ -3,12 +3,13 @@ const cors = require('cors');
 const {json} = require('body-parser');
 const nodemailer = require('nodemailer');
 const massive = require('massive');
-
+const moment = require('moment');
 const port = 4000;
 const config = require('./server/config');
 const collections = require('./server/collections')
 
 const masterRoutes = require('./server/masterRoutes');
+
 /*
 config file setup:
 
@@ -39,8 +40,9 @@ massive(config.postgres).then(function(db){
     //creates the tables if they dont exist
     // db.createTables();
     //(blog_id, title, posttime, img_url, posttext)
-    // db.addBlog([1, "hi there", new Date(), "http://i.stack.imgur.com/WCveg.jpg", "i like to see people without clothes"])
-    // db.addBlog([2, "Hello!", new Date(), "https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/2014/02/image.png", "Heres some neat birds"])
+    // db.addBlog([1, "hi there", moment().format('MMMM/DD/YY h:mm:ss A'), "http://i.stack.imgur.com/WCveg.jpg", "i like to see people without clothes"])
+    // db.addBlog([2, "Hello!", moment().format('MMMM/DD/YY h:mm:ss A'), "https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/2014/02/image.png", "Heres some neat birds"])
+
 
 });
 
@@ -52,6 +54,7 @@ app.use(json());
 
 app.get('/api/disneyCollection', collections.getDisneyCollection);
 app.get('/api/moonlightCollection', collections.getMoonlightCollection);
+app.get('/api/getDress', collections.getDress); 
 
 masterRoutes(app);
 

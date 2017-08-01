@@ -22,7 +22,7 @@ class Blog extends Component{
     componentDidMount(){
         var self = this;
         axios.get('/api/blogs').then(function(response){
-            self.setState({'postage': response.data.reverse()})
+            self.setState({'postage': response.data})
         })
     }
 
@@ -39,31 +39,32 @@ class Blog extends Component{
                          {this.state.postage.map(function(postage){
                              return (
                                  <div>
-                                     <div id="post">
-                                         <div id="posttitle">
-                                             {postage.title}
-                                         </div>
-                                         <div id="postdate">
-                                             {postage.posttime}
-                                         </div>
-                                         <div id="postimgbox">
-                                             <img id="postimg" src={postage.img_url}/>
-                                         </div>
-                                         <div id="posttext">
-                                             {postage.posttext}
-                                         </div>
-                                     </div>
-                                 </div>
+                                    <Link to={"/post/"+postage.blog_id}>
+                                        <div id="post">
+                                            <div id="posttitle">
+                                                {postage.title}
+                                            </div>
+                                            <div id="postdate">
+                                                {postage.posttime}
+                                            </div>
+                                            <div id="postimgbox">
+                                                <img id="postimg" src={postage.img_url}/>
+                                            </div>
+                                            <div id="posttext">
+                                                {postage.posttext}
+                                            </div>
+                                        </div>
+                                        </Link>
+                                    </div>
                              )
                          })}
                         </div>
                         <div className="blognavigation">
-                            <button>
-                                older posts...
-                            </button>
-                            <button>
-                                newer posts...
-                            </button>
+                            <Link to="older">
+                                <button className="btn btn-default">
+                                    older posts...
+                                </button>
+                            </Link>
                         </div>
                     </div>
 

@@ -1,0 +1,33 @@
+.chosen-dress{
+	width: 320px;
+}
+
+.contact-form{
+	text-align: center;
+}
+
+.chosen-header{
+	padding-bottom: 0;
+}
+
+#create-custom-size{
+	margin: 0;
+}
+
+.number-input-box{
+	margin-right: 10px;
+	margin-bottom: 10px;
+	width: 352px;
+	font-size: 15px;
+}
+
+#custom-size-container{
+	display: flex;
+
+    flex-wrap: wrap;
+}
+
+label{
+	display: inline-block;
+	width: 270px;
+}
