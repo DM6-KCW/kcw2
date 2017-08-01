@@ -12,7 +12,8 @@ import DisneyCollection from './components/Collections/Actualviews/Disney/disney
 import MoonlightCollection from './components/Collections/Actualviews/Moonlight/moonlight'
 import Collection3 from './components/Collections/Actualviews/Collection3/collection3'
 import PriceRequest from './components/PriceRequest/PriceRequest'
-
+import Posts from './components/Blog/Posts/posts';
+import Post from './components/Blog/Post/post';
 
 export default (
     <div>
@@ -29,6 +30,8 @@ export default (
         <Route component={MoonlightCollection} exact path= "/moonlight"/>
         <Route component={PriceRequest} path= "/moonlight/:dress_id"/>
         <Route component={Collection3} path= "/collection3"/>
+        <Route component={Posts} path = "/older"/>
+        <Route component={Post} path = "/post/:blog_id"/>
     </Switch>
 
     </div>
