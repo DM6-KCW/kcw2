@@ -14,6 +14,7 @@ import Collection3 from './components/Collections/Actualviews/Collection3/collec
 import PriceRequest from './components/PriceRequest/PriceRequest'
 
 
+
 export default (
     <div>
     <Switch>

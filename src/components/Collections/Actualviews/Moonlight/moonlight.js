@@ -26,14 +26,14 @@ class Moonlight extends Component {
     }
 
     handleMouseOver(e) {
-        if(this.state.dresses[e.target.id-1].back_img_url){
-            e.target.src = this.state.dresses[e.target.id-1].back_img_url;
+        if(this.state.dresses[e.target.id-11].back_img_url){
+            e.target.src = this.state.dresses[e.target.id-11].back_img_url;
         }
     }
 
     handleMouseOut(e) {
-        if(this.state.dresses[e.target.id-1].back_img_url){
-            e.target.src = this.state.dresses[e.target.id-1].img_url;
+        if(this.state.dresses[e.target.id-11].back_img_url){
+            e.target.src = this.state.dresses[e.target.id-11].img_url;
         }
     }
 
