@@ -28,7 +28,7 @@ class Admin extends Component {
                 console.log('checked' , this.state.loggedIn);
 
                     if (this.state.loggedIn) {
-                        this.props.history.push('/media')
+                        this.props.history.push('/adminPage')
                     }
                     else {
                         alert('wrong username or password idk either');
@@ -49,7 +49,7 @@ class Admin extends Component {
                             <form className="login-login-form" onSubmit={this.handleSubmit}>
 
                                 <input type="text" ref={(user) => this.user = user}/>
-                                <input type="password" ref={(pass) => this.pass = pass}/>
+                                <input type="password" ref={(pass) => this.pass = pass} maxLength="15"/>
                                 <button>login</button>
                             </form>
                         </div>

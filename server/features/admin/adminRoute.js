@@ -3,6 +3,7 @@ module.exports = function(app) {
         console.log(req.query);
         const db = app.get('db');
         db.getAdmin().then(function(response) {
+            console.log(response);
             if( req.query.username === response[0].admin
                 &&
                 req.query.password === response[0].password
