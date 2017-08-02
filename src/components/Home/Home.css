@@ -96,10 +96,7 @@
 
 
 /*Section 4*/
-
-
 /*Section 4 {img}*/
-
 #sec-4-img-1{
 	background-image: url('https://s-media-cache-ak0.pinimg.com/736x/56/99/68/569968bcfe5b7886b8821aecc068325c--blue-lehenga-party-wear-indian-dresses-lehenga-choli.jpg');
 }#sec-4-img-2{
@@ -109,11 +106,19 @@
 }#sec-4-img-4{
 	background-image: url('https://s-media-cache-ak0.pinimg.com/736x/54/02/9f/54029f514a5744ca9a21b616305610e2--indian-dresses-indian-clothes.jpg');
 }
-
+#sec-4-img-5{
+	background-image: url('https://s-media-cache-ak0.pinimg.com/originals/43/b9/de/43b9de7155d5154d0ec21306fcd9961b.jpg');
+}#sec-4-img-6{
+	background-image: url('https://s-media-cache-ak0.pinimg.com/originals/c2/c1/7b/c2c17b3b33a9fe0951be0a58154e7770.jpg');
+}#sec-4-img-7{
+	background-image: url('https://s-media-cache-ak0.pinimg.com/originals/c8/25/35/c825355909865f586b9ccc9cd54812cd.jpg');
+}#sec-4-img-8{
+	background-image: url('https://s-media-cache-ak0.pinimg.com/originals/54/60/e9/5460e940445708dfa316cc5709e9be1e.jpg');
+}
 /*Section 4 {img}*/
 
 .sec-4{
-	height: 3000px;
+	height: 2000px;
 	padding: 5%;
 	background-color: #FFFFFF;
 	clear: both;
@@ -123,41 +128,27 @@
 .sec-4-btm{
 	margin-top: 10px;
 }
-
 #sec-4-down{
 	margin-top: 30%;
 }
-
-
 #sec-4-more-down{
 	margin-top: 45%;
 }
-
 .sec-4-md{
-	
 	margin-bottom: 30%;
-
 }
 
 
 .sec-4-an-1{
 	background-color: transparent;
-	height: 300px;
-	width: 300px;
-	
+	height: 600px;
+	width: 600px;
 }
 
 .sec-4-img{
+	background-attachment: fixed;
 	background-color: #0A0C26;
 	height: 300px;
-	width: 300px;
-	z-index: 1;
-	position: relative;
-}
-
-.sec-4-img-v2{
-	background-color: #0A0C26;
-	height: 600px;
 	width: 300px;
 	z-index: 1;
 	position: relative;
@@ -171,9 +162,15 @@
 	position: relative;
 	left: 100px;
 	top: 200px;
-
 }
 
+.sec-4-img-v2{
+	background-color: #0A0C26;
+	height: 600px;
+	width: 300px;
+	z-index: 1;
+	position: relative;
+}
 
 .sec-4-color-v2{
 	background-color:gold;
@@ -186,61 +183,39 @@
 	top: 2300px;*/
 	left: 100px;
 	top: 450px;
+}
 
+.sec-4-head{
+	font-size: 34px;
 }
 
 
+/*Section 4-animation*/
 .sec-4-slow-an{
 	animation-delay: 2s;
 	animation-name: sec-4-animate-1;
     animation-duration: 1s;
-	
 }
 .sec-4-mid-an{
 	animation-delay: 1s;
 	animation-name: sec-4-animate-1;
     animation-duration: 1s;
-	
 }
 .sec-4-fast-an{
 	animation-delay: .5s;
 	animation-name: sec-4-animate-1;
     animation-duration: 1s;
 }
-
-
-
-
-
-
-
-
-
-
-.sec-4-text-dent{
-	font-size: 30px;
-	font-style: normal;
-	line-height: 36px;
-	z-index: 4;
-	background-attachment: fixed;
-	
-}
-
- .sec-4-down{} 
-
+ 
 @keyframes sec-4-animate-1 {
-    
 	from {
 		width: 0px;
-		
-		
 	}
     to {
 		width: 300px;
-		
 	}
-
 }
+/*Section 4-animation*/
 
 /*Section 4*/
 
@@ -288,9 +263,6 @@
 }
 
 
-
-
-
 /*Section 5*/
 
 /*Section 6*/
@@ -314,18 +286,38 @@
 		height: 35vh;
 		padding: 30px;
 		margin: 10px;
-		background-color: darkcyan;
 		float: right;
 		
 	}
 
 
-	.sec-6-marg{
-	
+	#sec-6-img-id-1{
+		background-image: url('https://s-media-cache-ak0.pinimg.com/736x/e0/d4/0d/e0d40dbd04b823b37b0eaa7115ddeab5--saree-fashion-indian-fashion.jpg');
+		filter: grayscale(100%);
 	}
 
-	.sec-6-img-cont{
-	
+	#sec-6-img-id-1:hover{
+		-webkit-filter: grayscale(0%);
+    	filter: grayscale(0%);
+		
+	}
+
+	#sec-6-img-id-2{
+		background-image: url('https://s-media-cache-ak0.pinimg.com/736x/f5/d4/16/f5d41658bd69c67067df07732140c916--india-fashion-asian-fashion.jpg');
+		filter: grayscale(100%);
+	}
+	#sec-6-img-id-2:hover{
+		-webkit-filter: grayscale(0%);
+    	filter: grayscale(0%);
+	}
+
+	#sec-6-img-id-3{
+		background-image: url('https://s-media-cache-ak0.pinimg.com/736x/eb/d9/23/ebd923e7890e87100938eebce1dbfc1f--blouse-outfit-indian-dresses.jpg');
+		filter: grayscale(100%);
+	}
+	#sec-6-img-id-3:hover{
+		-webkit-filter: grayscale(0%);
+    	filter: grayscale(0%);
 	}
 
 /*Section 6*/
@@ -395,13 +387,17 @@
 
 
 .sec-8-word-fade{
-	/*animation-delay: 1s;*/
 	animation-duration: 3s;
 	animation-name: word-fade;
 	transition: all ease-in-out 5s;
 	-webkit-animation-fill-mode: forwards;
+}
 
-
+.sec-8-word-fade-r{
+	animation-duration: 3s;
+	animation-name: word-fade-r;
+	transition: all ease-in-out 5s;
+	-webkit-animation-fill-mode: forwards;
 }
 
 
@@ -413,6 +409,9 @@
 	
 }
 
+.sec-8-dd{
+	top: 50px;
+}
 
 .sec-8-back-word{
 	font-size: 450%;
@@ -428,8 +427,23 @@
 	}
     to {
 		color: black;
+		transform: translateX(-100px);
+		font-size: 35px;
+
+
+	}
+}
+
+@keyframes word-fade-r{
+   
+	from {
+		color: transparent;
+		transform: translateX(0);		
+
+	}
+    to {
+		color: black;
 		transform: translateX(100px);
-		
 		font-size: 35px;
 
 
@@ -473,7 +487,6 @@
 }
 
 @media only screen and (max-width: 990px) {
-   
    
 	.sec-6{
 		display: block;
