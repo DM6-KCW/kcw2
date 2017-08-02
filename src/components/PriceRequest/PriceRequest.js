@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-import './PriceRequest.css'
+import './PriceRequest.css';
+import options from './countries.js';
 
 class PriceRequest extends Component {
 
@@ -16,6 +17,7 @@ class PriceRequest extends Component {
 	}
 
 	componentWillMount(){
+
 		var self = this;
 		axios.get('/api/getDress', {
 	         params: {
@@ -23,14 +25,19 @@ class PriceRequest extends Component {
 	         }
 		 }).then(function(response){
 			 self.setState({'dress': response.data[0].img_url})
-			 console.log(response.data[0]);
 		 });
 	}
 
-	onSubmit() {
-		console.log(this.countryInput.value);
-		this.setState({'country':this.countryInput.value});
+	componentDidMount() {
 		this.setState({'dress_id':this.props.match.params.dress_id});
+		var select = document.getElementById('countryInput');
+		for(var i = 0; i < options.length; i++) {
+		    select.options[i] = new Option(options[i].name, options[i].value);
+		}
+	}
+
+	onSubmit() {
+
 		console.log(this.state);
 		axios.post('/api/placeOrder', this.state).then(function(response){
 			console.log(response);
@@ -154,7 +161,9 @@ class PriceRequest extends Component {
 					</select>
 
 				<h2 className="order-header">Step 3: Contact Info</h2>
-				<div  ref={countryInput => {this.countryInput = countryInput;}} id="countryInput" className="bfh-selectbox bfh-countries"  data-flags="true" data-country="US" ></div>
+
+			<select value={this.state.country} onChange={this.handleInputChange} name="country" id="countryInput" className="form-control" placeholder="Country"></select>
+
 				<div className="form-group">
 					<input
 						name="name"
@@ -175,8 +184,8 @@ class PriceRequest extends Component {
 				</div>
 				<div className="form-group">
 					<input
-						name="phone_number"
-						value={this.state.phone_number}
+						name="phoneNumber"
+						value={this.state.phoneNumber}
 						onChange={this.handleInputChange}
 						type="tel"
 						className="form-control"

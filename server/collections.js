@@ -26,13 +26,14 @@ module.exports =  {
 
 	placeOrder: function(req, res, next){
 		console.log(req.body);
+
 		let order_email = {
 			from: 'Mithi Kalra Admin',
 			to: config.email,
 			subject: "New Order.",
 			html: '<ul><li>Dress ID: ' + req.body.dress_id + '</li>' +
 					'<li>Standard Size: ' + req.body.standardSize + '</li>'+
-					'<ul>Custom Size: ' +
+					'<li><ul>Custom Size: ' +
 						'<li>Bust: '+req.body.bust + '</li>' +
 						'<li>Chest: '+req.body.chest + '</li>' +
 						'<li>Hip: '+req.body.hip + '</li>' +
@@ -44,7 +45,7 @@ module.exports =  {
 						'<li>Shoulder to Waist: '+req.body.shouldertowaist + '</li>' +
 						'<li>Shoulder to Knee: '+req.body.shouldertoknee + '</li>' +
 						'<li>Shoulder to Ground: '+req.body.shouldertoground + '</li>' +
-					'</ul>' +
+					'</ul></li>' +
 					'<li>Height: ' + req.body.height + '</li>' +
 					'<li>Country: ' + req.body.country + '</li>' +
 					'<li>Name: ' + req.body.name + '</li>' +
@@ -59,6 +60,15 @@ module.exports =  {
 			}
 			console.log('Message %s sent: %s', info.messageId, info.response);
 		});
+
+		db = req.app.get('db');
+		db.addOrder([req.body.dress_id, req.body.standardSize, parseInt(req.body.bust), parseInt(req.body.chest), parseInt(req.body.hip),
+					parseInt(req.body.shoulder), parseInt(req.body.underbust), parseInt(req.body.upperarm), parseInt(req.body.waist),
+					parseInt(req.body.shouldertobust), parseInt(req.body.shouldertowaist), parseInt(req.body.shouldertoknee),
+					parseInt(req.body.shouldertoground), parseInt(req.body.height), req.body.country, req.body.name, req.body.email, parseInt(req.body.age), req.body.phoneNumber])
+					.then(function(response){
+						console.log(response);
+					})
 		res.status(200).send('hello');
 	}
 }
