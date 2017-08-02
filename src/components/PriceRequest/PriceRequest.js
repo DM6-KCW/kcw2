@@ -28,12 +28,19 @@ class PriceRequest extends Component {
 	}
 
 	onSubmit() {
+		console.log(this.countryInput.value);
+		this.setState({'country':this.countryInput.value});
+		this.setState({'dress_id':this.props.match.params.dress_id});
 		console.log(this.state);
+		axios.post('/api/placeOrder', this.state).then(function(response){
+			console.log(response);
+		})
 	}
 	handleInputChange(event) {
 		const target = event.target;
 		const value = target.value;
 		const name = target.name;
+		console.log(value);
 		this.setState({[name]: value});
 	}
 
@@ -147,27 +154,39 @@ class PriceRequest extends Component {
 					</select>
 
 				<h2 className="order-header">Step 3: Contact Info</h2>
-				<div id="country-input" className="bfh-selectbox bfh-countries"  data-flags="true" data-country="US" ></div>
+				<div  ref={countryInput => {this.countryInput = countryInput;}} id="countryInput" className="bfh-selectbox bfh-countries"  data-flags="true" data-country="US" ></div>
 				<div className="form-group">
 					<input
+						name="name"
+						value={this.state.name}
+						onChange={this.handleInputChange}
 						type="text"
 						className="form-control"
 						placeholder="Name"/>
 				</div>
 				<div className="form-group">
 					<input
+						name="email"
+						value={this.state.email}
+						onChange={this.handleInputChange}
 						type="email"
 						className="form-control"
 						placeholder="Email"/>
 				</div>
 				<div className="form-group">
 					<input
+						name="phone_number"
+						value={this.state.phone_number}
+						onChange={this.handleInputChange}
 						type="tel"
 						className="form-control"
 						placeholder="Phone No."/>
 				</div>
 				<div className="form-group">
 					<input
+						name="age"
+						value={this.state.age}
+						onChange={this.handleInputChange}
 						type="number"
 						className="form-control"
 						placeholder="Age"/>
