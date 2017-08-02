@@ -46,10 +46,12 @@ class Admin extends Component {
             <div className="admin-container">
                     <div className="login-page">
                         <div className="login-form">
-                            <form className="login-login-form" onSubmit={this.handleSubmit}>
+                            <form className="login-login-form"  onSubmit={this.handleSubmit}>
 
-                                <input type="text" ref={(user) => this.user = user}/>
-                                <input type="password" ref={(pass) => this.pass = pass} maxLength="15"/>
+                                <input type="text" placeholder="username" ref={(user) => this.user = user}/>
+                                <input type="password" placeholder="password" ref={(pass) => this.pass = pass}
+                                       maxLength="15"/>
+
                                 <button>login</button>
                             </form>
                         </div>
