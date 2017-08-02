@@ -7,6 +7,7 @@ const moment = require('moment');
 const port = 4000;
 const config = require('./server/config');
 const collections = require('./server/collections')
+const session = require('express-session');
 
 const masterRoutes = require('./server/masterRoutes');
 
@@ -50,6 +51,12 @@ app.use(cors({
     origin: 'http://localhost:3000',
     credentials: true
 }));
+app.use(session({
+    secret: config.secret,
+    saveUninitialized: false,
+    resave: false
+}));
+
 app.use(json());
 
 app.get('/api/disneyCollection', collections.getDisneyCollection);

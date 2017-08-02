@@ -10,6 +10,7 @@ module.exports = function(app) {
             )
 
             {
+                req.session.loggedIn = true;
                 res.status(200).json({answer:true});
             } else {
                 res.json({answer: false});
@@ -18,5 +19,10 @@ module.exports = function(app) {
         .catch( err =>  {
             res.json(err);
         })
+    });
+
+    app.get('/api/auth/', (req,res)=>{
+        console.log(req.session);
+        res.status(200).json(req.session.loggedIn);
     })
 };

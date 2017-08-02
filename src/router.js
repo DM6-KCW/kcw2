@@ -27,7 +27,7 @@ export default (
         <Route component={Contact} path = "/contact"/>
         <Route component={Media} path = "/media"/>
         <Route component={Admin} path= "/admin"/>
-        <Route component={AdminPage} path="/adminPage"/>
+        <Route path="/adminPage" component={AdminPage} />
         <Route component={DisneyCollection} exact path= "/disney"/>
         <Route component={PriceRequest} path= "/disney/:dress_id"/>
         <Route component={MoonlightCollection} exact path= "/moonlight"/>
