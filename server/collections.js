@@ -30,7 +30,8 @@ module.exports =  {
 			from: 'Mithi Kalra Admin',
 			to: config.email,
 			subject: "New Order.",
-			html: '<ul><li>Standard Size: ' + req.body.standardSize + '</li>'+
+			html: '<ul><li>Dress ID: ' + req.body.dress_id + '</li>' +
+					'<li>Standard Size: ' + req.body.standardSize + '</li>'+
 					'<ul>Custom Size: ' +
 						'<li>Bust: '+req.body.bust + '</li>' +
 						'<li>Chest: '+req.body.chest + '</li>' +
@@ -49,7 +50,7 @@ module.exports =  {
 					'<li>Name: ' + req.body.name + '</li>' +
 					'<li>Email: ' + req.body.email + '</li>' +
 					'<li>Phone Number: ' + req.body.phone_number + '</li>' +
-					'<li>Age: ' + req.body.age + '</li>' + 
+					'<li>Age: ' + req.body.age + '</li>' +
 					'</ul>'
 		}
 		nodemailer_config.transporter.sendMail(order_email, (error, info) => {
