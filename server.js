@@ -61,7 +61,8 @@ app.use(json());
 
 app.get('/api/disneyCollection', collections.getDisneyCollection);
 app.get('/api/moonlightCollection', collections.getMoonlightCollection);
-app.get('/api/getDress', collections.getDress); 
+app.get('/api/getDress', collections.getDress);
+app.post('/api/placeOrder', collections.placeOrder);
 
 masterRoutes(app);
 

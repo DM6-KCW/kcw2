@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 
-import './PriceRequest.css'
+import './PriceRequest.css';
+import options from './countries.js';
 
 class PriceRequest extends Component {
 
@@ -16,6 +17,7 @@ class PriceRequest extends Component {
 	}
 
 	componentWillMount(){
+
 		var self = this;
 		axios.get('/api/getDress', {
 	         params: {
@@ -23,17 +25,29 @@ class PriceRequest extends Component {
 	         }
 		 }).then(function(response){
 			 self.setState({'dress': response.data[0].img_url})
-			 console.log(response.data[0]);
 		 });
 	}
 
+	componentDidMount() {
+		this.setState({'dress_id':this.props.match.params.dress_id});
+		var select = document.getElementById('countryInput');
+		for(var i = 0; i < options.length; i++) {
+		    select.options[i] = new Option(options[i].name, options[i].value);
+		}
+	}
+
 	onSubmit() {
+
 		console.log(this.state);
+		axios.post('/api/placeOrder', this.state).then(function(response){
+			console.log(response);
+		})
 	}
 	handleInputChange(event) {
 		const target = event.target;
 		const value = target.value;
 		const name = target.name;
+		console.log(value);
 		this.setState({[name]: value});
 	}
 
@@ -147,27 +161,41 @@ class PriceRequest extends Component {
 					</select>
 
 				<h2 className="order-header">Step 3: Contact Info</h2>
-				<div id="country-input" className="bfh-selectbox bfh-countries"  data-flags="true" data-country="US" ></div>
+
+			<select value={this.state.country} onChange={this.handleInputChange} name="country" id="countryInput" className="form-control" placeholder="Country"></select>
+
 				<div className="form-group">
 					<input
+						name="name"
+						value={this.state.name}
+						onChange={this.handleInputChange}
 						type="text"
 						className="form-control"
 						placeholder="Name"/>
 				</div>
 				<div className="form-group">
 					<input
+						name="email"
+						value={this.state.email}
+						onChange={this.handleInputChange}
 						type="email"
 						className="form-control"
 						placeholder="Email"/>
 				</div>
 				<div className="form-group">
 					<input
+						name="phoneNumber"
+						value={this.state.phoneNumber}
+						onChange={this.handleInputChange}
 						type="tel"
 						className="form-control"
 						placeholder="Phone No."/>
 				</div>
 				<div className="form-group">
 					<input
+						name="age"
+						value={this.state.age}
+						onChange={this.handleInputChange}
 						type="number"
 						className="form-control"
 						placeholder="Age"/>
