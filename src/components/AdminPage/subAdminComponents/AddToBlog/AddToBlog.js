@@ -1,24 +1,84 @@
 import React, {Component} from 'react'
+import axios from 'axios';
+
 
 import './AddToBlog.css';
 
 class AddToBlog extends Component {
     constructor() {
         super();
+        this.handleSubmit = this.handleSubmit.bind(this);
+        this.uploadFile = this.uploadFile.bind(this);
     }
+
+
+    componentDidMount() {
+        let self = this;
+        document.getElementById('exampleInputFile').addEventListener('change', function (e) {
+                console.log(e.target.files);
+
+                let file = e.target.files[0];
+                 axios.get(`/api/s3?file_name=${file.name}&file_type=${file.type}`).then( response => {
+                    console.log(response.data);
+                    self.setState({image: response.data, file: file});
+                    console.log(self.state);
+                })
+            }
+        )
+
+    }
+
+    uploadFile(file, signed_request){
+        return axios.put(signed_request, file);
+    }
+
+    handleSubmit(e) {
+        let url = '';
+        this.uploadFile(this.state.file, this.state.image.signed_request).then(response => {
+            console.log(response);
+            url = this.state.image.url;
+        });
+
+        e.preventDefault();
+        var self = this;
+        axios.post('/api/addblog?title=' + this.title.value + '&image=' + self.state.image.url + '&description=' + this.content.value)
+            .then(response => {
+
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+
+
+    }
+
 
     render() {
         return (
             <div>
-                <form action="#" method="post" id="blogForm">
+                <form action="#" method="post" id="blogForm" onSubmit={this.handleSubmit}>
+
                     <div className="form-group">
                         <label for="exampleInputEmail1">Enter Title Name</label>
-                        <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
+                        <input type="text" className="form-control" placeholder="Enter title"
+                               ref={(title) => this.title = title}/>
                     </div>
+
+                    <div className="form-group">
+                        <label for="exampleInputFile">File input</label>
+                        <input type="file" className="form-control-file" id="exampleInputFile"
+                               aria-describedby="fileHelp" ref={(image) => this.image = image}/>
+                        <small id="fileHelp" className="form-text text-muted">This is some placeholder block-level help
+                            text for the above input. It's a bit lighter and easily wraps to a new line.
+                        </small>
+                    </div>
+
                     <div className="form-group">
                         <label for="exampleTextarea">Enter Content for blog</label>
-                        <textarea className="form-control" id="exampleTextarea" rows="5"></textarea>
+                        <textarea className="form-control" id="exampleTextarea" rows="5"
+                                  ref={(content) => this.content = content}></textarea>
                     </div>
+
                     <button type="submit" class="btn btn-primary">Submit blog</button>
 
                 </form>
