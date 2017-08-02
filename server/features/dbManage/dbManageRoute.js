@@ -24,6 +24,12 @@ module.exports = function(app) {
             res.status(200).json(response);
         })
     })
+    app.delete('/api/blogs/delete/:blog_id', function(req, res){
+        const db = app.get('db');
+        db.deleteBlog([req.params.blog_id]).then(function(response){
+            res.status(200).json(response);
+        })
+    })
 
 
 

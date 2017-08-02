@@ -4,7 +4,7 @@ import './AdminPage.css';
 import AddToBlog from './subAdminComponents/AddToBlog/AddToBlog';
 import AddToMedia from "./subAdminComponents/AddToMedia/AddToMedia";
 import ViewOrders from "./subAdminComponents/ViewOrders/ViewOrders";
-
+import RemoveBlog from "./subAdminComponents/RemoveFromBlog/removeblog";
 import axios from 'axios';
 
 class AdminPage extends Component {
@@ -30,9 +30,11 @@ class AdminPage extends Component {
                 <AddToMedia/>
                 <hr/>
                 <ViewOrders/>
+                <hr/>
+                <RemoveBlog/>
             </div>
         )
     }
 }
-
 export default withRouter(AdminPage)
+
