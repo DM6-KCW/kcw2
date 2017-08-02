@@ -12,10 +12,16 @@ class AddToMedia extends Component {
         return (
             <div>
                 <form action="" method="post">
-                    <h4>Add Post to Media</h4>
-                    <input type="file" name="pic" accept="image/*"/>
-                    <h6>Add caption</h6>
-                    <textarea cols="30" rows="10">Enter blog content here</textarea>                </form>
+                    <div className="form-group">
+                        <label for="exampleInputFile">File input</label>
+                        <input type="file" className="form-control-file" id="exampleInputFile" aria-describedby="fileHelp"/>
+                            <small id="fileHelp" className="form-text text-muted">This is some placeholder block-level help text for the above input. It's a bit lighter and easily wraps to a new line.</small>
+                    </div>
+                    <div className="form-group">
+                        <label for="exampleTextarea">Example textarea</label>
+                        <textarea className="form-control" id="exampleTextarea" rows="3">hello</textarea>
+                    </div>
+                </form>
             </div>
         )
     }
