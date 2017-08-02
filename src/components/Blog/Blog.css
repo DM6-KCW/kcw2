@@ -8,13 +8,13 @@
 
 }
 #blogtitle{
-    width: 800px;
+    width: 100%;
     font-family: 'Bellefair', serif;
     font-size: 52px;
     color: #626262
 }
 .blogposts{
-    width: 800px;
+    max-width: 800px;
     background-color: white;
 
 }
@@ -57,5 +57,5 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 800px;
+    width: 100%;
 }

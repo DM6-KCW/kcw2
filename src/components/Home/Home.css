@@ -1,8 +1,9 @@
 .home-container{
 	display: block;
 	color: black;
-	background-color: #FFFFFF;
-	width: 90%;
+	/*background-color: #FFFFFF;*/
+	/*width:90%;*/
+	overflow-x: hidden;
 	height: 100%;
 }
 
@@ -17,7 +18,7 @@
 
 .sec-2-sudo-sec4{
 	float: left;
-	margin-right: 30px;
+	margin-right: 10%;
 
 }
 
@@ -96,6 +97,21 @@
 
 /*Section 4*/
 
+
+/*Section 4 {img}*/
+
+#sec-4-img-1{
+	background-image: url('https://s-media-cache-ak0.pinimg.com/736x/56/99/68/569968bcfe5b7886b8821aecc068325c--blue-lehenga-party-wear-indian-dresses-lehenga-choli.jpg');
+}#sec-4-img-2{
+	background-image: url('http://1.bp.blogspot.com/-hg58zysqNco/USoyVTzMoSI/AAAAAAAAANg/-My21JLnDHA/s1600/indian%2Bmarriage%2Bdresses%2B2013%2B%2Bindian%2Bwedding%2Bdresses%2B2014.png');
+}#sec-4-img-3{
+	background-image: url('https://s-media-cache-ak0.pinimg.com/736x/25/b4/43/25b44364a757a40587442f0c53e7f847--indian-dresses-indian-clothes.jpg');
+}#sec-4-img-4{
+	background-image: url('https://s-media-cache-ak0.pinimg.com/736x/54/02/9f/54029f514a5744ca9a21b616305610e2--indian-dresses-indian-clothes.jpg');
+}
+
+/*Section 4 {img}*/
+
 .sec-4{
 	height: 3000px;
 	padding: 5%;
@@ -108,14 +124,24 @@
 	margin-top: 10px;
 }
 
-.sec-4-md{}
+#sec-4-down{
+	margin-top: 30%;
+}
 
-.sec-4-top{}
+
+#sec-4-more-down{
+	margin-top: 45%;
+}
+
+.sec-4-md{
+	
+	margin-bottom: 30%;
+
+}
 
 
 .sec-4-an-1{
 	background-color: transparent;
-	
 	height: 300px;
 	width: 300px;
 	
@@ -123,72 +149,72 @@
 
 .sec-4-img{
 	background-color: #0A0C26;
-	animation-name: sec-4-animate-1;
-    animation-duration: .5s;
 	height: 300px;
 	width: 300px;
 	z-index: 1;
 	position: relative;
 }
 
+.sec-4-img-v2{
+	background-color: #0A0C26;
+	height: 600px;
+	width: 300px;
+	z-index: 1;
+	position: relative;
+}
+
 .sec-4-color{
-	background-color:gold;
+	background-attachment: fixed;
 	height: 300px;
 	width: 300px;
 	z-index: 3;
-	animation-name: sec-4-animate-1;
-    animation-duration: 1s;
 	position: relative;
-	/*right: 1250px;
-	top: 2300px;*/
 	left: 100px;
 	top: 200px;
 
 }
 
 
-.sec-4-color-2{
+.sec-4-color-v2{
 	background-color:gold;
-	height: 300px;
+	background-attachment: fixed;
+	height: 600px;
 	width: 300px;
 	z-index: 3;
-	animation-name: sec-4-animate-2;
-    animation-duration: 1s;
-	animation-delay: 2s;
 	position: relative;
 	/*right: 1250px;
 	top: 2300px;*/
 	left: 100px;
-	top: 200px;
+	top: 450px;
 
 }
 
-.sec-4-color-1{
-	
-	animation-name: sec-4-animate-1;
-    animation-duration: 1s;
-	animation-delay: 2.5s;
-	
 
-}
-
-.sec-4-color-2{
-	
-	animation-name: sec-4-animate-1;
-    animation-duration: 1s;
+.sec-4-slow-an{
 	animation-delay: 2s;
-	
-
-}
-
-.sec-4-color-3{
-	
 	animation-name: sec-4-animate-1;
     animation-duration: 1s;
+	
+}
+.sec-4-mid-an{
 	animation-delay: 1s;
+	animation-name: sec-4-animate-1;
+    animation-duration: 1s;
 	
-
 }
+.sec-4-fast-an{
+	animation-delay: .5s;
+	animation-name: sec-4-animate-1;
+    animation-duration: 1s;
+}
+
+
+
+
+
+
+
+
 
 
 .sec-4-text-dent{
@@ -204,8 +230,15 @@
 
 @keyframes sec-4-animate-1 {
     
-	from {width: 0px;}
-    to {width: 300px}
+	from {
+		width: 0px;
+		
+		
+	}
+    to {
+		width: 300px;
+		
+	}
 
 }
 
@@ -265,7 +298,6 @@
 		padding: 5%;
 		height: 100vh;
 		color: blanchedalmond;
-		border-style: solid;
 		display: block;
 	}
 

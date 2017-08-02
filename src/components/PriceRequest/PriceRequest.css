@@ -15,19 +15,52 @@
 }
 
 .number-input-box{
-	margin-right: 10px;
+	/*margin-right: 10px;
 	margin-bottom: 10px;
 	width: 352px;
 	font-size: 15px;
+
+	float: none;
+	display: table-cell;
+  	vertical-align: bottom;*/
 }
 
 #custom-size-container{
 	display: flex;
-
-    flex-wrap: wrap;
+	flex-wrap: wrap;
 }
 
 label{
 	display: inline-block;
 	width: 270px;
 }
+
+#country-input{
+	margin-bottom: 15px;
+}
+
+.form-control{
+	width: 65%;
+	margin: 0 auto;
+}
+
+.order-header{
+	margin-top: 45px;
+}
+
+.btn-primary{
+	border: none;
+	background-color: #C9954C;
+	color: black;
+}
+
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open>.dropdown-toggle.btn-primary {
+	background-color: #C9954C;
+}
+
+/*.number-input-box input {
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	transform: translateX(-50%)
+}*/
