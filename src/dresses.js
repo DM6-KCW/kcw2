@@ -1,7 +1,6 @@
 import pinkAndRedDress from './images/dresses/pinkAndRedDress.png';
 import pinkDress from './images/dresses/pinkDress.png';
 import redDress from './images/dresses/redDress.png';
-import axios from 'axios';
 
 export default [
 
