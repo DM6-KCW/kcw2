@@ -56,16 +56,13 @@ class PriceRequest extends Component {
 
 	onSubmit() {
 
-		console.log(this.state);
 		axios.post('/api/placeOrder', this.state).then(function(response){
-			console.log(response);
 		})
 	}
 	handleInputChange(event) {
 		const target = event.target;
 		const value = target.value;
 		const name = target.name;
-		console.log(value);
 		this.setState({[name]: value});
 	}
 

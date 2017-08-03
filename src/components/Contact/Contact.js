@@ -35,7 +35,6 @@ class Contact extends Component {
     // }
 	onSubmit() {
         axios.post(baseurl + '/api/contact', this.state).then(function(response) {
-            console.log(response);
         });
 		this.setState({email: "", subject: "", message: "", sender_name: ""})
 	}

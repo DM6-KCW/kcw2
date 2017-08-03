@@ -40,7 +40,6 @@ module.exports = function(app) {
     //endpoint for adding blogs
 
     app.post('/api/addblog', function(req, res){
-        console.log(req.query);
         const db = app.get('db');
 
         db.addBlog([req.query.title, moment().format('MMMM/DD/YY h:mm:ss A'), req.query.image, req.query.description])
@@ -63,20 +62,18 @@ module.exports = function(app) {
 
     app.delete('/api/deleteOrder/:order_id', function (req, res, next) {
         const db = app.get('db');
-        console.log(req.params.order_id);
         db.deleteOrder([req.params.order_id]).then(function(response){
             res.status(200).json(response)
         })
     })
 //ORDERS END--------------------------------//
-  
-  
+
+
 
     app.post('/api/addmedia',  function(req, res) {
     //add a media
 
         const db = app.get('db');
-        console.log('we here boys');
         db.addMedia([req.query.imgurl, req.query.description, req.query.url])
             .then(response => {
                 res.status(200).json(response);
@@ -87,7 +84,6 @@ module.exports = function(app) {
     //delete media by id
     app.delete('/api/media/delete/:media_id', function(req, res){
         const db = app.get('db');
-        console.log(req.params.media_id);
         db.deleteMedia([req.params.media_id]).then(function(response){
             res.status(200).json(response);
         })

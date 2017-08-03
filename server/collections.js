@@ -25,8 +25,6 @@ module.exports =  {
 	},
 
 	placeOrder: function(req, res, next){
-		console.log(req.body);
-
 		let order_email = {
 			from: 'Mithi Kalra Admin',
 			to: config.email,

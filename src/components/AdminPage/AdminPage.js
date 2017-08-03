@@ -13,7 +13,6 @@ class AdminPage extends Component {
         console.log("mounting")
         axios.get('/api/auth')
             .then(response => {
-                console.log(response)
                 if (!response.data) {
                     this.props.history.push('/admin')
                 }

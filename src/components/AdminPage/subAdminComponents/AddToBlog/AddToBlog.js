@@ -15,13 +15,9 @@ class AddToBlog extends Component {
     componentDidMount() {
         let self = this;
         document.getElementById('exampleInputFile').addEventListener('change', function (e) {
-                console.log(e.target.files);
-
                 let file = e.target.files[0];
                  axios.get(`/api/s3?file_name=${file.name}`).then( response => {
-                    console.log(response.data);
                     self.setState({image: response.data, file: file});
-                    console.log(self.state);
                 })
             }
         )
@@ -35,7 +31,6 @@ class AddToBlog extends Component {
     handleSubmit(e) {
         let url = '';
         this.uploadFile(this.state.file, this.state.image.signed_request).then(response => {
-            console.log(response);
             url = this.state.image.url;
         });
 

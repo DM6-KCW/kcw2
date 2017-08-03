@@ -17,8 +17,6 @@ class RemoveBlog extends Component {
     }
 
     handleClick(e){
-        console.log(e.target.id);
-
         let answer = window.confirm('are you sure you want to permanently delete this media? ' + e.target.id);
         var self = this;
         if(answer){
@@ -26,7 +24,6 @@ class RemoveBlog extends Component {
             axios.delete('/api/media/delete/'+ e.target.id).then(function(response){
                 axios.get('/api/allmedia').then(function(response) {
                     self.setState({'postage': response.data})
-                    console.log(self.state);
                 })
             })
         }
@@ -63,7 +60,7 @@ class RemoveBlog extends Component {
                                     links to: {postage.link}
                                  </div>
                              </div>
-                            
+
 
                              <button
                                 type="button"

@@ -39,7 +39,6 @@ class Moonlight extends Component {
 
 
     render(){
-        console.log(this.state);
         var self = this;
         return (
             <div>

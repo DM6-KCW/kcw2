@@ -25,8 +25,6 @@ class Admin extends Component {
             this.setState({loggedIn: response.data.answer},
 
                 () => {
-                console.log('checked' , this.state.loggedIn);
-
                     if (this.state.loggedIn) {
                         this.props.history.push('/adminPage')
                     }
@@ -42,7 +40,7 @@ class Admin extends Component {
 
     render() {
         return (
-            
+
             <div className="admin-container">
                     <div className="login-page">
                         <div className="login-form">
