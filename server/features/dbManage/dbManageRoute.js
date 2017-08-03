@@ -42,10 +42,11 @@ module.exports = function(app) {
         db.addBlog([req.query.title, moment().format('MMMM/DD/YY h:mm:ss A'), req.query.image, req.query.description])
         .then(function(response){
             // db.addBlog(["Hello!", moment().format('MMMM/DD/YY h:mm:ss A'), "https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/2014/02/image.png", "Heres some neat birds"])
-            console.log(response);
+            // console.log(response);
             res.status(200).json(response);
         })
     })
+
 
     app.get('/api/getOrders', function(req, res, next){
         const db = app.get('db');
@@ -62,5 +63,15 @@ module.exports = function(app) {
         })
     })
 
+    app.post('/api/addmedia',  (req, res) => {
 
-}
+        const db = app.get('db');
+
+        db.addMedia([req.query.image, req.query.description, req.query.url])
+            .then(response => {
+                res.status(200).json(response);
+            })
+
+    })
+
+};

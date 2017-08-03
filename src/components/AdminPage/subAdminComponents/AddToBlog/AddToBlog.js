@@ -61,22 +61,19 @@ class AddToBlog extends Component {
                     <div className="form-group">
                         <label for="exampleInputEmail1">Enter Title Name</label>
                         <input type="text" className="form-control" placeholder="Enter title"
-                               ref={(title) => this.title = title}/>
+                               ref={(title) => this.title = title} required/>
                     </div>
 
                     <div className="form-group">
                         <label for="exampleInputFile">File input</label>
                         <input type="file" className="form-control-file" id="exampleInputFile"
-                               aria-describedby="fileHelp" ref={(image) => this.image = image}/>
-                        <small id="fileHelp" className="form-text text-muted">This is some placeholder block-level help
-                            text for the above input. It's a bit lighter and easily wraps to a new line.
-                        </small>
+                               aria-describedby="fileHelp" ref={(image) => this.image = image} required/>
                     </div>
 
                     <div className="form-group">
                         <label for="exampleTextarea">Enter Content for blog</label>
                         <textarea className="form-control" id="exampleTextarea" rows="5"
-                                  ref={(content) => this.content = content}></textarea>
+                                  ref={(content) => this.content = content} required></textarea>
                     </div>
 
                     <button type="submit" class="btn btn-primary">Submit blog</button>

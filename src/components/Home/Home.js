@@ -19,9 +19,9 @@ return (
    <div className="container-fluid">
       <div className="sec-2">
          <div className="sec-2-sudo-sec4">
-            <div className="sec-4-an-1">
-               <div className="sec-4-color"></div>
-               <div className="sec-4-img"></div>
+            <div className="sec-4-an-1" id="testprop">
+               <div className="sec-4-color sec-4-fast-an" id="sec-2-color-y"></div>
+               <div className="sec-4-img sec-4-fast-an" id="sec-2-color-t"></div>
             </div>
          </div>
          <div className="Latest-Collections">
@@ -110,8 +110,8 @@ return (
          </div>
          <div className="col-md-3">
             <div className="sec-4-an-1">
-               <div className="sec-4-color"></div>
-               <div className="sec-4-img" id="sec-4-img-1"></div>
+               <div className="sec-4-color" id="sec-4-img-1"></div>
+               <div className="sec-4-img"></div>
             </div>
             <div className="sec-4-an-1" id="sec-4-down">
                <div className="sec-4-color" id="sec-4-img-2"></div>
@@ -140,8 +140,8 @@ return (
 
          <div className="col-md-3">
             <div className="sec-4-an-1">
-               <div className="sec-4-color-v2"></div>
-               <div className="sec-4-img-v2" id="sec-4-img-5"></div>
+               <div className="sec-4-color-v2" id="sec-4-img-5"></div>
+               <div className="sec-4-img-v2"></div>
             </div>
          </div>
          <div className="col-md-3">
@@ -157,9 +157,8 @@ return (
             </div>
 
             <div className="sec-4-an-1">
-                <div className="sec-4-img" id="sec-4-img-6"></div>
-                <div className="sec-4-color"></div>
-        
+                <div className="sec-4-color" id="sec-4-img-6"></div>
+                <div className="sec-4-img"></div>
             </div>
 
 
