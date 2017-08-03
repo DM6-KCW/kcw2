@@ -19,11 +19,16 @@ class RemoveBlog extends Component {
     handleClick(e){
         console.log(e.target.id);
 
-        let answer = window.confirm('are you sure you want to permantetly delete this me? ' + e.target.id);
-
+        let answer = window.confirm('are you sure you want to permanently delete this media? ' + e.target.id);
+        var self = this;
         if(answer){
             //delete the blog
-            axios.delete('/api/blogs/delete/'+ e.target.id)
+            axios.delete('/api/media/delete/'+ e.target.id).then(function(response){
+                axios.get('/api/allmedia').then(function(response) {
+                    self.setState({'postage': response.data})
+                    console.log(self.state);
+                })
+            })
         }
         else{
             //dont delte the blog
@@ -31,7 +36,7 @@ class RemoveBlog extends Component {
     }
     componentDidMount(){
         var self = this;
-        axios.get('/api/allblogs').then(function(response){
+        axios.get('/api/allmedia').then(function(response){
             self.setState({'postage': response.data})
         })
     }
@@ -46,21 +51,24 @@ class RemoveBlog extends Component {
                  {this.state.postage.map(function(postage){
                      return (
                          <div>
-                         <Link to={"/post/"+postage.blog_id}>
+
                              <div id="post">
                                  <div id="posttitle">
-                                     {postage.title}
+                                     {postage.description}
                                  </div>
-                                 <div id="postdate">
-                                     {postage.posttime}
+                                 <div id="deletemediaimgurl">
+                                    image url: {postage.imgurl}
+                                 </div>
+                                 <div id="deletemedialink">
+                                    links to: {postage.link}
                                  </div>
                              </div>
-                             </Link>
+                            
 
                              <button
                                 type="button"
              					className="btn btn-danger"
-                                id={postage.blog_id}
+                                id={postage.id}
 
              	                onClick={(e) => self.handleClick(e)}>
              					delete above post
