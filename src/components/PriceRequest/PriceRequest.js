@@ -55,6 +55,7 @@ class PriceRequest extends Component {
 		}
 	}
 
+
 	onSubmit(e) {
 		e.preventDefault();
 		if (this.state.name && this.state.email && this.state.country) {

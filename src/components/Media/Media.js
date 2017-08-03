@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import axios from 'axios';
+import { Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
 
@@ -11,11 +13,20 @@ class Media extends Component {
 
     constructor() {
         super()
+        this.state = {
+            postage: []
+        }
     }
 
+    componentDidMount(){
+        var self = this;
+        axios.get('/api/allmedia').then(function(response){
+            self.setState({'postage': response.data})
+        })
+    }
 
     render() {
-
+        var self = this;
         return (
             <div id="media">
                 <div id="title">
@@ -26,45 +37,27 @@ class Media extends Component {
                 </div>
                 <div className="pressContain">
                     <div className="pressBox">
-                        <div className="para">
-                                <div>
-                                    <img src={image} alt="article" className="img-responsive" height="500px" width="500px" id="image"/>
-                                </div>
-                                <div >
-                                    <div id="mediap">you mama is so fat adfasdf asdf asdfa sdf asdf sad fasd fas asdfasdf adfasdf asd fa dsfa sdfasdf asdfasdfad fasdfasdfa sdf</div>
-                                </div>
-
-                        {/*{}*/}
-
-                        </div>
-                    </div>
-
-                    <div className="pressBox">
-                        <div className="para">
-                                <div>
-                                    <img src={imageTwo} alt="artile" className="img-responsive" height="500px" width="500px" id="image" />
-                                </div>
-                                <div>
-                                    <div id="mediap">your sister is in shape adsfa dsfasdf asdfasdfasdf sdfadfadfsdf asdfasdfasdfsdfdsadfasdf sdasdfasdfasdfasdf sdfasd fasd fadfasdfa dsfasdfa sdfasdfadffasdf adfasdf sdf</div>
-                                </div>
-                        </div>
-                    </div>
-
-
-
-                    <div className="pressBox">
-                        <div className="para">
-                                <div>
-                                    <img src={imageThree} alt="article" className="img-responsive" height="500px" width="500px" id="image" />
-                                </div>
-                                <div >
-                                    <div id="mediap">you sister is damn fine adfasdfasd fasdfasdfasdfadfa sdfasdfa sdfadfasd fasdfasdfaafdasfadadfadfdsfas asdfad fasdfa dfsdfa sdfsdfasdfsdsdfasdfsdfa fda</div>
-                                </div>
+                        <div id="postcontainer">
+                            <div className="blogposts">
+                                {this.state.postage.map(function(postage){
+                                    return (
+                                        <div>
+                                            <a href={postage.link}>
+                                                <div id="postimgbox">
+                                                    <img id="postimg" src={postage.imgurl}/>
+                                                </div>
+                                                <div>
+                                                    {postage.description}
+                                                </div>
+                                            </a>
+                                        </div>
+                                    )
+                                })}
+                            </div>
                         </div>
                     </div>
                 </div>
-                </div>
-
+            </div>
         )
     }
 }

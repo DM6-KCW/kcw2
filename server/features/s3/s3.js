@@ -11,7 +11,6 @@ aws.config.update({
 
 module.exports = function(app){
     app.get('/api/s3', function(req, res, next) {
-        console.log(req.query);
         const s3 = new aws.S3()
         const s3Config = {
             Bucket: config.bucketName,
@@ -28,7 +27,6 @@ module.exports = function(app){
                 signed_request: response,
                 url: `https://s3.${config.region}.amazonaws.com/${config.bucketName}/${req.query.file_name}`
             }
-            console.log(data);
             return res.status(200).json(data)
         })
 
