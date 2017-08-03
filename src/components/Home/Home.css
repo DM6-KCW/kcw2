@@ -13,13 +13,29 @@
 
 /*Section 2*/
 .sec-2{
-	height: 80vh;
+	height: 75vh;
+	display: b
 }
 
 .sec-2-sudo-sec4{
 	float: left;
-	margin-right: 10%;
+	margin-left: 4px;
+	margin-top: 0px;
+	
 
+}
+
+#testprop{
+	margin-left: 64%;
+}
+
+
+#sec-2-color-t{
+	background-color: #FFF8E7;
+}
+
+#sec-2-color-y{
+	background-image: url('https://s-media-cache-ak0.pinimg.com/736x/b5/6e/0b/b56e0bbe0d8d77a381e3de58416ee9cd--pakistani-dresses-indian-dresses.jpg');
 }
 
 .sec-2-Collections{
@@ -46,7 +62,7 @@
 	background-color: #f6ecdd;
 	float: right;
 	padding: 4%;
-	width: 70%;
+	width: 68%;
 }
 
 .sec-2-bm-img{}
@@ -61,11 +77,10 @@
 
 
 .sec-3{
-	
 	background-color: #910025;
-	height: 50vh;
+	height: 40vh;
 	color: #EE7B60;
-	margin-top: 20px;
+	margin-top: 0px;
 	clear: both;
 }
 
@@ -118,7 +133,7 @@
 /*Section 4 {img}*/
 
 .sec-4{
-	height: 2000px;
+	height: 1700px;
 	padding: 5%;
 	background-color: #FFFFFF;
 	clear: both;
@@ -156,6 +171,7 @@
 
 .sec-4-color{
 	background-attachment: fixed;
+	background-color: #0A0C26;
 	height: 300px;
 	width: 300px;
 	z-index: 3;
@@ -202,17 +218,23 @@
     animation-duration: 1s;
 }
 .sec-4-fast-an{
-	animation-delay: .5s;
+	animation-delay: .25s;
 	animation-name: sec-4-animate-1;
     animation-duration: 1s;
-}
+} 
+
+
  
 @keyframes sec-4-animate-1 {
 	from {
+		transform: translateX(-5px);
 		width: 0px;
+		
 	}
     to {
+		transform: translateX(0px);
 		width: 300px;
+		
 	}
 }
 /*Section 4-animation*/
@@ -268,7 +290,7 @@
 /*Section 6*/
 	.sec-6{
 		padding: 5%;
-		height: 100vh;
+		height: 80vh;
 		color: blanchedalmond;
 		display: block;
 	}
