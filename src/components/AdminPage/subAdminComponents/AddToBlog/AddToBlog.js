@@ -18,7 +18,7 @@ class AddToBlog extends Component {
                 console.log(e.target.files);
 
                 let file = e.target.files[0];
-                 axios.get(`/api/s3?file_name=${file.name}&file_type=${file.type}`).then( response => {
+                 axios.get(`/api/s3?file_name=${file.name}`).then( response => {
                     console.log(response.data);
                     self.setState({image: response.data, file: file});
                     console.log(self.state);

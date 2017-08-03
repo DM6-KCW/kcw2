@@ -26,7 +26,7 @@ module.exports = function(app){
             }
             const data = {
                 signed_request: response,
-                url: `https://s3.${config.region}.amazonaws.com/${config.bucketName}/${req.query.file_name}.${req.query.file_type}`
+                url: `https://s3.${config.region}.amazonaws.com/${config.bucketName}/${req.query.file_name}`
             }
             console.log(data);
             return res.status(200).json(data)
