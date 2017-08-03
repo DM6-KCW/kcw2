@@ -49,11 +49,11 @@ module.exports = function(app) {
 
     //endpoint for adding media
 
-    app.post('/api/addmedia',  (req, res) => {
+    app.post('/api/addmedia',  function(req, res) {
 
         const db = app.get('db');
-
-        db.addMedia([req.query.image, req.query.description, req.query.url])
+        console.log('we here boys');
+        db.addMedia([req.query.imgurl, req.query.description, req.query.url])
             .then(response => {
                 res.status(200).json(response);
             })
