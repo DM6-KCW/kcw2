@@ -17,8 +17,6 @@ class RemoveBlog extends Component {
     }
 
     handleClick(e){
-        console.log(e.target.id);
-
         let answer = window.confirm('are you sure you want to permantetly delete this blog? ' + e.target.id);
         var self = this;
         if(answer){
@@ -26,7 +24,6 @@ class RemoveBlog extends Component {
             axios.delete('/api/blogs/delete/'+ e.target.id).then(function(response){
                 axios.get('/api/allblogs').then(function(response) {
                     self.setState({'postage': response.data})
-                    console.log(self.state);
                 })
             })
 

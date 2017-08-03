@@ -24,9 +24,7 @@ class Nav extends Component {
 
 	}
 	componentWillUnmount() {
-		console.log("UNmounting")
 		document.onscroll = null
-		console.log(document)
 	}
 	render() {
 		return (
