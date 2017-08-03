@@ -43,22 +43,22 @@ class Nav extends Component {
 
 						<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 							<ul className="nav navbar-nav navbar-right">
-								<li>
+								<li data-toggle="collapse" data-target=".navbar-collapse.in">
 									<Link to="/brand">The Brand</Link>
 								</li>
-								<li>
+								<li data-toggle="collapse" data-target=".navbar-collapse.in">
 									<Link to="/brand">The Designer</Link>
 								</li>
-								<li>
+								<li data-toggle="collapse" data-target=".navbar-collapse.in">
 									<Link to="/collections">Collections</Link>
 								</li>
-								<li>
+								<li data-toggle="collapse" data-target=".navbar-collapse.in">
 									<Link to="/blog">Blog</Link>
 								</li>
-								<li>
+								<li data-toggle="collapse" data-target=".navbar-collapse.in">
 									<Link to="/media">Media</Link>
 								</li>
-								<li>
+								<li data-toggle="collapse" data-target=".navbar-collapse.in">
 									<Link to="/contact">Contact</Link>
 								</li>
 							</ul>

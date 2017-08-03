@@ -19,31 +19,19 @@ class Contact extends Component {
 		this.handleInputChange = this.handleInputChange.bind(this);
 	}
 
-    // componentDidMount(){
-    //     var file = {
-    //         name: "full-logo",
-    //         type: "png"
-    //     };
-    //     var self = this;
-    //     var imgUrl;
-    //     axios.get(`/api/s3?file_name=${file.name}&file_type=${file.type}`).then(function(response){
-    //         console.log(response.data.url);
-    //         imgUrl = response.data.url;
-    //         self.setState({'imageUrl': imgUrl})
-    //         return response.data.url;
-    //     });
-    // }
 	onSubmit() {
         axios.post(baseurl + '/api/contact', this.state).then(function(response) {
         });
 		this.setState({email: "", subject: "", message: "", sender_name: ""})
 	}
+
 	handleInputChange(event) {
 		const target = event.target;
 		const value = target.value;
 		const name = target.name;
 		this.setState({[name]: value});
 	}
+
 	render() {
 		return (
             <div className="contact-container">
@@ -52,9 +40,9 @@ class Contact extends Component {
 
 				<h4>Connect</h4>
 				<div className="social-buttons">
-					<div className="col-md-4"><a href=""><i className="fa fa-facebook fa-lg" aria-hidden="true"></i></a></div>
-					<div className="col-md-4"><a href=""><i className="fa fa-twitter fa-lg" aria-hidden="true"></i></a></div>
-					<div className="col-md-4"><a href=""><i className="fa fa-instagram fa-lg" aria-hidden="true"></i></a></div>
+					<div className="col-md-4"><a href="https://www.facebook.com/MithikalraFashion/"><i className="fa fa-facebook fa-lg" aria-hidden="true"></i></a></div>
+					<div className="col-md-4"><a href="https://twitter.com/mithikalra?lang=en"><i className="fa fa-twitter fa-lg" aria-hidden="true"></i></a></div>
+					<div className="col-md-4"><a href="https://www.instagram.com/mithikalra/"><i className="fa fa-instagram fa-lg" aria-hidden="true"></i></a></div>
 				</div>
 				<hr/>
 
