@@ -48,9 +48,9 @@ class Admin extends Component {
                         <div className="login-form">
                             <form className="login-login-form"  onSubmit={this.handleSubmit}>
 
-                                <input type="text" placeholder="username" ref={(user) => this.user = user}/>
+                                <input type="text" placeholder="username" ref={(user) => this.user = user} required/>
                                 <input type="password" placeholder="password" ref={(pass) => this.pass = pass}
-                                       maxLength="15"/>
+                                       maxLength="15" required/>
 
                                 <button>login</button>
                             </form>

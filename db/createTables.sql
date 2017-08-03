@@ -6,6 +6,8 @@ create table if not exists dresses (collection_id int, dress_id int, img_url tex
 
 create table if not exists admin (id serial, admin text, password text);
 
+create table if not exists media (id serial, imgurl text, description text, link text);
+
 CREATE TABLE if not exists orders
 (
     order_id serial NOT NULL,
