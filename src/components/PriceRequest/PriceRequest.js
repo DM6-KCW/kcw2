@@ -28,7 +28,8 @@ class PriceRequest extends Component {
 			name: null,
 			email: null,
 			phoneNumber: null,
-			age: null
+			age: null,
+			formDisabled: true
 		}
 		this.onSubmit = this.onSubmit.bind(this);
 		this.handleInputChange = this.handleInputChange.bind(this);
@@ -54,18 +55,35 @@ class PriceRequest extends Component {
 		}
 	}
 
-	onSubmit() {
-
+	onSubmit(e) {
+		e.preventDefault();
+		if (this.state.name && this.state.email && this.state.country) {
+			axios.post('/api/placeOrder', this.state).then(function(response){
+				console.log(response);
+			})
+			return
+		}
+		if (!this.state.name) {
+			window.$('.form-group-name').addClass('has-error').children('label').removeClass('hidden')
+		} else {
+			window.$('.form-group-name').removeClass('has-error').children('label').addClass('hidden')
+		}
+		if (!this.state.email) {
+			window.$('.form-group-email').addClass('has-error').children('label').removeClass('hidden')
+		} else {
+			window.$('.form-group-email').removeClass('has-error').children('label').addClass('hidden')
+		}
+		if (!this.state.country) {
+			window.$('.form-group-country').addClass('has-error').children('label').removeClass('hidden')
+		} else {
+			window.$('.form-group-country').removeClass('has-error').children('label').addClass('hidden')
+		}
 		console.log(this.state);
-		axios.post('/api/placeOrder', this.state).then(function(response){
-			console.log(response);
-		})
 	}
 	handleInputChange(event) {
 		const target = event.target;
 		const value = target.value;
 		const name = target.name;
-		console.log(value);
 		this.setState({[name]: value});
 	}
 
@@ -75,7 +93,7 @@ class PriceRequest extends Component {
 
 				<h1 className="chosen-header">Chosen Item: </h1>
 				<img className="chosen-dress" src={this.state.dress} alt=""/>
-
+				<form className="login-login-form">
 				<h2 className="order-header">Step 1: What's your size</h2>
 					<h3><b>Choose from Standard Sizes:</b> </h3>
 					<select name="standardSize" value={this.state.standardSize} onChange={this.handleInputChange} className="form-control">
@@ -180,25 +198,38 @@ class PriceRequest extends Component {
 
 				<h2 className="order-header">Step 3: Contact Info</h2>
 
-			<select value={this.state.country} onChange={this.handleInputChange} name="country" id="countryInput" className="form-control" placeholder="Country"></select>
+				<div className="form-group form-group-country">
+					<label className="hidden control-label" htmlFor="country">Please select a country</label>
+					<select
+						value={this.state.country}
+						onChange={this.handleInputChange}
+						name="country"
+						id="countryInput"
+						className="form-control"
+						placeholder="Country" ></select>
+				</div>
 
-				<div className="form-group">
+				<div className="form-group form-group-name">
+					<label className="hidden control-label" htmlFor="name">Please enter your name</label>
 					<input
 						name="name"
 						value={this.state.name}
 						onChange={this.handleInputChange}
 						type="text"
 						className="form-control"
-						placeholder="Name" />
+						placeholder="Name"
+						required/>
 				</div>
-				<div className="form-group">
+				<div className="form-group form-group-email">
+					<label className="hidden control-label" htmlFor="email">Please enter your email</label>
 					<input
 						name="email"
 						value={this.state.email}
 						onChange={this.handleInputChange}
 						type="email"
 						className="form-control"
-						placeholder="Email"/>
+						placeholder="Email"
+						required/>
 				</div>
 				<div className="form-group">
 					<input
@@ -207,7 +238,7 @@ class PriceRequest extends Component {
 						onChange={this.handleInputChange}
 						type="tel"
 						className="form-control"
-						placeholder="Phone No."/>
+						placeholder="Phone No." aria-required="true"/>
 				</div>
 				<div className="form-group">
 					<input
@@ -216,7 +247,7 @@ class PriceRequest extends Component {
 						onChange={this.handleInputChange}
 						type="number"
 						className="form-control"
-						placeholder="Age" />
+						placeholder="Age" aria-required="true"/>
 				</div>
 
 				<button
@@ -225,7 +256,7 @@ class PriceRequest extends Component {
 					onClick={this.onSubmit}>
 					Submit Order
 				</button>
-
+				</form>
 			</div>
 		)
 	}
