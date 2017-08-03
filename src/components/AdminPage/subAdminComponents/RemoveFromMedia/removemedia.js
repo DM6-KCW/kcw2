@@ -2,7 +2,7 @@ import React, {Component} from 'react'
 import axios from 'axios';
 import { Link } from 'react-router-dom';
 
-import './removeblog.css';
+import './removemedia.css';
 
 class RemoveBlog extends Component {
 
@@ -19,7 +19,7 @@ class RemoveBlog extends Component {
     handleClick(e){
         console.log(e.target.id);
 
-        let answer = window.confirm('are you sure you want to permantetly delete this blog? ' + e.target.id);
+        let answer = window.confirm('are you sure you want to permantetly delete this me? ' + e.target.id);
 
         if(answer){
             //delete the blog
@@ -40,7 +40,7 @@ class RemoveBlog extends Component {
         var self = this;
         return (
             <div>
-            Remove Blogs
+                Remove Media
             <div id="postcontainer">
                 <div className="blogposts">
                  {this.state.postage.map(function(postage){
