@@ -81,6 +81,7 @@ return (
                   quaerat voluptatem. Ut."
                </p>
             </div>
+
             <div className="text-center sec-3-btn-padder">
                <Link to="/media"><button className="sec-3-btn">FIND OUT MORE</button></Link>
             </div>
@@ -182,7 +183,7 @@ return (
       </div>
 
 
-      <div className="sec-8">
+      {/* <div className="sec-8">
          <div className="sec-8-word-fade sec-8-dd">
             <div className="sec-8-word">
                <p> accusantium doloremque laudantium, 
@@ -196,22 +197,29 @@ return (
          <div className="sec-8-back-word">
             this is in the background moving
          </div>
-      </div>
+      </div> */}
+
       <div className="sec-7">
-         <div className="text-center margin-down">
-            <h1>Dolore Magnam</h1>
+         <div id="sec-7-left">
          </div>
-         <div>
-            <div className="sec-7-img"></div>
-         </div>
-         <div>
-            <div className="sec-7-bg-word">
-               <div className="sec-7-word">
-                  <h1 className="sec-7-word">THESE ARE THE WORD</h1>
-               </div>
+         <div id="sec-7-right">
+            <div className="sec-7-word-cont">
+                <div className="row">
+                    <div className="col-md-6">
+                        <div className="arrow"><hr /></div>
+                    </div>
+                    <div className="col-md-6">
+                        <div className="sec-7-word">
+                            Rot enim ad minima veniam, 
+                            quis nostrum exercitationem.
+                        </div>
+                    </div>
+                </div>
             </div>
          </div>
       </div>
+
+
    </div>
 </div>
 )
