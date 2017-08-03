@@ -47,7 +47,21 @@ module.exports = function(app) {
         })
     })
 
-    //endpoint for adding media
+
+    app.get('/api/getOrders', function(req, res, next){
+        const db = app.get('db');
+        db.getOrders().then(function (response){
+            res.status(200).json(response);
+        })
+    })
+
+    app.delete('/api/deleteOrder/:order_id', function (req, res, next) {
+        const db = app.get('db'); 
+        console.log(req.params.order_id);
+        db.deleteOrder([req.params.order_id]).then(function(response){
+            res.status(200).json(response)
+        })
+    })
 
     app.post('/api/addmedia',  (req, res) => {
 

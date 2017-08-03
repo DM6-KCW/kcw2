@@ -10,7 +10,25 @@ class PriceRequest extends Component {
 		super();
 
 		this.state = {
-			dress: ""
+			dress: "",
+			standardSize: "us0uk4",
+			bust: null,
+			chest: null,
+			hip: null,
+			shoulder: null,
+			underbust: null,
+			upperarm: null,
+			waist: null,
+			shouldertobust: null,
+			shouldertowaist: null,
+			shouldertoknee: null,
+			shouldertoground: null,
+			height: 46,
+			country: null,
+			name: null,
+			email: null,
+			phoneNumber: null,
+			age: null
 		}
 		this.onSubmit = this.onSubmit.bind(this);
 		this.handleInputChange = this.handleInputChange.bind(this);
@@ -171,7 +189,7 @@ class PriceRequest extends Component {
 						onChange={this.handleInputChange}
 						type="text"
 						className="form-control"
-						placeholder="Name"/>
+						placeholder="Name" />
 				</div>
 				<div className="form-group">
 					<input
@@ -198,7 +216,7 @@ class PriceRequest extends Component {
 						onChange={this.handleInputChange}
 						type="number"
 						className="form-control"
-						placeholder="Age"/>
+						placeholder="Age" />
 				</div>
 
 				<button
