@@ -10,7 +10,6 @@ import axios from 'axios';
 
 class AdminPage extends Component {
     componentWillMount() {
-        console.log("mounting")
         axios.get('/api/auth')
             .then(response => {
                 if (!response.data) {
