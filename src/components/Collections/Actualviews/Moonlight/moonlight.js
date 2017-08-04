@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
@@ -46,7 +45,7 @@ class Moonlight extends Component {
                 {this.state.dresses.map(function(dresses) {
                          return (
                             <div className="container">
-                                <img onMouseOver={self.handleMouseOver} onMouseOut={self.handleMouseOut} src={dresses.img_url} id={dresses.dress_id} className="image" />
+                                <img alt="" onMouseOver={self.handleMouseOver} onMouseOut={self.handleMouseOut} src={dresses.img_url} id={dresses.dress_id} className="image" />
                                 <Link to={"/moonlight/"+dresses.dress_id}>
                                         <div className="overlay">
                                             <div className="text">Price Request</div>
