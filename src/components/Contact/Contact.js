@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 import baseurl from '../../Utilities/utils';
+import fullLogo from '../../images/full-logo.png';
 
 import "./Contact.css";
 
@@ -38,8 +39,9 @@ class Contact extends Component {
             <div className="contact-container">
 
 			<div className="contact-form col-md-6">
-
-				<h4>Connect</h4>
+				<div className="img-logo-contact">
+				   <img className="full-logo" src={fullLogo} alt=""/>
+				</div>
 				<div className="social-buttons">
 					<div className="col-md-4"><a href="https://www.facebook.com/MithikalraFashion/"><i className="fa fa-facebook fa-lg" aria-hidden="true"></i></a></div>
 					<div className="col-md-4"><a href="https://twitter.com/mithikalra?lang=en"><i className="fa fa-twitter fa-lg" aria-hidden="true"></i></a></div>
@@ -98,7 +100,7 @@ class Contact extends Component {
 
 				<h4>Or call us at</h4>
 
-				<div id="phonenumber">1-555-555-5555</div>
+				<div id="phonenumber">999-984-1847</div>
 
 				<div className="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
 					<div className="modal-dialog modal-sm" role="document">
