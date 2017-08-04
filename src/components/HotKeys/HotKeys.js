@@ -6,16 +6,11 @@
 // };
 //
 // const
-import React, {Component} from 'react'
-import {HotKeys, HotKeyMapMixin} from 'react-hotkeys';
+import React from 'react'
+import {HotKeys} from 'react-hotkeys';
 import {withRouter} from 'react-router-dom';
 import Home from '../Home/Home'
-import Admin from '../Admin/Admin'
 
-const handlers = {
-    'deleteNode': (event) => console.log("Delete"),
-    'moveUp': (event) => console.log('Move up hotkey called!'),
-};
 
 const keyMap = {
     'redirect': 'shift+a'
@@ -36,5 +31,3 @@ const HotKey = React.createClass({
 });
 
 export default withRouter(HotKey);
-
-

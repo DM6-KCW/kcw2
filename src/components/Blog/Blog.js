@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 import axios from 'axios';
-import Posts from './Posts/posts'
 
 import "./Blog.css";
 import "./Posts/posts.css"
@@ -35,7 +33,7 @@ class Blog extends Component{
 
 
                         <img id="logoonblog" src={fullLogo} alt=""/>
-                        
+
                         </div>
                         <div className="blogposts">
                          {this.state.postage.map(function(postage){
@@ -50,7 +48,7 @@ class Blog extends Component{
                                                 {postage.posttime}
                                             </div>
                                             <div id="postimgbox">
-                                                <img id="postimg" src={postage.img_url}/>
+                                                <img id="postimg" alt="" src={postage.img_url}/>
                                             </div>
                                             <div id="posttext">
                                                 {postage.posttext}

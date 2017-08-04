@@ -1,14 +1,9 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-import { Link } from 'react-router-dom';
 // import { Link } from 'react-router-dom';
 
 
 import "./Media.css";
-import image from "../../images/FB_IMG_1500476060183[125].jpg";
-import imageTwo from "../../images/FB_IMG_1500476073426[124].jpg";
-import imageThree from "../../images/FB_IMG_1500475775897[120].jpg";
-
 class Media extends Component {
 
     constructor() {
@@ -26,7 +21,6 @@ class Media extends Component {
     }
 
     render() {
-        var self = this;
         return (
             <div id="media">
                 <div id="title">
@@ -42,7 +36,7 @@ class Media extends Component {
                                 <div className="pressBox">
                                     <a href={postage.link}>
                                         <div id="mediaimgbox">
-                                            <img id="mediaimg" src={postage.imgurl}/>
+                                            <img id="mediaimg" alt='' src={postage.imgurl}/>
                                         </div>
                                         <div id="mediaDescriptionbox">
                                             {postage.description}
