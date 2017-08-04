@@ -3,7 +3,7 @@
 	margin-bottom: 0;
 	background-color: #0A0C26;
 	border: none;
-	padding: 10px;
+	padding: 11px;
 	transition: background-color 0.3s ease-in-out;
 	font-family: 'Bellefair', serif;
 	font-size: 19px;
@@ -28,12 +28,28 @@
 	background-color: #C9954C;
 }
 
+.navbar-inverse .navbar-toggle:focus, .navbar-inverse .navbar-toggle:hover{
+	background-color: transparent;
+}
+.navbar-inverse .navbar-toggle{
+	border: none;
+}
+
+.navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form{
+	border: none;
+}
+
 ul.nav a:hover {
 	color: #C9954C !important;
 }
 
 ul.nav a:focus {
 	color: #C9954C !important;
+}
+
+.navbar.navbar-inverse .navbar-collapse {
+  border: none;
+  box-shadow: none;
 }
 
 @media (max-width: 915px) {

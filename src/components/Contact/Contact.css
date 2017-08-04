@@ -1,6 +1,5 @@
 .contact-container{
-	padding-top: 20px;
-	padding-bottom: calc(100vh - 679px);
+	padding-bottom: calc(100vh - 775px);
 	font-family: 'Bellefair', serif;
 }
 
@@ -31,4 +30,8 @@
 }
 #phonenumber{
     color: #C9954C;
+}
+
+.img-logo-contact{
+	margin: 0;
 }
