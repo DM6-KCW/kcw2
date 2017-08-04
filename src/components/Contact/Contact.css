@@ -1,6 +1,7 @@
 .contact-container{
 	padding-top: 20px;
 	padding-bottom: calc(100vh - 679px);
+	font-family: 'Bellefair', serif;
 }
 
 .contact-form{

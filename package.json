@@ -12,6 +12,7 @@
     "nodemailer": "^4.0.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
+    "react-hotkey": "^0.7.0",
     "react-scripts": "1.0.10"
   },
   "scripts": {
@@ -26,6 +27,7 @@
     "express-session": "^1.15.4",
     "multer": "^1.3.0",
     "react-dropzone": "^3.13.4",
+    "react-hotkeys": "^0.10.0",
     "react-redux": "^5.0.5",
     "react-router": "^4.1.2",
     "react-router-dom": "^4.1.2",

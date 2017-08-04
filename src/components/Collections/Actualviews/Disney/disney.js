@@ -1,9 +1,7 @@
 import React, {Component} from 'react';
-import {connect} from 'react-redux';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
-import DressProducts from './dressProduct/dressProducts';
 
 import './disney.css';
 
@@ -26,7 +24,6 @@ class Disney extends Component {
 
 
     render(){
-        console.log(this.state);
         return (
             <div>
                 <div className = "dressContainer">

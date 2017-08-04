@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { Link } from 'react-router-dom';
 import "./Footer.css";
 class Footer extends Component {
 render() {
@@ -20,7 +19,7 @@ return (
                <div className="col-md-3">
                   <div className="text-center spacer padder-right">FOLLOW:</div>
                </div>
-            
+
                   <div className="col-md-3">
                      <div className="inv-spacer text-center ">
                         <a href="https://www.facebook.com/MithikalraFashion/"><i className="fa fa-facebook fa-lg" aria-hidden="true"></i></a>
@@ -36,7 +35,7 @@ return (
                         <a href="https://www.instagram.com/mithikalra/"><i className="fa fa-instagram fa-lg" aria-hidden="true"></i></a>
                      </div>
                   </div>
-               
+
             </div>
          </div>
          <div className="col-md-3">

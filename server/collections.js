@@ -25,8 +25,6 @@ module.exports =  {
 	},
 
 	placeOrder: function(req, res, next){
-		console.log(req.body);
-
 		let order_email = {
 			from: 'Mithi Kalra Admin',
 			to: config.email,
@@ -50,7 +48,7 @@ module.exports =  {
 					'<li>Country: ' + req.body.country + '</li>' +
 					'<li>Name: ' + req.body.name + '</li>' +
 					'<li>Email: ' + req.body.email + '</li>' +
-					'<li>Phone Number: ' + req.body.phone_number + '</li>' +
+					'<li>Phone Number: ' + req.body.phoneNumber + '</li>' +
 					'<li>Age: ' + req.body.age + '</li>' +
 					'</ul>'
 		}
@@ -62,10 +60,10 @@ module.exports =  {
 		});
 
 		db = req.app.get('db');
-		db.addOrder([req.body.dress_id, req.body.standardSize, parseInt(req.body.bust), parseInt(req.body.chest), parseInt(req.body.hip),
-					parseInt(req.body.shoulder), parseInt(req.body.underbust), parseInt(req.body.upperarm), parseInt(req.body.waist),
-					parseInt(req.body.shouldertobust), parseInt(req.body.shouldertowaist), parseInt(req.body.shouldertoknee),
-					parseInt(req.body.shouldertoground), parseInt(req.body.height), req.body.country, req.body.name, req.body.email, parseInt(req.body.age), req.body.phoneNumber])
+		db.addOrder([req.body.dress_id, req.body.standardSize, req.body.bust, req.body.chest, req.body.hip,
+					req.body.shoulder, req.body.underbust, req.body.upperarm, req.body.waist,
+					req.body.shouldertobust, req.body.shouldertowaist, req.body.shouldertoknee,
+					req.body.shouldertoground, req.body.height, req.body.country, req.body.name, req.body.email, req.body.age, req.body.phoneNumber])
 					.then(function(response){
 						console.log(response);
 					})

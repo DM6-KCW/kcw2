@@ -1,3 +1,30 @@
 #removeblog{
-    
+    background-color: #ff8580;
 }
+#blogstitle {
+    text-align: center;
+    color: #EF3B3A;
+    font-weight: bold;
+    font-size: 26px;
+    font-style: oblique;
+}
+
+#blogtitles {
+    display: table;
+    margin: auto;
+    padding: 10px;
+    font-size: 24px;
+}
+
+#postdate {
+    display: table;
+    margin: auto;
+    padding: 18px;
+    color: white;
+}
+
+.btnb {
+    display: table;
+    margin: auto;
+}
+

@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import axios from 'axios';
-import { Link } from 'react-router-dom';
-
+import {Link} from 'react-router-dom';
 import './removemedia.css';
 
 class RemoveBlog extends Component {
@@ -17,13 +16,15 @@ class RemoveBlog extends Component {
     }
 
     handleClick(e){
-        console.log(e.target.id);
-
-        let answer = window.confirm('are you sure you want to permantetly delete this me? ' + e.target.id);
-
+        let answer = window.confirm('are you sure you want to permanently delete this media? ' + e.target.id);
+        var self = this;
         if(answer){
             //delete the blog
-            axios.delete('/api/blogs/delete/'+ e.target.id)
+            axios.delete('/api/media/delete/'+ e.target.id).then(function(response){
+                axios.get('/api/allmedia').then(function(response) {
+                    self.setState({'postage': response.data})
+                })
+            })
         }
         else{
             //dont delte the blog
@@ -31,7 +32,7 @@ class RemoveBlog extends Component {
     }
     componentDidMount(){
         var self = this;
-        axios.get('/api/allblogs').then(function(response){
+        axios.get('/api/allmedia').then(function(response){
             self.setState({'postage': response.data})
         })
     }
@@ -40,36 +41,48 @@ class RemoveBlog extends Component {
         var self = this;
         return (
             <div>
-                Remove Media
-            <div id="postcontainer">
-                <div className="blogposts">
+                <h3 id="removemediatitle">Remove Media</h3>
+                <div className="">
                  {this.state.postage.map(function(postage){
                      return (
-                         <div>
-                         <Link to={"/post/"+postage.blog_id}>
-                             <div id="post">
-                                 <div id="posttitle">
-                                     {postage.title}
+
+                         <div className="row">
+
+                             <Link to={"/post/" + postage.link}>
+                                 <div className="col-xs-3" id="removedescription">
+                                         {postage.description}
                                  </div>
-                                 <div id="postdate">
-                                     {postage.posttime}
-                                 </div>
-                             </div>
                              </Link>
 
-                             <button
-                                type="button"
-             					className="btn btn-danger"
-                                id={postage.blog_id}
+                                 <div className="col-xs-3" id="removelink">
+                                        <img src={postage.imgurl} alt="media image" height="50px" width="60px" />
+                                 </div>
 
-             	                onClick={(e) => self.handleClick(e)}>
-             					delete above post
-             				</button>
+
+
+
+                                    <div className="col-xs-3 medialink">
+                                        {postage.link}
+                                    </div>
+
+
+
+
+                                <div className="col-xs-3">
+                                     <button
+                                        type="button"
+                                        className="btn btn-danger btnm"
+                                        id={postage.id}
+
+                                        onClick={(e) => self.handleClick(e)}>
+                                        delete above post
+                                    </button>
+                                </div>
+
                          </div>
                      )
                  })}
                 </div>
-            </div>
             </div>
         )
     }

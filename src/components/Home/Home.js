@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
 import "./Home.css";
+
 import fullLogo from '../../images/full-logo.png'; 
 class Home extends Component {
     constructor(){
@@ -27,6 +28,10 @@ class Home extends Component {
         }
     }
 render() {
+
+
+
+
 return (
 <div className="home-container">
    <div className="sec-5">
