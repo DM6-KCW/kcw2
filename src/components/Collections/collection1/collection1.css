@@ -1,85 +1,88 @@
+#left-part {
+    color: #c19925;
+    width: 30vw;
+    height: 70vh;
+    background-color: rgba(30, 100, 150, .2);
+    border-radius: 10px;
+    text-align: center;
+    font-family: Bellefair, serif;
+}
+
 #moonlight-text {
-    text-align: center;
-
+    font-size: 3em;
+    margin: 0;
+    text-shadow: 3px 3px rgba(235, 60, 192, .29);
 }
+
 #moonlight-date {
-    text-align: center;
-}
-.collectionbox{
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    background-color: red;
-}
-.collectionstack{
-    border: solid 3px #F0F0F0;
-    padding: 0px;
-    background-color: magenta;
-    height: 642px;
-    width: 377px;
-}
-.toplefttext{
-    width: 160px;
-    text-align: center;
-    z-index: 2;
-    background-color: red;
-    position: absolute;
-    height: 200px;
-    padding: 15px;
-    display:block;
-}
-.imgtopright{
-    position: relative;
-    left: 71px;
-    z-index: 0;
-    width:300px;
-    background-color: orange;
-    height: 175px;
-
-}
-.imgundertext{
-    position: absolute;
-    top: 300px;
-    width: 120px;
-    z-index: 1;
-    height: 300px;
-    background-color: blue;
+    display: inline-block;
+    font-size: 1.5em;
 }
 
-.rightimg{
-    position: relative;
-    left: 72px;
-    z-index: 0;
-    width: 300px;
-    background-color: purple;
-    height: 250px;
-    top: 0px;
+.toplefttext {
+    font-size: 1.2em;
+    width: auto;
+    color: #c29943;
 }
 
-.middletxt{
-    position: relative;
-    left: 110px;
-    top: -50px;
-    background-color: yellow;
-    z-index: 3;
-    height: 65px;
-    width: 150px;
+#collection-stuff {
+    clear: both;
 }
-.rightrightimg{
-    position: relative;
-    left: 252px;
-    top: -200px;
-    width: 120px;
-    background-color: cyan;
-    height: 200px;
-    z-index: 1;
+
+.toplefttext {
+    margin: 50px;
 }
-.bottomimg{
-    z-index: 0;
-    position: relative;
-    left: 0px;
-    top: -274px;
-    width: 371px;
-    height: 220px;
-    background-color: violet;
+
+#banner{
+    width:100%;
+    height:auto;
+    position:relative;
+    list-style:none;
+    margin:0 auto;
+    padding:0;
+    background: #ccc;
 }
+
+#banner li{
+    position:absolute;
+    left:0;
+    top:0;
+    width:100%;
+    height:300px;
+    background: no-repeat scroll center center / cover;
+}
+
+#banner #slide-1{
+    background-image:url(http://www.google.com/about/datacenters/gallery/images/_2000/LNR_015.jpg);
+}
+#banner #slide-2{
+    background-image:url(http://www.google.com/about/datacenters/gallery/images/_2000/GBL_001.jpg);-webkit-animation: fadeOut 2s ease-in-out forwards;
+
+/* css aimation  */
+    opacity:0;
+    animation: fadeIn 4s infinite;
+    animation-delay: 0s;
+}
+
+a{
+  text-align:center; 
+  display:block;
+}
+
+@-webkit-keyframes fadeIn {
+    100% { opacity: 1; }
+}
+
+@-moz-keyframes fadeIn {
+    100% { opacity: 1; }
+}
+
+@-o-keyframes fadeIn {
+    100% { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    100% { opacity: 1; }
+}
+
+

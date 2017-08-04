@@ -6,7 +6,7 @@ import "./collection2.css";
 class Collection2 extends Component {
     render() {
         return (
-            <div>
+            <div id='right-part'>
                 <div id="disney-text">
                     Indian Disney Story
                 </div>
@@ -17,18 +17,11 @@ class Collection2 extends Component {
                     <div className="disneytop">
                         <div className="disneytopleft">MITHI KALRA</div>
                     </div>
-                    <div className="disneymid">
-                        <div className="disneymidupleft"></div>
-                        <div className="disneymidupright"></div>
-                        <div className="disneymiddown"></div>
-                        <div className="disneymidmid"></div>
-                    </div>
-                    <div className="disneybottom4square">
-                        <div className="disney4squaretopleft"></div>
-                        <div className="disney4squaretopright"></div>
-                        <div className="disney4squarebottomleft"></div>
-                        <div className="disney4squarebottomright"></div>
-                    </div>
+                    <ul id='banner'>
+                      <li id="slide-1"></li>
+                      <li id="slide-2"></li>
+                      <li id="slide-3"></li>
+                    </ul>
                 </div>
             </div>
         )
