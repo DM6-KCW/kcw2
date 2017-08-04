@@ -39,7 +39,10 @@ class AddToMedia extends Component {
         var self = this;
         axios.post('/api/addmedia?imgurl=' + self.state.image.url + '&description=' + this.media.value + '&url=' + this.url.value)
             .then(response => {
-
+                self.image.value = "";
+                self.media.value = "";
+                self.url.value = "";
+                alert('completed addition to media page');
             })
             .catch(err => {
                 console.log(err);
@@ -53,25 +56,25 @@ class AddToMedia extends Component {
         return (
             <div>
                 <form action="#" method="post" id="mediaForm" onSubmit={this.handleSubmit}>
-
+                    <h3 id="mediatitle">Add to Media Page</h3>
                     <div className="form-group">
-                        <label>File input</label>
-                        <input type="file" className="form-control-file" id="mediaInputFile" aria-describedby="fileHelp"
-                               ref={(image) => this.image = image} required/>
+                        <label htmlFor="" id="mediaimage">attach media image</label>
+                        <input type="file" className="form-control-file form-control" id="mediaInputFile" aria-describedby="fileHelp"
+                               ref={(image) => this.image = image} required />
                     </div>
 
                     <div className="form-group">
-                        <label>Example textarea</label>
+
                         <textarea className="form-control" id="exampleTextarea" rows="3"
-                                  ref={(media) => this.media = media} required>write content</textarea>
+                                  ref={(media) => this.media = media} placeholder="Enter figure caption here" required></textarea>
                     </div>
 
                     <div className="form-group">
-                        <label>Enter Link</label>
-                        <input type='text' className="form-control" id="text" ref={(url) => this.url = url} required/>
+
+                        <input type='text' className="form-control" id="text" ref={(url) => this.url = url} placeholder="Enter URL Example: https://www.example.com/" required/>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Submit Media Post</button>
+                    <button type="submit" className="btn btn-success center-block">Submit Media Post</button>
 
                 </form>
             </div>

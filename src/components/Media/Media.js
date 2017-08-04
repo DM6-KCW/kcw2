@@ -1,13 +1,12 @@
 import React, {Component} from 'react';
 import axios from 'axios';
-// import { Link } from 'react-router-dom';
 
 
 import "./Media.css";
 class Media extends Component {
 
     constructor() {
-        super()
+        super();
         this.state = {
             postage: []
         }
@@ -30,11 +29,12 @@ class Media extends Component {
                     <hr />
                 </div>
                 <div className="pressContain">
+
                     {this.state.postage.map(function(postage){
                         return (
                             <div>
                                 <div className="pressBox">
-                                    <a href={postage.link}>
+                                    <a href={postage.link} target="_blank">
                                         <div id="mediaimgbox">
                                             <img id="mediaimg" alt='' src={postage.imgurl}/>
                                         </div>

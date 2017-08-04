@@ -41,39 +41,48 @@ class RemoveBlog extends Component {
         var self = this;
         return (
             <div>
-                Remove Media
-            <div id="postcontainer">
-                <div className="blogposts">
+                <h3 id="removemediatitle">Remove Media</h3>
+                <div className="">
                  {this.state.postage.map(function(postage){
                      return (
-                         <div>
 
-                             <div id="post">
-                                 <div id="posttitle">
-                                     {postage.description}
+                         <div className="row">
+
+                             <Link to={"/post/" + postage.link}>
+                                 <div className="col-xs-3" id="removedescription">
+                                         {postage.description}
                                  </div>
-                                 <div id="deletemediaimgurl">
-                                    image url: {postage.imgurl}
+                             </Link>
+
+                                 <div className="col-xs-3" id="removelink">
+                                        <img src={postage.imgurl} alt="media image" height="50px" width="60px" />
                                  </div>
-                                 <div id="deletemedialink">
-                                    links to: {postage.link}
-                                 </div>
-                             </div>
 
 
-                             <button
-                                type="button"
-             					className="btn btn-danger"
-                                id={postage.id}
 
-             	                onClick={(e) => self.handleClick(e)}>
-             					delete above post
-             				</button>
+
+                                    <div className="col-xs-3 medialink">
+                                        {postage.link}
+                                    </div>
+
+
+
+
+                                <div className="col-xs-3">
+                                     <button
+                                        type="button"
+                                        className="btn btn-danger btnm"
+                                        id={postage.id}
+
+                                        onClick={(e) => self.handleClick(e)}>
+                                        delete above post
+                                    </button>
+                                </div>
+
                          </div>
                      )
                  })}
                 </div>
-            </div>
             </div>
         )
     }

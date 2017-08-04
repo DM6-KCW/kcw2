@@ -1,4 +1,6 @@
-
+.admin-container {
+    /*min-height: calc(100vh - 128px);*/
+}
 .login-page {
   width: 360px;
   padding: 8% 0 0;

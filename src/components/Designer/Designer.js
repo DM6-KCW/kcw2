@@ -6,7 +6,7 @@ render() {
 return (
 <div>
    <div className="designer-container text-center">
-      <div>
+      <div id="designer">
          <h1>THE DESIGNER</h1>
       </div>
       <div className="img-logo">
