@@ -1,12 +1,20 @@
 #post{
     margin-bottom: 20px;
+    background-color: #C9954C;
+    border: solid #C9954C 3px;
+    border-radius: 5px;
 }
 #posttitle{
     font-size: 32px;
-    color: #4286f4;
+    color: #0A0C26;
+    font-family: 'Bellefair', serif;
+    margin-left: 10px;
 }
 #postdate{
     color: #626262;
+    margin-left: 10px;
+    font-size: 16px;
+    padding-bottom: 2px;
 }
 #postimgbox{
     display: flex;
@@ -20,4 +28,7 @@
 }
 #posttext{
     font-size: 20px;
+    color: #0A0C26;
+    font-family: 'Bellefair', serif;
+    margin-left: 10px;
 }
