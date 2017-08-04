@@ -8,13 +8,29 @@ import logo from "./logo.png"
 class Nav extends Component {
 	constructor() {
 		super()
-		this.addScroll = this.addScroll.bind(this)
-		this.scrollListener = this.scrollListener.bind(this)
+		// this.addScroll = this.addScroll.bind(this)
+		// this.scrollListener = this.scrollListener.bind(this)
+		this.handleScroll = this.handleScroll.bind(this); 
 	}
-	addScroll() {
-		document.onscroll = this.scrollListener
+	// addScroll() {
+	// 	document.onscroll = this.scrollListener
+	// }
+	// scrollListener(e) {
+	// 	if(document.body.scrollTop > 50){
+	// 		this.nav.style.backgroundColor = "white"
+	// 	}
+	// 	else{
+	// 		this.nav.style.backgroundColor = '#0A0C26'
+	// 	}
+
+	// }
+	componentDidMount(){
+		window.addEventListener('scroll', this.handleScroll); 
 	}
-	scrollListener(e) {
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this.handleScroll); 
+	}
+	handleScroll(e){
 		if(document.body.scrollTop > 50){
 			this.nav.style.backgroundColor = "white"
 		}
@@ -23,13 +39,10 @@ class Nav extends Component {
 		}
 
 	}
-	componentWillUnmount() {
-		document.onscroll = null
-	}
 	render() {
 		return (
 			<div>
-				<nav id="nav" ref={nav => {this.nav = nav; this.addScroll()}} className="navbar navbar-inverse navbar-fixed-top">
+				<nav id="nav" ref={nav => {this.nav = nav}} className="navbar navbar-inverse navbar-fixed-top">
 					<div className="container-fluid">
 						<div className="navbar-header">
 							<button type="button" className="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">

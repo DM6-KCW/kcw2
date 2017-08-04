@@ -6,27 +6,15 @@
 	overflow-x: hidden;
 	height: 100%;
 }
-
 /*Section 1*/
 /*Section 1*/
 
 
 /*Section 2*/
 .sec-2{
-	height: 75vh;
-	display: b
-}
-
-.sec-2-sudo-sec4{
-	float: left;
-	margin-left: 4px;
-	margin-top: 0px;
-	
-
-}
-
-#testprop{
-	margin-left: 64%;
+	 /* height: 80vh;  */
+	display: flex;
+	clear: both;
 }
 
 
@@ -36,6 +24,8 @@
 
 #sec-2-color-y{
 	background-image: url('https://s-media-cache-ak0.pinimg.com/736x/b5/6e/0b/b56e0bbe0d8d77a381e3de58416ee9cd--pakistani-dresses-indian-dresses.jpg');
+	background-position: left center
+	/* background-repeat: no-repeat;  */
 }
 
 .sec-2-Collections{
@@ -60,12 +50,101 @@
 }
 .Latest-Collections{
 	background-color: #f6ecdd;
-	float: right;
+	float: left;
 	padding: 4%;
-	width: 68%;
+	width: 50%;
+	
 }
 
+#pAnimate{
+	color: #F6ECDD; 
+}
+
+.p-keyframe{
+	animation-name: collect;
+	animation-duration: 0.75s;
+	transition: all ease-in 0.75s;
+	 -webkit-animation-fill-mode: forwards; 
+
+}
+
+.p-keyframe-from-right{
+	animation-name: collect2; 
+	animation-duration: 0.75s;
+	transition: all ease-in 0.75s;
+	 -webkit-animation-fill-mode: backwards; 
+
+}
+
+
+@keyframes collect{
+
+	from {
+		transform: translateX(-100%);
+		opacity: 0; 
+	}
+			
+
+	to{
+		transform: translateX(0);
+		opacity: 1; 
+	}
+	
+}
+
+@keyframes collect2{
+
+	from {
+		transform: translateX(200%);
+		opacity: 0; 
+	}
+			
+
+	to{
+		transform: translateX(0);
+		opacity: 1; 
+	}
+	
+}
+
+
 .sec-2-bm-img{}
+
+
+/* .cont{
+	 height: 700px; 
+	background-color: #fff;;
+}
+
+  .collect-1{ 
+
+}  */
+
+/* .right h1, div, p{
+	position: relative;
+}
+
+.left{
+	position: relative;
+	height: inherit;
+	float: right;
+	width: 50%;
+	background-image: url('https://s-media-cache-ak0.pinimg.com/736x/56/99/68/569968bcfe5b7886b8821aecc068325c--blue-lehenga-party-wear-indian-dresses-lehenga-choli.jpg');
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+.right{
+	position: relative;
+	height: inherit;
+	float: right;
+	width: 50%;
+} */
+
+
+
+
 /*Section 2*/
 
 
@@ -75,37 +154,43 @@
 
 /*Section 3*/
 
-
 .sec-3{
 	background-color: #910025;
 	height: 40vh;
 	color: #EE7B60;
 	margin-top: 0px;
+	display: block;
+	clear: both;
+	
+	
+}
+
+.sec-3 div, h1, p{
+	position: relative;
+	display: block;
 	clear: both;
 }
 
-
-.sec-3-p{
+.sec-3 p{
+	color: #fff3ee;
 	font-family: Helvetica, sans-serif;
 	font-size: 30px;
 	font-style: normal;
 	line-height: 36px;
-	color: #fff3ee;
 }
 
-
-.sec-3-btn{
+.sec-3 button{
 	background-color: transparent;
 	border-style: solid;
 	border-color: #EE7B60;
 	padding: 15px;
-
 }
 
 
 .sec-3-btn-padder{
 	padding: 30px;
 	position: relative;
+
 }
 
 /*Section 3*/
@@ -159,6 +244,7 @@
 	background-color: transparent;
 	height: 600px;
 	width: 600px;
+	margin-left:10px; 
 }
 
 .sec-4-img{
@@ -172,13 +258,12 @@
 
 .sec-4-color{
 	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: cover;
 	background-color: #0A0C26;
-	height: 300px;
-	width: 300px;
 	z-index: 3;
-	position: relative;
-	left: 100px;
-	top: 200px;
+	float: right; 
+	width: 50%; 
 }
 
 .sec-4-img-v2{
@@ -206,35 +291,43 @@
 	font-size: 34px;
 }
 
+#sec-4-view-collection{
+	margin-top: 20px; 
+}
+
 
 /*Section 4-animation*/
-.sec-4-slow-an{
-	animation-delay: 2s;
+.sec-4-1-an{
 	animation-name: sec-4-animate-1;
     animation-duration: 1s;
 }
-.sec-4-mid-an{
-	animation-delay: 1s;
-	animation-name: sec-4-animate-1;
-    animation-duration: 1s;
-}
-.sec-4-fast-an{
+.sec-4-2-an{
 	animation-delay: .25s;
+	animation-name: sec-4-animate-1;
+    animation-duration: 1s;
+}
+.sec-4-3-an{
+	animation-delay: .75s;
+	animation-name: sec-4-animate-1;
+    animation-duration: 1.5s;
+} 
+
+.sec-4-4-an{
+	animation-delay: 1s;
 	animation-name: sec-4-animate-1;
     animation-duration: 1s;
 } 
 
-
  
 @keyframes sec-4-animate-1 {
 	from {
-		transform: translateX(-5px);
+		transform: translateX(0px);
 		width: 0px;
 		
 	}
     to {
 		transform: translateX(0px);
-		width: 300px;
+		width: 350px;
 		
 	}
 }
@@ -248,20 +341,20 @@
 .sec-5{
 		font-size: 450%;
 		font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-		height: 70vh;
+		/* height: 70vh; */
 		color: #C9954C;
-		display: block;
-		clear: both;
+		 display: block; 
+		 clear: both; 
 	}
 
 .sec-5-back-img{
-	background-image: url('https://mygeneral.org/wp-content/uploads/2017/06/fashion13-1.jpg');
+	background-image: url('./Screen Shot 2017-08-03 at 10.58.23 PM.png');
 	/*background-color: #CA3517;*/
 	background-repeat: no-repeat;
-	background-position: right 20% top 20%;
-	background-attachment: fixed;
+	/* background-attachment: fixed; */
 	z-index: 1;
-	height: 100%;
+	height: 370px;
+	background-size: cover; 
 
 
 	
@@ -270,7 +363,7 @@
 
 .sec-5-word-cont{
 	position: relative;
-	top: 10%;
+	top: 10%; 
 	z-index: 2;
 	background-attachment: fixed;
 	
@@ -281,8 +374,19 @@
 	top: 22px;
 	z-index: 3;
 	position: relative;
-	margin-top: 40px;
 	background-attachment: fixed;
+}
+
+.sec-5-logo-container{
+	position: relative; 
+
+}
+
+.sec-5-logo{
+	width: 350px;
+	height:350px; 
+		/* animation-name: sec-4-animate-1;
+    animation-duration: 2s; */
 }
 
 
@@ -294,6 +398,7 @@
 		height: 80vh;
 		color: blanchedalmond;
 		display: block;
+		clear: both;
 	}
 
 	.sec-6-header{
@@ -350,11 +455,15 @@
 .sec-7{
 	height: 100vh;
 	width: 100%;
+	color: #C9954C;
+	background-color: #fff;
 }
 #sec-7-left{
 	float: left;
 	background-image: url('https://s-media-cache-ak0.pinimg.com/originals/2b/bc/55/2bbc55ab166d64604b31ac79906b603e.jpg');
 	background-size: cover;
+	background-attachment: fixed;
+	background-position: right top;
 	background-repeat: no-repeat;
 	width: 50%;
 	z-index: -1;
@@ -363,13 +472,12 @@
 #sec-7-right{
 	float: right;
 	width: 50%;
-	background-color: #fff;
 	height: inherit;
 }
 .sec-7-word-cont{
 	font-size: 36px;
 	z-index: 4;
-	
+
 	height: 80%;
 	width: 60%;
 	position: relative;
@@ -379,7 +487,7 @@
 .sec-7-word{
 	font-size: 36px;
 	z-index: 4;
-	
+	margin-bottom: 40%;
 	height: 70%;
 	width: 100%;
 	position: relative;
@@ -389,9 +497,15 @@
 .arrow{
 	position: relative;
 	left: 10%;
-	top: 20%;
+	top: 40%;
 }
 
+#sec-7-word-b{
+	font-size: 50px;
+	right: 20px;
+}
+
+#sec-7-word-2{}
 
 hr.style17 {
     border-top: 1px solid #8c8b8b;
@@ -411,6 +525,23 @@ hr.style17:after {
     transform: rotate(60deg);
 }
 
+
+#sec-7-animation-1{
+	font-size: 50px;
+	animation-duration: 1s;
+	animation-name: word-fade;
+	transition: all ease-in-out 5s;
+	-webkit-animation-fill-mode: forwards;
+}		
+#sec-7-animation-2{
+	animation-duration: 2s;
+	animation-name: word-fade;
+	transition: all ease-in-out 3s;
+	-webkit-animation-fill-mode: forwards;
+}
+
+#sec-7-animation-2{}
+
 /*Section 7*/
 
 /*Section 8*/
@@ -428,7 +559,7 @@ hr.style17:after {
 
 .sec-8-word-fade{
 	animation-duration: 3s;
-	animation-name: word-fade;
+	animation-name: word-fade;		
 	transition: all ease-in-out 5s;
 	-webkit-animation-fill-mode: forwards;
 }
@@ -501,7 +632,7 @@ hr.style17:after {
 	 
 	.sec-6{
 		display: block;
-		overflow: scroll;
+		overflow: hidden;
 		padding: 3%;
 		height: 100vh;
 		color: blanchedalmond;
