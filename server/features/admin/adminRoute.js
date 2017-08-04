@@ -1,6 +1,5 @@
 module.exports = function(app) {
     app.get('/api/login', function(req,res) {
-        console.log(req.query);
         const db = app.get('db');
         db.getAdmin().then(function(response) {
             // console.log(response);

@@ -2,6 +2,7 @@ import React from 'react';
 import {Switch, Route} from 'react-router-dom';
 
 import Home from './components/Home/Home';
+import HotKey from './components/HotKeys/HotKeys'
 import Brand from './components/Brand/Brand';
 import Collections from './components/Collections/Collections';
 import Blog from './components/Blog/Blog';
@@ -20,7 +21,7 @@ import AdminPage from './components/AdminPage/AdminPage';
 export default (
     <div>
     <Switch>
-        <Route component={Home} exact path="/"/>
+        <Route component={HotKey} exact path="/"/>
         <Route component={Brand} path = "/brand"/>
         <Route component={Collections} path = "/collections"/>
         <Route component={Blog} path = "/blog"/>

@@ -10,10 +10,8 @@ import axios from 'axios';
 
 class AdminPage extends Component {
     componentWillMount() {
-        console.log("mounting")
         axios.get('/api/auth')
             .then(response => {
-                console.log(response)
                 if (!response.data) {
                     this.props.history.push('/admin')
                 }
@@ -26,6 +24,8 @@ class AdminPage extends Component {
     render() {
         return (
             <div>
+                <h2 id="admin">Admin Page</h2>
+                <hr/>
                 <AddToBlog/>
                 <hr/>
                 <AddToMedia/>
@@ -35,6 +35,7 @@ class AdminPage extends Component {
                 <RemoveBlog/>
                 <hr/>
                 <RemoveMedia/>
+                <br/>
             </div>
         )
     }

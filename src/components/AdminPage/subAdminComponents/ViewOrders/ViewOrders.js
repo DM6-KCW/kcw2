@@ -15,14 +15,10 @@ class ViewOrders extends Component {
 	}
 
     deleteOrder(order){
-        console.log("deleted");
-        console.log(order.order_id);
-        var self = this; 
+        var self = this;
         axios.delete('/api/deleteOrder/' + order.order_id).then(function(response){
-            console.log(response);
             axios.get('/api/getOrders').then(function(response) {
                 self.setState({'orders': response.data})
-                console.log(self.state);
             })
         })
     }
@@ -31,7 +27,6 @@ class ViewOrders extends Component {
         var self = this;
         axios.get('/api/getOrders').then(function(response) {
             self.setState({'orders': response.data})
-            console.log(self.state);
         })
 	}
 
@@ -40,7 +35,7 @@ class ViewOrders extends Component {
         var self = this;
 		return (
 			<div className="white-text">
-				<h3>Orders Summary</h3>
+				<h3 id="viewtitle">Orders Summary</h3>
                 <div className="table-responsive">
 				<table className="table">
 					<thead>

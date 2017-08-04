@@ -1,9 +1,9 @@
 import React, {Component} from 'react';
-import { Route, Link, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 import Collection1 from './collection1/collection1';
 import Collection2 from './collection2/collection2';
-import Collection3 from './collection3/collection3';
+// import Collection3 from './collection3/collection3';
 
 
 import "./Collections.css";

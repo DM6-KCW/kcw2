@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+
 import Designer from '../Designer/Designer';
 import "./Brand.css";
 import fullLogo from '../../images/full-logo.png';

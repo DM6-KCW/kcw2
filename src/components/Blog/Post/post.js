@@ -1,6 +1,5 @@
 import React, {Component} from 'react';
 import { Link } from 'react-router-dom';
-import { connect } from 'react-redux';
 import axios from 'axios';
 
 
@@ -27,7 +26,6 @@ class Post extends Component{
     }
 
     render(){
-        console.log(this.state);
         return(
             <div>
                 <div id="blogcontainer">
@@ -47,7 +45,7 @@ class Post extends Component{
                                                 {postage.posttime}
                                             </div>
                                             <div id="postimgbox">
-                                                <img id="postimg" src={postage.img_url}/>
+                                                <img alt="" id="postimg" src={postage.img_url}/>
                                             </div>
                                             <div id="posttext">
                                                 {postage.posttext}

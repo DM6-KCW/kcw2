@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
 import axios from 'axios';
 import baseurl from '../../Utilities/utils';
 import fullLogo from '../../images/full-logo.png';
@@ -22,7 +21,6 @@ class Contact extends Component {
 
 	onSubmit() {
         axios.post(baseurl + '/api/contact', this.state).then(function(response) {
-            console.log(response);
         });
 		this.setState({email: "", subject: "", message: "", sender_name: ""})
 	}

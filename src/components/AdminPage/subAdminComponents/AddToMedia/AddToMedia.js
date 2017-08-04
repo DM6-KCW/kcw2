@@ -15,13 +15,10 @@ class AddToMedia extends Component {
     componentDidMount() {
         let self = this;
         document.getElementById('mediaInputFile').addEventListener('change', function (e) {
-            console.log(e.target.files);
 
             let file = e.target.files[0];
             axios.get(`/api/s3?file_name=${file.name}&file_type=${file.type}`).then(response => {
-                console.log(response.data);
                 self.setState({image: response.data, file: file});
-                console.log(self.state);
             })
         }
         )
@@ -35,7 +32,6 @@ class AddToMedia extends Component {
     handleSubmit(e) {
         let url = '';
         this.uploadFile(this.state.file, this.state.image.signed_request).then(response => {
-            console.log(response);
             url = this.state.image.url;
         });
 
@@ -43,7 +39,10 @@ class AddToMedia extends Component {
         var self = this;
         axios.post('/api/addmedia?imgurl=' + self.state.image.url + '&description=' + this.media.value + '&url=' + this.url.value)
             .then(response => {
-
+                self.image.value = "";
+                self.media.value = "";
+                self.url.value = "";
+                alert('completed addition to media page');
             })
             .catch(err => {
                 console.log(err);
@@ -57,25 +56,25 @@ class AddToMedia extends Component {
         return (
             <div>
                 <form action="#" method="post" id="mediaForm" onSubmit={this.handleSubmit}>
-
+                    <h3 id="mediatitle">Add to Media Page</h3>
                     <div className="form-group">
-                        <label>File input</label>
-                        <input type="file" className="form-control-file" id="mediaInputFile" aria-describedby="fileHelp"
-                               ref={(image) => this.image = image} required/>
+                        <label htmlFor="" id="mediaimage">attach media image</label>
+                        <input type="file" className="form-control-file form-control" id="mediaInputFile" aria-describedby="fileHelp"
+                               ref={(image) => this.image = image} required />
                     </div>
 
                     <div className="form-group">
-                        <label>Example textarea</label>
+
                         <textarea className="form-control" id="exampleTextarea" rows="3"
-                                  ref={(media) => this.media = media} required>write content</textarea>
+                                  ref={(media) => this.media = media} placeholder="Enter figure caption here" required></textarea>
                     </div>
 
                     <div className="form-group">
-                        <label>Enter Link</label>
-                        <input type='text' className="form-control" id="text" ref={(url) => this.url = url} required/>
+
+                        <input type='text' className="form-control" id="text" ref={(url) => this.url = url} placeholder="Enter URL Example: https://www.example.com/" required/>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Submit Media Post</button>
+                    <button type="submit" className="btn btn-success center-block">Submit Media Post</button>
 
                 </form>
             </div>
