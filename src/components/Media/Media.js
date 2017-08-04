@@ -36,26 +36,22 @@ class Media extends Component {
                     <hr />
                 </div>
                 <div className="pressContain">
-                    <div className="pressBox">
-                        <div id="postcontainer">
-                            <div className="blogposts">
-                                {this.state.postage.map(function(postage){
-                                    return (
-                                        <div>
-                                            <a href={postage.link}>
-                                                <div id="postimgbox">
-                                                    <img id="postimg" src={postage.imgurl}/>
-                                                </div>
-                                                <div>
-                                                    {postage.description}
-                                                </div>
-                                            </a>
+                    {this.state.postage.map(function(postage){
+                        return (
+                            <div>
+                                <div className="pressBox">
+                                    <a href={postage.link}>
+                                        <div id="mediaimgbox">
+                                            <img id="mediaimg" src={postage.imgurl}/>
                                         </div>
-                                    )
-                                })}
+                                        <div id="mediaDescriptionbox">
+                                            {postage.description}
+                                        </div>
+                                    </a>
+                                </div>
                             </div>
-                        </div>
-                    </div>
+                        )
+                    })}
                 </div>
             </div>
         )
