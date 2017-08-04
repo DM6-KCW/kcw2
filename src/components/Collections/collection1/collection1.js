@@ -6,34 +6,23 @@ import "./collection1.css";
 class Collection1 extends Component {
     render() {
         return (
-            <div>
+            <div id="left-part">
                 <div id="moonlight-text">
                     Moonlight Collection
                 </div>
                 <div id="moonlight-date">
                     Spring Summer 2017
                 </div>
-                <div className="collectionstack">
+                <div id="collection-stuff" className="collectionstack">
                     <div className="toplefttext"> The moonlight collection
                         is inspired from diﬀerent phases of moon
                         structured in cotton chanderi fabric.
                     </div>
-                    <div className="imgtopright"> img thats right here now
-                    </div>
-                    <div className="imgundertext"> img
-                    </div>
-                    <div className="rightimg">
-                        img
-                    </div>
-                    <div className="middletxt">
-                        text
-                    </div>
-                    <div className="rightrightimg">
-                        img
-                    </div>
-                    <div className="bottomimg">
-                        img
-                    </div>
+                    <ul id='banner'>
+                      <li id="slide-1"></li>
+                      <li id="slide-2"></li>
+                      <li id="slide-3"></li>
+                    </ul>
                 </div>
             </div>
         )
