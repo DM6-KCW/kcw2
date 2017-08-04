@@ -25,6 +25,8 @@ class AdminPage extends Component {
     render() {
         return (
             <div>
+                <h2 id="admin">Admin Page</h2>
+                <hr/>
                 <AddToBlog/>
                 <hr/>
                 <AddToMedia/>
@@ -34,6 +36,7 @@ class AdminPage extends Component {
                 <RemoveBlog/>
                 <hr/>
                 <RemoveMedia/>
+                <br/>
             </div>
         )
     }

@@ -9,8 +9,7 @@
 import React, {Component} from 'react'
 import {HotKeys, HotKeyMapMixin} from 'react-hotkeys';
 import {withRouter} from 'react-router-dom';
-import Home from '../Home/Home'
-import Admin from '../Admin/Admin'
+import Home from '../Home/Home';
 
 const handlers = {
     'deleteNode': (event) => console.log("Delete"),
@@ -18,12 +17,15 @@ const handlers = {
 };
 
 const keyMap = {
-    'redirect': 'shift+a'
+    'redirect': 'shift+a',
+    'adminpage': 'shift+h'
 };
 
 const HotKey = React.createClass({
     getInitialState() {
-        return {admin: false, handlers: {'redirect': () => this.props.history.push('/admin')}}
+        return {admin: false, handlers: {'redirect': () => this.props.history.push('/admin'),
+        'adminpage': () => this.props.history.push('/adminPage')}
+        }
     },
 
     render() {

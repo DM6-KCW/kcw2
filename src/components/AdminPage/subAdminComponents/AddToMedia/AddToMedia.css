@@ -1,0 +1,14 @@
+#mediaForm {
+
+}
+#mediatitle {
+    padding: 10px;
+    text-align: center;
+    font-style: oblique;
+    font-weight: bold;
+    color: #5cb85c;
+}
+#mediaimage {
+    margin-left: 18%;
+    color: white;
+}

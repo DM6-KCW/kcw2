@@ -38,12 +38,14 @@ class AddToBlog extends Component {
         var self = this;
         axios.post('/api/addblog?title=' + this.title.value + '&image=' + self.state.image.url + '&description=' + this.content.value)
             .then(response => {
-
+                self.title.value = "";
+                self.image.value = "";
+                self.content.value = "";
+                alert('completed adding blog');
             })
             .catch((err) => {
                 console.log(err);
-            })
-
+            });
 
     }
 
@@ -52,26 +54,29 @@ class AddToBlog extends Component {
         return (
             <div>
                 <form action="#" method="post" id="blogForm" onSubmit={this.handleSubmit}>
-
+                    <h3 id="blogtitles">Add to Blog Page</h3>
                     <div className="form-group">
-                        <label for="exampleInputEmail1">Enter Title Name</label>
+
                         <input type="text" className="form-control" placeholder="Enter title"
                                ref={(title) => this.title = title} required/>
                     </div>
 
                     <div className="form-group">
-                        <label for="exampleInputFile">File input</label>
-                        <input type="file" className="form-control-file" id="exampleInputFile"
+                        <label id="blogimage">Add blog image</label>
+                        <input type="file" className="form-control-file form-control" id="exampleInputFile"
                                aria-describedby="fileHelp" ref={(image) => this.image = image} required/>
                     </div>
 
                     <div className="form-group">
-                        <label for="exampleTextarea">Enter Content for blog</label>
+
                         <textarea className="form-control" id="exampleTextarea" rows="5"
-                                  ref={(content) => this.content = content} required></textarea>
+                                  ref={(content) => this.content = content}
+                                  placeholder="enter blog content here" required>
+
+                        </textarea>
                     </div>
 
-                    <button type="submit" class="btn btn-primary">Submit blog</button>
+                    <button type="submit" className="btn btn-success center-block">Submit blog</button>
 
                 </form>
             </div>

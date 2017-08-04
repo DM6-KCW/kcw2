@@ -42,7 +42,7 @@ module.exports = function(app) {
     app.post('/api/addblog', function(req, res){
         const db = app.get('db');
 
-        db.addBlog([req.query.title, moment().format('MMMM/DD/YY h:mm:ss A'), req.query.image, req.query.description])
+        db.addBlog([req.query.title, moment().format('MMMM Do YYYY'), req.query.image, req.query.description])
         .then(function(response){
             // db.addBlog(["Hello!", moment().format('MMMM/DD/YY h:mm:ss A'), "https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/2014/02/image.png", "Heres some neat birds"])
             // console.log(response);

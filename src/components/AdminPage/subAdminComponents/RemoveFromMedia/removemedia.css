@@ -1,0 +1,35 @@
+.col-xs-3 {
+    padding: 10px;
+    }
+
+#removemediatitle {
+    text-align: center;
+    color: #EF3B3A;
+    font-weight: bold;
+    font-size: 26px;
+    font-style: oblique;
+}
+
+#removedescription {
+    display: table;
+    margin: auto;
+    padding: 10px;
+    font-size: 24px;
+    text-align: center;
+    font-style: oblique;
+    font-weight: bold;
+
+}
+
+#removelink {
+    display: table;
+    margin: auto;
+}
+.btnm {
+    display: table;
+    margin: auto;
+}
+
+.medialink {
+    color: white;
+}

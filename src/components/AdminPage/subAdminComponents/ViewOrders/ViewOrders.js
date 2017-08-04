@@ -35,7 +35,7 @@ class ViewOrders extends Component {
         var self = this;
 		return (
 			<div className="white-text">
-				<h3>Orders Summary</h3>
+				<h3 id="viewtitle">Orders Summary</h3>
                 <div className="table-responsive">
 				<table className="table">
 					<thead>

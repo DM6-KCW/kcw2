@@ -1,18 +1,13 @@
 import React, {Component} from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-// import { Link } from 'react-router-dom';
 
 
 import "./Media.css";
-import image from "../../images/FB_IMG_1500476060183[125].jpg";
-import imageTwo from "../../images/FB_IMG_1500476073426[124].jpg";
-import imageThree from "../../images/FB_IMG_1500475775897[120].jpg";
-
 class Media extends Component {
 
     constructor() {
-        super()
+        super();
         this.state = {
             postage: []
         }
@@ -42,9 +37,9 @@ class Media extends Component {
                                 {this.state.postage.map(function(postage){
                                     return (
                                         <div>
-                                            <a href={postage.link}>
+                                            <a href={postage.link} target="_blank">
                                                 <div id="postimgbox">
-                                                    <img id="postimg" src={postage.imgurl}/>
+                                                    <img id="postimg" src={postage.imgurl} />
                                                 </div>
                                                 <div>
                                                     {postage.description}

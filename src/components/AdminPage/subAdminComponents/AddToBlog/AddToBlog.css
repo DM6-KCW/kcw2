@@ -1,0 +1,14 @@
+#blogForm {
+    color: #5cb85c;
+}
+#blogtitles {
+    padding: 10px;
+    text-align:center;
+    font-style: oblique;
+    font-weight: bold;
+}
+
+#blogimage {
+    margin-left: 18%;
+    color: white;
+}
