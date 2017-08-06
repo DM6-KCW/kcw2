@@ -12,25 +12,20 @@ class Home extends Component {
     }
     componentDidMount(){
         window.addEventListener('scroll', this.handleScroll); 
+        setTimeout(() => {this.pAnimate2.style.color = '#0A0C26'}, 750); 
     }
     componentWillUnmount() {
         window.removeEventListener('scroll', this.handleScroll); 
     }
     handleScroll(e){
-        if(document.body.scrollTop > 1){
-
-        }
         var scrollPercent = (window.$(window).scrollTop()) / (window.$(document).height() - window.$(window).height());
         console.log(scrollPercent)
-        if(scrollPercent > 0.08){
+        if(scrollPercent > 0.12){
             this.pAnimate.style.color = 'black'
             window.$('#pAnimate').addClass('p-keyframe')
         }
     }
 render() {
-
-
-
 
 return (
 <div className="home-container">
@@ -45,69 +40,79 @@ return (
    </div>
 
    <div className="sec-2">
-      <div className="sec-4-color" id="sec-2-color-y"></div>
-      <div id="latest-collections" className="Latest-Collections">
-          <div className="p-keyframe-from-right">
+       
+       <div className="k3-cont">
+            <div className="k3">
 
-          
-         <div className="sec-2-Collections">
-            <h1>Latest Collections</h1>
-         </div>
-         <div>
-            <p>
-               The moonlight collection is inspired from different 
-               phases of moon structured in cotton chanderi fabric. 
-               Chanderi being a traditional ethnic Indian fabric is 
-               characterized by its light weight, sheer texture and 
-               fine luxurious feel.Designs of Moonlight collection are seen surfacing the 
-               stage in flattering cuts at the neck and mid-section, 
-               right from short party dresses to flowy ball gowns to 
-               the full-length cocktail dresses, she has given white a 
-               whole new definition all together and with summer around, 
-               it feels like a soothing balm to the eyes.
-            </p>
-         </div>
-      </div>
+            </div>
+       </div>
+
+      <div className="Latest-Collections">
+          <div id="pAnimate2" ref={pAnimate2 =>{this.pAnimate2 = pAnimate2}}>
+            <div className="p-keyframe-from-right">
+                <div className="sec-2-Collections">
+                    <h1>The Moonlight Collection</h1>
+                </div>
+                <div>
+                <p>
+                    The moonlight collection is inspired from different phases 
+                    of moon structured in cotton chanderi fabric. Chanderi being 
+                    a traditional ethnic Indian fabric is characterized by its light weight, sheer texture and fine luxurious feel.
+                </p>
+                </div>
+            </div>
+        </div>
       </div>
    </div>
-      <div className="sec-2">
-      <div id="latest-collections" className="Latest-Collections">
+
+    <div className="sec-2">
+      <div className="Latest-Collections">
          <div  id="pAnimate" ref={pAnimate =>
             {this.pAnimate = pAnimate}} >
             <div className="sec-2-Collections ">
-               <h1>Latest Collections</h1>
+               <h1>The Disney Collection</h1>
             </div>
             <div>
                <p>
-                  The moonlight collection is inspired from different 
-                  phases of moon structured in cotton chanderi fabric. 
-                  Chanderi being a traditional ethnic Indian fabric is 
-                  characterized by its light weight, sheer texture and 
-                  fine luxurious feel.Designs of Moonlight collection are seen surfacing the 
-                  stage in flattering cuts at the neck and mid-section, 
-                  right from short party dresses to flowy ball gowns to 
-                  the full-length cocktail dresses, she has given white a 
-                  whole new definition all together and with summer around, 
-                  it feels like a soothing balm to the eyes.
+                    Dresses, gowns suited for a Princess, 
+                    based on the tradional art of Madhubani, 
+                    hand embroidered on pure silks and organza. 
+                    The collecon wonderfully and imaginavely combines 
+                    the grace of a bygone era, with the modern day fashion. Creavely designed Gowns and dresses are certain to catch the imaginaon of the young generaon not only in India but the world over.
                </p>
             </div>
          </div>
       </div>
-      <div className="sec-4-color" id="sec-2-color-y"></div>
+
+      <div className="k2-cont">
+        <div className="k2">
+        
+        </div>
+      </div>
+
+
    </div>
+
    <div className="sec-3 text-center">
-      <h1>MEDIA</h1>
       <p> 
-         "sed quia non numquam eius modi tempora 
-         incidunt ut labore et dolore magnam aliquam 
-         quaerat voluptatem. Ut."
+         "Moonlight came to me almost naturally as I had always been fascinated 
+         with the purity and sanctity that is attached to the moon and stars..."
       </p>
       <div className="sec-3-btn-padder">
          <Link to="/media">
-         <button>FIND OUT MORE</button></Link>
+         <button>Read More</button></Link>
       </div>
    </div>
-   <div className="sec-6 text-center">
+   <div id="read-the-blog" className="sec-3 text-center">
+       <p>Read the Designer's Personal Blog</p>
+      <div className="sec-3-btn-padder">
+         <Link to="/blog">
+         <button>Go There</button></Link>
+      </div>
+   </div>
+
+
+   {/* <div className="sec-6 text-center">
       <div className="sec-6-header">
          <div>FOLLOW US ON IN SOCIAL MEDIA </div>
       </div>
@@ -200,7 +205,7 @@ return (
       </div>
    </div>
    */}
-   <div className="sec-7">
+   {/* <div className="sec-7">
       <div id="sec-7-left">
       </div>
       <div id="sec-7-right">
@@ -231,7 +236,7 @@ return (
             </div>
          </div>
       </div>
-   </div>
+   </div> */}
 </div>
 )
 }
