@@ -12,7 +12,7 @@ class Brand extends Component {
 	componentDidMount(){
 		window.addEventListener('scroll', this.handleScroll);
 		if(this.props.location.search){
-			document.body.scrollTop = (window.$(document).height() - window.$(window).height()) * 0.80;
+			document.body.scrollTop = (window.$(document).height() - window.$(window).height()) * 1;
 		}
 		else{
 			document.body.scrollTop = 0;
@@ -27,7 +27,7 @@ class Brand extends Component {
 	}
 	componentDidUpdate(){
 		if(this.props.location.search){
-			document.body.scrollTop = (window.$(document).height() - window.$(window).height()) * 0.80;
+			document.body.scrollTop = (window.$(document).height() - window.$(window).height()) * 1;
 		}
 		else{
 			document.body.scrollTop = 0;
