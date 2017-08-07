@@ -7,33 +7,17 @@ class Collection1 extends Component {
     render() {
         return (
             <div>
-                <div id="moonlight-text">
-                    Moonlight Collection
-                </div>
-                <div id="moonlight-date">
-                    Spring Summer 2017
-                </div>
-                <div className="collectionstack">
-                    <div className="toplefttext"> The moonlight collection
-                        is inspired from diﬀerent phases of moon
-                        structured in cotton chanderi fabric.
+                <div id="collection-box">
+                    <div id="moonlight-date-and-text-box">
+                        <div id="moonlight-text">
+                            Moonlight Collection
+                        </div>
+                        <div id="moonlight-date">
+                            Spring Summer 2017
+                        </div>
                     </div>
-                    <div className="imgtopright"> img thats right here now
-                    </div>
-                    <div className="imgundertext"> img
-                    </div>
-                    <div className="rightimg">
-                        img
-                    </div>
-                    <div className="middletxt">
-                        text
-                    </div>
-                    <div className="rightrightimg">
-                        img
-                    </div>
-                    <div className="bottomimg">
-                        img
-                    </div>
+                    <img id="moonlight-collection-img" src="http://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg">
+                    </img>
                 </div>
             </div>
         )
