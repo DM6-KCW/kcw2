@@ -16,6 +16,7 @@ import PriceRequest from './components/PriceRequest/PriceRequest'
 import Posts from './components/Blog/Posts/posts';
 import Post from './components/Blog/Post/post';
 import AdminPage from './components/AdminPage/AdminPage';
+import ThankYou from './components/ThankYou/ThankYou';
 
 
 export default (
@@ -36,6 +37,7 @@ export default (
         <Route component={Collection3} path= "/collection3"/>
         <Route component={Posts} path = "/older"/>
         <Route component={Post} path = "/post/:blog_id"/>
+        <Route component={ThankYou} path = "/thank-you" />
     </Switch>
 
     </div>
