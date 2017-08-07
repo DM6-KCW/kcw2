@@ -1,11 +1,12 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const {json} = require('body-parser');
 const nodemailer = require('nodemailer');
 const massive = require('massive');
 const moment = require('moment');
-const port = 4000;
-const config = require('./server/config');
+const port = process.env.PORT;
+// const config = require('./server/config');
 const collections = require('./server/collections')
 const session = require('express-session');
 
@@ -35,11 +36,12 @@ module.exports = config;
 
 const app = express();
 
-massive(config.postgres).then(function(db){
+massive(process.env.DATABASE_URL).then(function(db){
     app.set('db', db);
+    console.log(db.tables)
     //do at start every time
     //creates the tables if they dont exist
-    db.createTables();
+    // db.createTables();
     //(blog_id, title, posttime, img_url, posttext)
     // db.addBlog([1, "hi there", moment().format('MMMM/DD/YY h:mm:ss A'), "http://i.stack.imgur.com/WCveg.jpg", "i like to see people without clothes"])
     // db.addBlog([2, "Hello!", moment().format('MMMM/DD/YY h:mm:ss A'), "https://cdn.colorlib.com/wp/wp-content/uploads/sites/2/2014/02/image.png", "Heres some neat birds"])
@@ -52,7 +54,7 @@ app.use(cors({
     credentials: true
 }));
 app.use(session({
-    secret: config.secret,
+    secret: process.env.SECRET,
     saveUninitialized: false,
     resave: false
 }));
