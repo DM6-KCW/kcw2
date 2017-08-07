@@ -5,37 +5,63 @@ import "./Brand.css";
 import fullLogo from '../../images/full-logo.png';
 
 class Brand extends Component {
+	constructor(){
+		super();
+		this.handleScroll = this.handleScroll.bind(this);
+	}
+	componentDidMount(){
+		window.addEventListener('scroll', this.handleScroll);
+		if(this.props.location.search){
+			document.body.scrollTop = (window.$(document).height() - window.$(window).height()) * 0.80;
+		}
+		else{
+			document.body.scrollTop = 0;
+		}
+	}
+	componentWillUnmount() {
+		window.removeEventListener('scroll', this.handleScroll);
+	}
+	handleScroll(e){
+		var scrollPercent = (window.$(window).scrollTop()) / (window.$(document).height() - window.$(window).height());
+		console.log(scrollPercent);
+	}
+	componentDidUpdate(){
+		if(this.props.location.search){
+			document.body.scrollTop = (window.$(document).height() - window.$(window).height()) * 0.80;
+		}
+		else{
+			document.body.scrollTop = 0;
+		}
+	}
 	render() {
 		return (
 			<div>
 				<div className="brand-container">
-					<div className="text-center">
+					<div className="text-center brand-section">
 						<div className="m-d">
 							<h1>THE BRAND</h1>
 						</div>
 						<div className="img-logo">
 							<img className="full-logo" src={fullLogo} alt=""/>
 						</div>
-						<div>
-							<h3>WHO WE ARE</h3>
-						</div>
 						<div className="pinch-margin">
-							<p>iLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse ciiLorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-							</p>
+							<p>In spite of being young in the industry the designer has worked
+								on her areas of epertise.</p>
+							<p>Increasingly known for eloquent designs which represent impeccable
+								style and femininity, they are self-confessed works of quality.</p>
+							<p>Pure fabrics, neutral colors, surprising embellishments and passionate
+								attention to detail defines the label 'Mithi Kalra'.</p>
+							<p>Keenly focused on comfort and style gently tailored and handcrafted, making the
+								garments extremely graceful. </p>
+							<p>Also in spite of being young and new to the fashion industry, Kalra has been
+								nominated for 'Best Indowestern Creative Designer' with ravishing wedding magazine awards.</p>
+							<p>Featured in almost all top magazines and newspapers in the country, the
+								'Mith Kalra' label is making its mark in the market.</p>
 						</div>
-						<div>
-							<h3>WHAT DO WE WANT TO ACHIEVE?</h3>
-						</div>
-						<p>For the brand to become the predominant occasion-wear choice for contemporary luxury shoppers around the globe
-						</p>
-						<p>For the brand to become the predominant occasion-wear choice for contemporary luxury shoppers around the globe
-						</p>
-						<p>For the brand to become the predominant occasion-wear choice for contemporary luxury shoppers around the globe
-						</p>
 					</div>
-				</div>
 				<Designer/>
 			</div>
+		</div>
 		)
 	}
 }

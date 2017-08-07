@@ -17,6 +17,14 @@
   height: 100%;
 }
 
+.img-logo-collections{
+    height: 120px;
+    width: 120px;
+    margin: 0 auto;
+    /* margin-top: -2%; */
+    /* margin-bottom: 5%; */
+    }
+
 .overlay {
   position: absolute;
   bottom: 0;
@@ -25,6 +33,18 @@
   width: 290px;
   height: 0;
   transition: .2s ease;
+}
+
+.collection-name{
+    color: #C9954C;
+    font-family: 'Bellefair', serif;
+    padding: 10px; 
+}
+
+.collection-description{
+    color: #C9954C;
+    font-family: 'Bellefair', serif;
+    padding-bottom: 100px;
 }
 
 .container:hover .overlay {

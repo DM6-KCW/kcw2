@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
 import axios from 'axios';
 
+import fullLogo from '../../../../images/full-logo.png';
 import './moonlight.css';
 
 class Moonlight extends Component {
@@ -40,7 +41,28 @@ class Moonlight extends Component {
     render(){
         var self = this;
         return (
-            <div>
+            <div className="text-center">
+                <div className="img-logo-collections">
+                    <img className="full-logo" src={fullLogo} alt=""/>
+                </div>
+                <h1 className="collection-name">The Moonlight Collection</h1>
+                <div className="collection-description">
+                    <p>The Moonlight collection is inspired from different phases of moon
+                        structured in cotton chanderi fabric. Chanderi being a traditional
+                        ethnic Indian fabric is characterized by its light weight, sheer
+                        texture and fine luxurious feel.</p>
+                    <p>Designs of the Moonlight Collection are seen surfacing the stage in
+                        flattering cuts at the neck and mid-section, right from short party
+                        dresses to flowy ball gowns to the full-length cocktail dresses, she
+                        has given white a whole new definition all together and with summer
+                        around, it feels like a soothing balm to the eyes. For the show stopper
+                        dress, retainng the undeniable grandeur of black, giving her
+                        'spotlight design' the spark it demands. The princess gown is a vision
+                        in black, perfect for any formal occasion, with all the glam and glitter
+                        it could have had in just the right places; with bold low cut frame at the
+                        back and a very unique classy front-cut, it promises to bring emphasis
+                        to those envious body curves the way any woman would dream of.</p>
+                </div>
                 <div className = "dressContainer">
                 {this.state.dresses.map(function(dresses) {
                          return (

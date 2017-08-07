@@ -10,7 +10,7 @@ class Nav extends Component {
 		super()
 		// this.addScroll = this.addScroll.bind(this)
 		// this.scrollListener = this.scrollListener.bind(this)
-		this.handleScroll = this.handleScroll.bind(this); 
+		this.handleScroll = this.handleScroll.bind(this);
 	}
 	// addScroll() {
 	// 	document.onscroll = this.scrollListener
@@ -25,10 +25,10 @@ class Nav extends Component {
 
 	// }
 	componentDidMount(){
-		window.addEventListener('scroll', this.handleScroll); 
+		window.addEventListener('scroll', this.handleScroll);
 	}
 	componentWillUnmount() {
-		window.removeEventListener('scroll', this.handleScroll); 
+		window.removeEventListener('scroll', this.handleScroll);
 	}
 	handleScroll(e){
 		if(document.body.scrollTop > 50){
@@ -54,13 +54,13 @@ class Nav extends Component {
 							<Link to="/"><img className="navbar-brand" src={logo} alt="logo" /></Link>
 						</div>
 
-						<div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<div className="collapse navbar-collapse pull-right" id="bs-example-navbar-collapse-1">
 							<ul className="nav navbar-nav navbar-right">
 								<li data-toggle="collapse" data-target=".navbar-collapse.in">
 									<Link to="/brand">The Brand</Link>
 								</li>
 								<li data-toggle="collapse" data-target=".navbar-collapse.in">
-									<Link to="/brand">The Designer</Link>
+									<Link to="/brand?designer">The Designer</Link>
 								</li>
 								<li data-toggle="collapse" data-target=".navbar-collapse.in">
 									<Link to="/collections">Collections</Link>
