@@ -30,8 +30,8 @@ class Posts extends Component{
             <div>
                 <div id="blogcontainer">
                     <div id="postcontainer">
-                        <div id="blogtitle">
-                            Mithi says stuff to people
+                        <div id="blogtitleandlogo">
+                            <img id="logoonblog" src={fullLogo} alt=""/>
                         </div>
                         <div className="blogposts">
                          {this.state.postage.map(function(postage){
