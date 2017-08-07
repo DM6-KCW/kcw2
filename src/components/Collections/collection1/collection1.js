@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-
+import moonlightImg from './moonlight.JPG';
 import "./collection1.css";
 
 class Collection1 extends Component {
@@ -16,7 +16,7 @@ class Collection1 extends Component {
                             2017
                         </div>
                     </div>
-                    <img id="moonlight-collection-img" src="http://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg">
+                    <img id="moonlight-collection-img" src={moonlightImg}>
                     </img>
                 </div>
             </div>
