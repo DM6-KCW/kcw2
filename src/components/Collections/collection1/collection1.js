@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-import moonlightImg from './moonlight.JPG';
+import moonlightImg from './moonlight.JPG'
 import "./collection1.css";
 
 class Collection1 extends Component {

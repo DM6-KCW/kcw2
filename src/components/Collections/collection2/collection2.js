@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 
-
+import disneyImg from './disney.JPG'
 import "./collection2.css";
 
 
@@ -17,7 +17,7 @@ class Collection2 extends Component {
                             2016
                         </div>
                     </div>
-                    <img id="disney-collection-img" src="http://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg">
+                    <img id="disney-collection-img" src={disneyImg}>
                     </img>
                 </div>
             </div>

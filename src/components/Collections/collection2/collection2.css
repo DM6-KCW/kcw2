@@ -3,7 +3,7 @@
 #disney-text{
     text-align: center;
     font-size: 42px;
-    
+
 }
 #disney-date{
     text-align: center;
@@ -12,8 +12,8 @@
 #disney-date-and-text-box{
 
 }
-#disney-collection-image{
-
+#disney-collection-img{
+    height: 320px;
 }
 
 #collection-box{
