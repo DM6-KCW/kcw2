@@ -2,9 +2,12 @@
 
 .brand-container{
     font-family: 'Bellefair', serif;
-    padding: 0 0 120px 0;    
     color: #C9954C;
     /*height: calc(100vh - 10px); */
+}
+
+.brand-section{
+    padding-bottom: calc(100vh - 651px);
 }
 
 
