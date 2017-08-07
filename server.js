@@ -48,7 +48,7 @@ massive(process.env.DATABASE_URL).then(function(db){
 
 
 });
-
+app.use(express.static(__dirname + '/build'))
 app.use(cors({
     origin: 'http://localhost:3000',
     credentials: true
