@@ -24,7 +24,7 @@ class Media extends Component {
             <div id="media">
                 <div id="title">
                     <h2 id="press">
-                        PRESS
+                        MEDIA
                     </h2>
                     <hr />
                 </div>
