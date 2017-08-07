@@ -1,12 +1,9 @@
-@font-face {
-    font-family: "disney";
-    src: url('./NewWaltDisneyUI.ttf');
-}
+
 
 #disney-text{
     text-align: center;
     font-size: 42px;
-    font-family: disney;
+    
 }
 #disney-date{
     text-align: center;
@@ -16,7 +13,7 @@
 
 }
 #disney-collection-image{
-    
+
 }
 
 #collection-box{

@@ -13,7 +13,7 @@ class Collection1 extends Component {
                             Moonlight Collection
                         </div>
                         <div id="moonlight-date">
-                            Spring Summer 2017
+                            2017
                         </div>
                     </div>
                     <img id="moonlight-collection-img" src="http://www.jqueryscript.net/images/Simplest-Responsive-jQuery-Image-Lightbox-Plugin-simple-lightbox.jpg">

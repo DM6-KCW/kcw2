@@ -30,10 +30,10 @@ class Post extends Component{
             <div>
                 <div id="blogcontainer">
                     <div id="postcontainer">
-                        <div id="blogtitle">
-                            Mithi says stuff to people
-                            </div>
-                            <div className="blogposts">
+                        <div id="blogtitleandlogo">
+                            <img id="logoonblog" src={fullLogo} alt=""/>
+                        </div>
+                        <div className="blogposts">
                             {this.state.postage.map(function(postage){
                                 return (
                                     <div>
@@ -56,7 +56,7 @@ class Post extends Component{
                      })}
                     </div>
                     <div className="blognavigation">
-                        <Link to="older">
+                        <Link to="/older">
                             <button>
                                 other posts
                             </button>
