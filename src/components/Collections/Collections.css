@@ -1,6 +1,10 @@
 .collections{
     margin-top:70px;
     text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    font-style: oblique;
+    color: #C9954C;
 }
 .collectionsholder{
     display: flex;
@@ -13,7 +17,19 @@
 .collection1{
     width: 377px;
     padding-top: 20px;
+
 }
+
+.collection1:hover {
+    text-decoration: none !important;
+    color: #f2f2f2;
+}
+
+.collection2:hover {
+    text-decoration: none !important;
+    color: #f2f2f2;
+}
+
 .collection2{
     width: 377px;
     padding-top: 20px;
