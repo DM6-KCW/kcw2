@@ -1,41 +1,23 @@
 import React, {Component} from 'react';
 
-
+import moonlightImg from './moonlight.JPG'
 import "./collection1.css";
 
 class Collection1 extends Component {
     render() {
         return (
             <div>
-                <div id="moonlight-text">
-                    Moonlight Collection
-                </div>
-                <div id="moonlight-date">
-                    Spring Summer 2017
-                </div>
-
-                <div className="collectionstack">
-
-                    <div className="toplefttext"> The moonlight collection
-                        is inspired from diﬀerent phases of moon
-                        structured in cotton chanderi fabric.
+                <div id="collection-box">
+                    <div id="moonlight-date-and-text-box">
+                        <div id="moonlight-text">
+                            Moonlight Collection
+                        </div>
+                        <div id="moonlight-date">
+                            2017
+                        </div>
                     </div>
-                    <div className="imgtopright">
-                    </div>
-                    <div className="imgundertext">
-                    </div>
-                    <div className="rightimg">
-
-                    </div>
-                    <div className="middletxt">
-
-                    </div>
-                    <div className="rightrightimg">
-
-                    </div>
-                    <div className="bottomimg">
-
-                    </div>
+                    <img id="moonlight-collection-img" src={moonlightImg}>
+                    </img>
 
                 </div>
 

@@ -1,113 +1,18 @@
 #moonlight-text {
     text-align: center;
 
+    font-size: 42px;
 
 }
 #moonlight-date {
     text-align: center;
-}
-.collectionbox{
-    display: flex;
-    flex-direction: column;
-    width: 500px;
-    background-color: red;
-}
-.collectionstack{
-    border: solid 3px black;
-    padding: 0px;
-    background-color: magenta;
-    height: 642px;
-    width: 377px;
-}
-.toplefttext{
-    width: 160px;
-    text-align: center;
-    z-index: 2;
-    background-color: red;
-    position: absolute;
-    height: 150px;
-    padding: 15px;
-    display:block;
-}
-.imgtopright{
-    position: relative;
-    left: 71px;
-    z-index: 0;
-    width:300px;
-    background-color: orange;
-    height: 175px;
-    background-image: url('https://s3.us-east-2.amazonaws.com/mithi-kalra/moonlight-11.JPG');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:100% 100%;
-}
-.imgundertext{
-    position: absolute;
-    top: 300px;
-    width: 120px;
-    z-index: 1;
-    height: 300px;
-    background-color: blue;
-    background-image: url('https://s3.us-east-2.amazonaws.com/mithi-kalra/moonlight-1.JPG');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:100% 100%;
+    font-size: 30px;
 }
 
-.rightimg{
-    position: relative;
-    left: 72px;
-    z-index: 0;
-    width: 300px;
-    background-color: purple;
-    height: 250px;
-    top: 0px;
-    background-color: blue;
-    background-image: url('https://s3.us-east-2.amazonaws.com/mithi-kalra/moonlight-2.JPG');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:100% 100%;
-}
+#moonlight-date-and-text-box{
 
-.middletxt{
-    position: relative;
-    left: 110px;
-    top: -50px;
-    background-color: yellow;
-    z-index: 3;
-    height: 65px;
-    width: 150px;
-    background-color: blue;
-    background-image: url('https://s3.us-east-2.amazonaws.com/mithi-kalra/moonlight-3.JPG');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:100% 100%;
 }
-.rightrightimg{
-    position: relative;
-    left: 252px;
-    top: -200px;
-    width: 120px;
-    background-color: cyan;
-    height: 200px;
-    z-index: 1;
-    background-color: blue;
-    background-image: url('https://s3.us-east-2.amazonaws.com/mithi-kalra/moonlight-4.JPG');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size:100% 100%;
-}
-.bottomimg{
-    z-index: 0;
-    position: relative;
-    left: 0px;
-    top: -274px;
-    width: 371px;
-    height: 220px;
-    background-color: violet;
-    background-color: blue;
-    background-image: url('https://s3.us-east-2.amazonaws.com/mithi-kalra/moonlight-5.JPG');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100% 100%;
+#moonlight-collection-img{
+    height: 320px; 
+
 }

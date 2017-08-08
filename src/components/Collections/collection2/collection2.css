@@ -1,112 +1,28 @@
-@font-face {
-    font-family: "disney";
-    src: url('./NewWaltDisneyUI.ttf');
-}
+
 
 #disney-text{
     text-align: center;
+    font-size: 42px;
+
 }
 #disney-date{
     text-align: center;
+    font-size: 30px;
 }
 
+#disney-date-and-text-box{
 
-
-.disneytop{
-    background-color: blue;
-    height: 175px;
-    background-image: url('https://s3.us-east-2.amazonaws.com/mithi-kalra/moonlight-11.JPG');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 
 }
-.disneytopleft{
-    background-color: blue;
-    height: 75px;
-    width: 160px;
-    font-family: disney;
-    font-size: 24px;
+#disney-collection-img{
+    height: 320px;
+}
+
+#collection-box{
+    background-color: #222756;
+    border-radius: 10px;
+    height: 800px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-}
-
-
-.disneymid{
-    background-color: orange;
-    height: 200px;
-
-}
-.disneymidupleft{
-    height: 100px;
-    width: 125px;
-    background-color: pink;
-}
-.disneymidupright{
-    height: 100px;
-    width: 125px;
-    background-color: purple;
-    position: relative;
-    left: 246px;
-    top: -100px;
-}
-.disneymidmid{
-    height: 150px;
-    width: 121px;
-    background-color: cyan;
-    position: relative;
-    top: -350px;
-    left: 125px;
-    background-position: center;
-    background-size: cover;
-    background-image: url('https://lumiere-a.akamaihd.net/v1/images/character_disneyprincess_mulan_693b57cb.jpeg?region=0,0,300,300');
-}
-.disneymiddown{
-    height: 150px;
-    background-color: green;
-    position: relative;
-    top: -100px;
-    background-position: center;
-    background-size: contain;
-    background-image: url('http://personalitygrowth.com/wp-content/uploads/2015/09/disneyprincesses.png?2aa4f6');
-}
-.disneybottom4square{
-    background-color: yellow;
-    height: 211px;
-    position: relative;
-    top: 50px;
-}
-.disney4squaretopleft{
-    background-color: violet;
-    height: 105px;
-    width: 185px;
-
-}
-.disney4squaretopright{
-    background-color: red;
-    height: 105px;
-    width: 186px;
-    position: relative;
-    top: -105px;
-    left: 185px;
-}
-.disney4squarebottomleft{
-    background-color: indigo;
-    height: 106px;
-    width: 185px;
-    position: relative;
-    top: -105px;
-    background-position: center;
-    background-size: cover;
-    background-image: url('https://s-media-cache-ak0.pinimg.com/736x/45/d9/cb/45d9cbaf29ebbc1412d296264b4bf056--disney-princess-sketches-disney-princess-art.jpg');
-}
-.disney4squarebottomright{
-    background-color: black;
-    height: 106px;
-    width: 186px;
-    position: relative;
-    top: -211px;
-    left: 185px;
+    justify-content: space-around;
 }

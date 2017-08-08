@@ -1,4 +1,4 @@
-const config = require('./config');
+// const config = require('./config');
 const nodemailer = require('nodemailer');
 const nodemailer_config = require('./nodemailer_config');
 
@@ -6,6 +6,7 @@ module.exports =  {
 	getDisneyCollection: function(req, res, next){
 		db = req.app.get('db');
 		db.getDisneyCollection().then(function(response){
+			console.log(response)
 			res.status(200).json(response);
 		})
 	},
@@ -27,7 +28,7 @@ module.exports =  {
 	placeOrder: function(req, res, next){
 		let order_email = {
 			from: 'Mithi Kalra Admin',
-			to: config.email,
+			to: process.env.EMAIL,
 			subject: "New Order.",
 			html: '<ul><li>Dress ID: ' + req.body.dress_id + '</li>' +
 					'<li>Standard Size: ' + req.body.standardSize + '</li>'+

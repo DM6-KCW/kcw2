@@ -62,6 +62,7 @@ class PriceRequest extends Component {
 			axios.post('/api/placeOrder', this.state).then(function(response){
 				console.log(response);
 			})
+			this.props.history.push('/thank-you'); 
 			return
 		}
 		if (!this.state.name) {

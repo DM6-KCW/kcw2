@@ -1,9 +1,7 @@
 .collections{
     margin-top:70px;
     text-align: center;
-    font-size: 24px;
-    font-weight: bold;
-    font-style: oblique;
+    font-size: 42px;
     color: #C9954C;
 }
 .collectionsholder{
@@ -11,11 +9,11 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding-bottom: calc(100vh - 792px);
+
 }
 
 .collection1{
-    width: 377px;
+    width: 600px;
     padding-top: 20px;
 
 }
@@ -31,10 +29,10 @@
 }
 
 .collection2{
-    width: 377px;
+    width: 600px;
     padding-top: 20px;
 }
 .collection3{
-    width: 377px;
+    width: 600px;
     padding-top: 20px;
 }
