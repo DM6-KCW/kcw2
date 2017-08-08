@@ -18,7 +18,9 @@ class Collection1 extends Component {
                     </div>
                     <img id="moonlight-collection-img" src={moonlightImg}>
                     </img>
+
                 </div>
+
             </div>
         )
     }

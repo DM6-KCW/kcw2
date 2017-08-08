@@ -15,7 +15,19 @@
 .collection1{
     width: 600px;
     padding-top: 20px;
+
 }
+
+.collection1:hover {
+    text-decoration: none !important;
+    color: #f2f2f2;
+}
+
+.collection2:hover {
+    text-decoration: none !important;
+    color: #f2f2f2;
+}
+
 .collection2{
     width: 600px;
     padding-top: 20px;

@@ -1,14 +1,18 @@
 #moonlight-text {
     text-align: center;
+
     font-size: 42px;
+
 }
 #moonlight-date {
     text-align: center;
     font-size: 30px;
 }
+
 #moonlight-date-and-text-box{
 
 }
 #moonlight-collection-img{
     height: 320px; 
+
 }
